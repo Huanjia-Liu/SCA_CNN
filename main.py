@@ -24,15 +24,14 @@ def byte_machine( byte, plts, hp, trcs):
 def main():
 
 
-    wandb.init(project='pytorch-sca-binary-MSB')
 
     hp = hyperparams()
     
     num_trc = hp.train_size + hp.vali_size
     trcs, metadata = load_raw_ascad(ascad_database_file=hp.path_trace, idx_srt=0, idx_end=num_trc, start=hp.start, end=hp.end, load_metadata=True)
     
-    J = wandb.config.J
-    Q = wandb.config.Q
+    J = 3
+    Q = 8
     scattered_trcs = scap.scattering( trcs=trcs.astype(np.float32), J=J, M=trcs.shape[1], Q=Q )
     hp.sample_num = ( scattered_trcs.shape[1], scattered_trcs.shape[2] )
 
@@ -48,20 +47,7 @@ def main():
 import time
 
 if "__main__" == __name__:
-    sweep_configuration = {
-    'method': 'random',
-    'name': 'sweep',
-    'metric': {'goal': 'minimize', 'name': 'loss'},
-    'parameters': 
-    {
-        'epochs': {'values': [1000]},
-        'lr': {'max': 0.001, 'min': 0.0001},
-        'Q' : {'values' : [8,12,16,20]},
-        'J' : {'values' : [3,4,5]},
-        'optimizer' : {'values': ['sgd', 'rmsprop', 'adam', 'nadam']},
-        'loss' : {'values': ['adam']}
-     }
-    }
+
     # sweep_configuration = {
     # 'method': 'random',
     # 'name': 'sweep',
@@ -81,9 +67,9 @@ if "__main__" == __name__:
 
 
     start_time = time.time()
-    sweep_id = wandb.sweep(sweep=sweep_configuration, project='pytorch-sca-binary-MSB')
-    wandb.agent(sweep_id, function = main, count=50)
 
+
+    main()
     stop_time = time.time()
 
     print('Duration: {}'.format(time.strftime('%H:%M:%S', time.gmtime(stop_time - start_time))))

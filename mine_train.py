@@ -47,14 +47,9 @@ def train(model, device, train_loader, optimizer, epoch, data_temp):
         traces = traces.unsqueeze(1)
         preds = model(traces)
        # train_loss = loss_functions.KNLL( preds, labels.long() )
-        if(wandb.config.loss=='mse'):
-            loss = torch.nn.MSELoss()
-        elif(wandb.config.loss =='nll'):
 
-            loss = torch.nn.NLLLoss()
-        elif(wandb.config.loss == 'cross'):
 
-            loss = torch.nn.CrossEntropyLoss()
+        loss = torch.nn.CrossEntropyLoss()
         train_loss = loss(preds, labels.long())
 
 
@@ -75,14 +70,9 @@ def test(models, device, test_loader, data_temp):
     with torch.no_grad():
         all_vali_preds, all_vali_labels = get_all_preds_labels(model=models, loader=test_loader, device=device, mean=data_temp.mean, var=data_temp.var)
         #vali_loss = loss_functions.KNLL( all_vali_preds, all_vali_labels.long() )
-        if(wandb.config.loss=='mse'):
-            loss = torch.nn.MSELoss()
-        elif(wandb.config.loss =='nll'):
 
-            loss = torch.nn.NLLLoss()
-        elif(wandb.config.loss == 'cross'):
 
-            loss = torch.nn.CrossEntropyLoss()
+        loss = torch.nn.CrossEntropyLoss()
         vali_loss = loss(all_vali_preds, all_vali_labels.long())
 
 
@@ -128,21 +118,13 @@ def nn_train(hp, plt, cpt, data, bit_poss, byte_pos):
             TO_device.to_device(network, DV.device)
 
 
-            if wandb.config.optimizer=='sgd':
-                optimizer = optim.SGD(network.parameters(), lr=wandb.config.lr, momentum=0.9, nesterov=True)
-            elif wandb.config.optimizer=='rmsprop':
-                optimizer = optim.RMSprop(network.parameters(), lr=wandb.config.lr, weight_decay=1e-5)
-            elif wandb.config.optimizer=='adam':
-                optimizer = optim.Adam(network.parameters(), lr=wandb.config.lr)  
-            elif wandb.config.optimizer=='nadam':
-                optimizer = optim.NAdam(network.parameters(), lr=wandb.config.lr, betas=(0.9,0.999))
 
 
+            optimizer = optim.Adam(network.parameters(), lr=0.0001)
 
             train_total_loss = 0
 
-            wandb.watch(network,log='all')
-            for epoch in range(wandb.config.epochs):
+            for epoch in range(500):
 
                 vali_loss, vali_total_correct = test(network,DV.device,vali_loader,Data1)
                 print(
@@ -152,16 +134,12 @@ def nn_train(hp, plt, cpt, data, bit_poss, byte_pos):
                         "vali_loss:", vali_loss.item(), 
                         "train_total_loss:", train_total_loss
                     )
-                wandb.log({"epoch":epoch, 
-                            "vali_set_total_correct": vali_total_correct,
-                            "vali_loss": vali_loss.item(),
-                            "loss": train_total_loss
-                })
+
 
 
                 train_total_loss = train(network, DV.device, train_loader, optimizer,epoch, Data1)
             torch.save(network.state_dict(), 'model.h5')
-            wandb.save('model.h5')
+
 
 
 
