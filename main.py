@@ -36,6 +36,9 @@ def main():
     scattered_trcs = scap.scattering( trcs=trcs.astype(np.float32), J=J, M=trcs.shape[1], Q=Q )
     hp.sample_num = ( scattered_trcs.shape[1], scattered_trcs.shape[2] )
 
+    v_min = np.max(axis=(1,2), scattered_trcs)
+    
+
     plts = read_plts( metadata=metadata )
     
     for byte in range(1):
@@ -54,12 +57,14 @@ if "__main__" == __name__:
     'metric': {'goal': 'minimize', 'name': 'loss'},
     'parameters': 
     {
-        'epochs': {'values': [1000]},
+        'epochs': {'values': [2000]},
         'lr': {'max': 0.001, 'min': 0.0001},
-        'Q' : {'values' : [8,12,16,20]},
-        'J' : {'values' : [3,4,5]},
-        'optimizer' : {'values': ['sgd', 'rmsprop', 'adam', 'nadam']},
-        'loss' : {'values': ['adam']}
+        'Q' : {'values' : [16,20,24,32]},
+        'J' : {'values' : [1,2]},
+        'optimizer' : {'values': ['sgd']},
+        'loss' : {'values': ['mine_cross'],
+        'normalize':{'values':[0,1]}
+        }
      }
     }
     # sweep_configuration = {
