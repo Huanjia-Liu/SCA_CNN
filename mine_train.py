@@ -46,11 +46,12 @@ def train(model, device, train_loader, optimizer, epoch, data_temp):
         traces = sca_preprocessing.trcs_scaled_centrolize_agmt( traces, torch.from_numpy(data_temp.mean).to(device), torch.sqrt( torch.from_numpy(data_temp.var) ).to(device) )
         traces = traces.unsqueeze(1)
         preds = model(traces)
-       # train_loss = loss_functions.KNLL( preds, labels.long() )
+        #train_loss = loss_functions.KNLL( preds, labels.long() )
 
+        train_loss = loss_functions.corr_loss(preds, labels)
 
-        loss = torch.nn.CrossEntropyLoss()
-        train_loss = loss(preds, labels.long())
+        #loss = torch.nn.CrossEntropyLoss()
+        #train_loss = loss(preds, labels.long())
 
 
 
@@ -70,10 +71,10 @@ def test(models, device, test_loader, data_temp):
     with torch.no_grad():
         all_vali_preds, all_vali_labels = get_all_preds_labels(model=models, loader=test_loader, device=device, mean=data_temp.mean, var=data_temp.var)
         #vali_loss = loss_functions.KNLL( all_vali_preds, all_vali_labels.long() )
+        vali_loss = loss_functions.corr_loss(all_vali_preds, all_vali_labels)
 
-
-        loss = torch.nn.CrossEntropyLoss()
-        vali_loss = loss(all_vali_preds, all_vali_labels.long())
+        #loss = torch.nn.CrossEntropyLoss()
+        #vali_loss = loss(all_vali_preds, all_vali_labels.long())
 
 
 
@@ -88,7 +89,7 @@ def nn_train(hp, plt, cpt, data, bit_poss, byte_pos):
     network = Network( traceLen=hp.sample_num, num_classes=hp.output )
     stat_params = network.state_dict()
     #labels = get_LSB( atk_round=hp.atk_round, byte_pos=byte_pos, plt=plt, cpt=cpt ).astype( 'uint8' )
-    labels = get_MSB( atk_round=hp.atk_round, byte_pos=byte_pos, plt=plt, cpt=cpt ).astype( 'uint8' )
+    labels = get_LSB( atk_round=hp.atk_round, byte_pos=byte_pos, plt=plt, cpt=cpt ).astype( 'uint8' )
     DV = TO_device()
     DV.get_default_device()
 
@@ -120,7 +121,8 @@ def nn_train(hp, plt, cpt, data, bit_poss, byte_pos):
 
 
 
-            optimizer = optim.Adam(network.parameters(), lr=0.0001)
+           # optimizer = optim.Adam(network.parameters(), lr=0.0001)
+            optimizer = optim.SGD(network.parameters(), lr=0.0002, momentum=0.9, nesterov=True)
 
             train_total_loss = 0
 

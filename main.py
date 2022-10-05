@@ -30,9 +30,17 @@ def main():
     num_trc = hp.train_size + hp.vali_size
     trcs, metadata = load_raw_ascad(ascad_database_file=hp.path_trace, idx_srt=0, idx_end=num_trc, start=hp.start, end=hp.end, load_metadata=True)
     
-    J = 3
-    Q = 8
+    J = 1
+    Q = 32
     scattered_trcs = scap.scattering( trcs=trcs.astype(np.float32), J=J, M=trcs.shape[1], Q=Q )
+
+    #normalize here
+    #v_min = scattered_trcs.min(axis=2, keepdims=True)
+    #v_max = scattered_trcs.max(axis=2, keepdims=True)
+
+    #scattered_trcs = (scattered_trcs-v_min)/(v_max-v_min)
+
+
     hp.sample_num = ( scattered_trcs.shape[1], scattered_trcs.shape[2] )
 
     plts = read_plts( metadata=metadata )
