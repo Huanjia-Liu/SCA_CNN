@@ -24,7 +24,7 @@ def byte_machine( byte, plts, hp, trcs):
 def main():
 
 
-    wandb.init(project='pytorch-sca-binary-MSB')
+    wandb.init(project='pytorch-sca-binary-LSB-10/05')
 
     hp = hyperparams()
     
@@ -36,7 +36,12 @@ def main():
     scattered_trcs = scap.scattering( trcs=trcs.astype(np.float32), J=J, M=trcs.shape[1], Q=Q )
     hp.sample_num = ( scattered_trcs.shape[1], scattered_trcs.shape[2] )
 
-    v_min = np.max(axis=(1,2), scattered_trcs)
+    #normalize here
+    if(wandb.config.normalize):
+        v_min = scattered_trcs.min(axis=2, keepdims=True)
+        v_max = scattered_trcs.max(axis=2, keepdims=True)
+
+        scattered_trcs = (scattered_trcs-v_min)/(v_max-v_min)
     
 
     plts = read_plts( metadata=metadata )
@@ -52,13 +57,13 @@ import time
 
 if "__main__" == __name__:
     sweep_configuration = {
-    'method': 'random',
+    'method': 'grid',
     'name': 'sweep',
     'metric': {'goal': 'minimize', 'name': 'loss'},
     'parameters': 
     {
         'epochs': {'values': [2000]},
-        'lr': {'max': 0.001, 'min': 0.0001},
+        'lr': {'values':[0.0002]},
         'Q' : {'values' : [16,20,24,32]},
         'J' : {'values' : [1,2]},
         'optimizer' : {'values': ['sgd']},
@@ -86,7 +91,7 @@ if "__main__" == __name__:
 
 
     start_time = time.time()
-    sweep_id = wandb.sweep(sweep=sweep_configuration, project='pytorch-sca-binary-MSB')
+    sweep_id = wandb.sweep(sweep=sweep_configuration, project='pytorch-sca-binary-LSB-10/05')
     wandb.agent(sweep_id, function = main, count=50)
 
     stop_time = time.time()

@@ -49,13 +49,18 @@ def train(model, device, train_loader, optimizer, epoch, data_temp):
        # train_loss = loss_functions.KNLL( preds, labels.long() )
         if(wandb.config.loss=='mse'):
             loss = torch.nn.MSELoss()
+            train_loss = loss(preds, labels.long())
         elif(wandb.config.loss =='nll'):
 
             loss = torch.nn.NLLLoss()
+            train_loss = loss(preds, labels.long())
         elif(wandb.config.loss == 'cross'):
 
             loss = torch.nn.CrossEntropyLoss()
-        train_loss = loss(preds, labels.long())
+            train_loss = loss(preds, labels.long())
+        elif(wandb.config.loss == 'mine_cross'):
+
+            train_loss = loss_functions.corr_loss(preds, labels)
 
 
 
@@ -77,13 +82,19 @@ def test(models, device, test_loader, data_temp):
         #vali_loss = loss_functions.KNLL( all_vali_preds, all_vali_labels.long() )
         if(wandb.config.loss=='mse'):
             loss = torch.nn.MSELoss()
+            vali_loss = loss(all_vali_preds, all_vali_labels.long())
         elif(wandb.config.loss =='nll'):
 
             loss = torch.nn.NLLLoss()
+            vali_loss = loss(all_vali_preds, all_vali_labels.long())
         elif(wandb.config.loss == 'cross'):
 
             loss = torch.nn.CrossEntropyLoss()
-        vali_loss = loss(all_vali_preds, all_vali_labels.long())
+            vali_loss = loss(all_vali_preds, all_vali_labels.long())
+        elif(wandb.config.loss == 'mine_cross'):
+
+            vali_loss = loss_functions.corr_loss(all_vali_preds, all_vali_labels)
+
 
 
 
@@ -98,7 +109,7 @@ def nn_train(hp, plt, cpt, data, bit_poss, byte_pos):
     network = Network( traceLen=hp.sample_num, num_classes=hp.output )
     stat_params = network.state_dict()
     #labels = get_LSB( atk_round=hp.atk_round, byte_pos=byte_pos, plt=plt, cpt=cpt ).astype( 'uint8' )
-    labels = get_MSB( atk_round=hp.atk_round, byte_pos=byte_pos, plt=plt, cpt=cpt ).astype( 'uint8' )
+    labels = get_LSB( atk_round=hp.atk_round, byte_pos=byte_pos, plt=plt, cpt=cpt ).astype( 'uint8' )
     DV = TO_device()
     DV.get_default_device()
 
