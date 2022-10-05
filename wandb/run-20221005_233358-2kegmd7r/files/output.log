@@ -1,0 +1,5 @@
+get MSB done!
+train set shape: (16000, 140, 21) (16000,) vali set shape: (4000, 140, 21) (4000,) test set shape: (0, 140, 21) (0,)
+tensor(1, dtype=torch.uint8)
+/home/admin1/conda/envs/py_sca/lib/python3.10/site-packages/torch/nn/modules/loss.py:530: UserWarning: Using a target size (torch.Size([4000])) that is different to the input size (torch.Size([4000, 2])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+  return F.mse_loss(input, target, reduction=self.reduction)
