@@ -37,11 +37,11 @@ def main():
     hp.sample_num = ( scattered_trcs.shape[1], scattered_trcs.shape[2] )
 
     #normalize here
-    if(wandb.config.normalize):
-        v_min = scattered_trcs.min(axis=2, keepdims=True)
-        v_max = scattered_trcs.max(axis=2, keepdims=True)
+    # if(wandb.config.normalize):
+    #    v_min = scattered_trcs.min(axis=2, keepdims=True)
+    #    v_max = scattered_trcs.max(axis=2, keepdims=True)
 
-        scattered_trcs = (scattered_trcs-v_min)/(v_max-v_min)
+    #    scattered_trcs = (scattered_trcs-v_min)/(v_max-v_min)
     
 
     plts = read_plts( metadata=metadata )
@@ -67,8 +67,8 @@ if "__main__" == __name__:
         'Q' : {'values' : [16,20,24,32]},
         'J' : {'values' : [1,2]},
         'optimizer' : {'values': ['sgd']},
-        'loss_function' : {'values': ['mine_cross']},
-        'normalize':{'values':[0,1]}
+        'loss_function' : {'values': ['mine_cross']}
+    #    'normalize':{'values':[0,1]}
         }
      
     }

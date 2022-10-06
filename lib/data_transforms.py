@@ -116,8 +116,8 @@ class Data():
     #     print( "training set no. of 1:", self.train_labels[:,key_guess].sum(), " vali set no. of 1:", self.vali_labels[:,key_guess].sum() )
     
     def features_normal_db(self):
-        self.mean = np.array(np.mean(self.train))
-        self.var = np.array(np.var(self.train))
+        self.mean = np.array(np.mean(self.train,axis=0))
+        self.var = np.array(np.var(self.train, axis =0))
     
     def max_normal(self):
         self.max = np.amax( self.train )

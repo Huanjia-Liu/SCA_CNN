@@ -77,7 +77,7 @@ class Network(nn.Module):
         # self.dt0 = nn.Dropout(0.5)
         #self.fc1 = nn.Linear(self.conv3_outchannel*self.cov2fc_W*self.cov2fc_H, num_classes)
 
-        self.fc1 = nn.Linear(self.conv2_outchannel*self.cov2fc_W*self.cov2fc_H, 2)
+        self.fc1 = nn.Linear(self.conv2_outchannel*self.cov2fc_W*self.cov2fc_H, 9)
 
         # self.dt1 = nn.Dropout(0.5)
         # self.fc2 = nn.Linear(64, num_classes)
