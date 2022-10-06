@@ -47,18 +47,18 @@ def train(model, device, train_loader, optimizer, epoch, data_temp):
         traces = traces.unsqueeze(1)
         preds = model(traces)
        # train_loss = loss_functions.KNLL( preds, labels.long() )
-        if(wandb.config.loss=='mse'):
+        if(wandb.config.loss_function=='mse'):
             loss = torch.nn.MSELoss()
             train_loss = loss(preds, labels.long())
-        elif(wandb.config.loss =='nll'):
+        elif(wandb.config.loss_function =='nll'):
 
             loss = torch.nn.NLLLoss()
             train_loss = loss(preds, labels.long())
-        elif(wandb.config.loss == 'cross'):
+        elif(wandb.config.loss_function == 'cross'):
 
             loss = torch.nn.CrossEntropyLoss()
             train_loss = loss(preds, labels.long())
-        elif(wandb.config.loss == 'mine_cross'):
+        elif(wandb.config.loss_function == 'mine_cross'):
 
             train_loss = loss_functions.corr_loss(preds, labels)
 
@@ -80,18 +80,18 @@ def test(models, device, test_loader, data_temp):
     with torch.no_grad():
         all_vali_preds, all_vali_labels = get_all_preds_labels(model=models, loader=test_loader, device=device, mean=data_temp.mean, var=data_temp.var)
         #vali_loss = loss_functions.KNLL( all_vali_preds, all_vali_labels.long() )
-        if(wandb.config.loss=='mse'):
+        if(wandb.config.loss_function=='mse'):
             loss = torch.nn.MSELoss()
             vali_loss = loss(all_vali_preds, all_vali_labels.long())
-        elif(wandb.config.loss =='nll'):
+        elif(wandb.config.loss_function =='nll'):
 
             loss = torch.nn.NLLLoss()
             vali_loss = loss(all_vali_preds, all_vali_labels.long())
-        elif(wandb.config.loss == 'cross'):
+        elif(wandb.config.loss_function == 'cross'):
 
             loss = torch.nn.CrossEntropyLoss()
             vali_loss = loss(all_vali_preds, all_vali_labels.long())
-        elif(wandb.config.loss == 'mine_cross'):
+        elif(wandb.config.loss_function == 'mine_cross'):
 
             vali_loss = loss_functions.corr_loss(all_vali_preds, all_vali_labels)
 

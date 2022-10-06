@@ -24,7 +24,7 @@ def byte_machine( byte, plts, hp, trcs):
 def main():
 
 
-    wandb.init(project='pytorch-sca-binary-LSB-10/05')
+    wandb.init(project='pytorch-sca-binary-LSB-10_05')
 
     hp = hyperparams()
     
@@ -67,10 +67,10 @@ if "__main__" == __name__:
         'Q' : {'values' : [16,20,24,32]},
         'J' : {'values' : [1,2]},
         'optimizer' : {'values': ['sgd']},
-        'loss' : {'values': ['mine_cross'],
+        'loss_function' : {'values': ['mine_cross']},
         'normalize':{'values':[0,1]}
         }
-     }
+     
     }
     # sweep_configuration = {
     # 'method': 'random',
@@ -91,7 +91,7 @@ if "__main__" == __name__:
 
 
     start_time = time.time()
-    sweep_id = wandb.sweep(sweep=sweep_configuration, project='pytorch-sca-binary-LSB-10/05')
+    sweep_id = wandb.sweep(sweep=sweep_configuration, project='pytorch-sca-binary-LSB-10_05')
     wandb.agent(sweep_id, function = main, count=50)
 
     stop_time = time.time()

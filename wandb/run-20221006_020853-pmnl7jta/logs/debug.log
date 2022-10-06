@@ -1,0 +1,191 @@
+2022-10-06 02:08:53,379 INFO    Thread-8 (_run_job):3001662 [wandb_setup.py:_flush():68] Configure stats pid to 3001662
+2022-10-06 02:08:53,379 INFO    Thread-8 (_run_job):3001662 [wandb_setup.py:_flush():68] Loading settings from /home/admin1/.config/wandb/settings
+2022-10-06 02:08:53,380 INFO    Thread-8 (_run_job):3001662 [wandb_setup.py:_flush():68] Loading settings from /home/admin1/git/SCA_CNN/wandb/settings
+2022-10-06 02:08:53,380 INFO    Thread-8 (_run_job):3001662 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True', 'project': 'pytorch-sca-binary-LSB-10_05', 'entity': 'aceleo', 'root_dir': '/home/admin1/git/SCA_CNN', 'run_id': 'pmnl7jta', 'sweep_param_path': '/home/admin1/git/SCA_CNN/wandb/sweep-55jhqnh7/config-pmnl7jta.yaml', 'sweep_id': '55jhqnh7'}
+2022-10-06 02:08:53,380 INFO    Thread-8 (_run_job):3001662 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'main.py', 'program': '/home/admin1/git/SCA_CNN/main.py'}
+2022-10-06 02:08:53,380 INFO    Thread-8 (_run_job):3001662 [wandb_init.py:_log_setup():476] Logging user logs to /home/admin1/git/SCA_CNN/wandb/run-20221006_020853-pmnl7jta/logs/debug.log
+2022-10-06 02:08:53,380 INFO    Thread-8 (_run_job):3001662 [wandb_init.py:_log_setup():477] Logging internal logs to /home/admin1/git/SCA_CNN/wandb/run-20221006_020853-pmnl7jta/logs/debug-internal.log
+2022-10-06 02:08:53,380 INFO    Thread-8 (_run_job):3001662 [wandb_init.py:init():516] calling init triggers
+2022-10-06 02:08:53,380 INFO    Thread-8 (_run_job):3001662 [wandb_init.py:init():519] wandb.init called with sweep_config: {'J': 1, 'Q': 16, 'epochs': 2000, 'loss_function': 'mine_cross', 'lr': 0.0002, 'normalize': 1, 'optimizer': 'sgd'}
+config: {}
+2022-10-06 02:08:53,380 INFO    Thread-8 (_run_job):3001662 [wandb_init.py:init():569] starting backend
+2022-10-06 02:08:53,380 INFO    Thread-8 (_run_job):3001662 [wandb_init.py:init():573] setting up manager
+2022-10-06 02:08:53,384 INFO    Thread-8 (_run_job):3001662 [backend.py:_multiprocessing_setup():102] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2022-10-06 02:08:53,387 INFO    Thread-8 (_run_job):3001662 [wandb_init.py:init():580] backend started and connected
+2022-10-06 02:08:53,389 INFO    Thread-8 (_run_job):3001662 [wandb_run.py:_config_callback():1145] config_cb None None {'J': 1, 'Q': 16, 'epochs': 2000, 'loss_function': 'mine_cross', 'lr': 0.0002, 'normalize': 1, 'optimizer': 'sgd'}
+2022-10-06 02:08:53,389 INFO    Thread-8 (_run_job):3001662 [wandb_init.py:init():658] updated telemetry
+2022-10-06 02:08:53,391 INFO    Thread-8 (_run_job):3001662 [wandb_init.py:init():692] communicating run to backend with 30 second timeout
+2022-10-06 02:08:53,912 INFO    Thread-8 (_run_job):3001662 [wandb_run.py:_on_init():1974] communicating current version
+2022-10-06 02:08:53,949 INFO    Thread-8 (_run_job):3001662 [wandb_run.py:_on_init():1978] got version response 
+2022-10-06 02:08:53,949 INFO    Thread-8 (_run_job):3001662 [wandb_init.py:init():727] starting run threads in backend
+2022-10-06 02:08:56,194 INFO    Thread-8 (_run_job):3001662 [wandb_run.py:_console_start():1954] atexit reg
+2022-10-06 02:08:56,195 INFO    Thread-8 (_run_job):3001662 [wandb_run.py:_redirect():1812] redirect: SettingsConsole.WRAP_RAW
+2022-10-06 02:08:56,195 INFO    Thread-8 (_run_job):3001662 [wandb_run.py:_redirect():1877] Wrapping output streams.
+2022-10-06 02:08:56,195 INFO    Thread-8 (_run_job):3001662 [wandb_run.py:_redirect():1899] Redirects installed.
+2022-10-06 02:08:56,195 INFO    Thread-8 (_run_job):3001662 [wandb_init.py:init():764] run started, returning control to user process
+2022-10-06 02:09:10,673 INFO    Thread-8 (_run_job):3001662 [wandb_watch.py:watch():51] Watching
+2022-10-06 02:22:28,684 INFO    Thread-8 (_run_job):3001662 [wandb_run.py:_finish():1720] finishing run aceleo/pytorch-sca-binary-LSB-10_05/pmnl7jta
+2022-10-06 02:22:28,684 INFO    Thread-8 (_run_job):3001662 [wandb_run.py:_atexit_cleanup():1923] got exitcode: 0
+2022-10-06 02:22:28,684 INFO    Thread-8 (_run_job):3001662 [wandb_run.py:_restore():1906] restore
+2022-10-06 02:22:28,684 INFO    Thread-8 (_run_job):3001662 [wandb_run.py:_restore():1912] restore done
+2022-10-06 02:22:28,688 INFO    Thread-8 (_run_job):3001662 [wandb_run.py:_on_finish():2224] got exit ret: file_counts {
+  wandb_count: 1
+  other_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 768
+  total_bytes: 51360
+}
+
+2022-10-06 02:22:29,028 INFO    Thread-8 (_run_job):3001662 [wandb_run.py:_on_finish():2224] got exit ret: file_counts {
+  wandb_count: 1
+  other_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 51360
+  total_bytes: 51360
+}
+
+2022-10-06 02:22:29,342 INFO    Thread-8 (_run_job):3001662 [wandb_run.py:_on_finish():2224] got exit ret: file_counts {
+  wandb_count: 1
+  other_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 51360
+  total_bytes: 51360
+}
+
+2022-10-06 02:22:30,170 INFO    Thread-8 (_run_job):3001662 [wandb_run.py:_on_finish():2224] got exit ret: file_counts {
+  wandb_count: 5
+  other_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 51360
+  total_bytes: 312280
+}
+
+2022-10-06 02:22:30,271 INFO    Thread-8 (_run_job):3001662 [wandb_run.py:_on_finish():2224] got exit ret: file_counts {
+  wandb_count: 6
+  other_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 51360
+  total_bytes: 353589
+}
+
+2022-10-06 02:22:30,373 INFO    Thread-8 (_run_job):3001662 [wandb_run.py:_on_finish():2224] got exit ret: file_counts {
+  wandb_count: 6
+  other_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 51360
+  total_bytes: 353589
+}
+
+2022-10-06 02:22:30,474 INFO    Thread-8 (_run_job):3001662 [wandb_run.py:_on_finish():2224] got exit ret: file_counts {
+  wandb_count: 6
+  other_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 353589
+  total_bytes: 353589
+}
+
+2022-10-06 02:22:30,575 INFO    Thread-8 (_run_job):3001662 [wandb_run.py:_on_finish():2224] got exit ret: file_counts {
+  wandb_count: 6
+  other_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 353589
+  total_bytes: 353589
+}
+
+2022-10-06 02:22:30,676 INFO    Thread-8 (_run_job):3001662 [wandb_run.py:_on_finish():2224] got exit ret: file_counts {
+  wandb_count: 6
+  other_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 353589
+  total_bytes: 353589
+}
+
+2022-10-06 02:22:30,777 INFO    Thread-8 (_run_job):3001662 [wandb_run.py:_on_finish():2224] got exit ret: file_counts {
+  wandb_count: 6
+  other_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 353589
+  total_bytes: 353589
+}
+
+2022-10-06 02:22:30,878 INFO    Thread-8 (_run_job):3001662 [wandb_run.py:_on_finish():2224] got exit ret: file_counts {
+  wandb_count: 6
+  other_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 353589
+  total_bytes: 353589
+}
+
+2022-10-06 02:22:30,980 INFO    Thread-8 (_run_job):3001662 [wandb_run.py:_on_finish():2224] got exit ret: file_counts {
+  wandb_count: 6
+  other_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 353589
+  total_bytes: 353589
+}
+
+2022-10-06 02:22:31,081 INFO    Thread-8 (_run_job):3001662 [wandb_run.py:_on_finish():2224] got exit ret: file_counts {
+  wandb_count: 6
+  other_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 353589
+  total_bytes: 353589
+}
+
+2022-10-06 02:22:31,182 INFO    Thread-8 (_run_job):3001662 [wandb_run.py:_on_finish():2224] got exit ret: file_counts {
+  wandb_count: 6
+  other_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 353589
+  total_bytes: 353589
+}
+
+2022-10-06 02:22:31,283 INFO    Thread-8 (_run_job):3001662 [wandb_run.py:_on_finish():2224] got exit ret: file_counts {
+  wandb_count: 6
+  other_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 353589
+  total_bytes: 353589
+}
+
+2022-10-06 02:22:32,764 INFO    Thread-8 (_run_job):3001662 [wandb_run.py:_on_finish():2224] got exit ret: file_counts {
+  wandb_count: 6
+  other_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 353589
+  total_bytes: 353589
+}
+
+2022-10-06 02:22:33,329 INFO    Thread-8 (_run_job):3001662 [wandb_run.py:_on_finish():2224] got exit ret: done: true
+exit_result {
+}
+file_counts {
+  wandb_count: 6
+  other_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 353589
+  total_bytes: 353589
+}
+local_info {
+}
+
+2022-10-06 02:22:34,437 INFO    Thread-8 (_run_job):3001662 [wandb_run.py:_footer_history_summary_info():3321] rendering history
+2022-10-06 02:22:34,438 INFO    Thread-8 (_run_job):3001662 [wandb_run.py:_footer_history_summary_info():3353] rendering summary
+2022-10-06 02:22:34,440 INFO    Thread-8 (_run_job):3001662 [wandb_run.py:_footer_sync_info():3277] logging synced files

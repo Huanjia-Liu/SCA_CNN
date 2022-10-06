@@ -1,0 +1,49 @@
+wandb_version: 1
+
+J:
+  desc: null
+  value: 2
+Q:
+  desc: null
+  value: 24
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.13.3
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    python_version: 3.10.5
+    start_time: 1665004776.742478
+    t:
+      1:
+      - 1
+      - 55
+      2:
+      - 1
+      - 55
+      3:
+      - 1
+      - 2
+      - 3
+      - 23
+      - 37
+      4: 3.10.5
+      5: 0.13.3
+      8:
+      - 5
+epochs:
+  desc: null
+  value: 2000
+loss_function:
+  desc: null
+  value: mine_cross
+lr:
+  desc: null
+  value: 0.0002
+normalize:
+  desc: null
+  value: 0
+optimizer:
+  desc: null
+  value: sgd

@@ -1,0 +1,1 @@
+{"epoch": 27, "vali_set_total_correct": 1950, "vali_loss": 0.9663220047950745, "loss": 14.463845431804657, "_timestamp": 1664992501.6939905, "_runtime": 31.925766468048096, "_step": 27, "_wandb": {"runtime": 31}}
