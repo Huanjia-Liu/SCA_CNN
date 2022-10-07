@@ -50,7 +50,7 @@ def train(model, device, train_loader, optimizer, epoch, data_temp):
 
         train_loss = loss_functions.corr_loss(preds, labels)
 
-        #loss = torch.nn.CrossEntropyLoss()
+        #loss = torch.nn.NLLLoss()
         #train_loss = loss(preds, labels.long())
 
 
@@ -73,7 +73,7 @@ def test(models, device, test_loader, data_temp):
         #vali_loss = loss_functions.KNLL( all_vali_preds, all_vali_labels.long() )
         vali_loss = loss_functions.corr_loss(all_vali_preds, all_vali_labels)
 
-        #loss = torch.nn.CrossEntropyLoss()
+        #loss = torch.nn.NLLLoss()
         #vali_loss = loss(all_vali_preds, all_vali_labels.long())
 
 
@@ -89,7 +89,7 @@ def nn_train(hp, plt, cpt, data, bit_poss, byte_pos):
     network = Network( traceLen=hp.sample_num, num_classes=hp.output )
     stat_params = network.state_dict()
     #labels = get_LSB( atk_round=hp.atk_round, byte_pos=byte_pos, plt=plt, cpt=cpt ).astype( 'uint8' )
-    labels = get_LSB( atk_round=hp.atk_round, byte_pos=byte_pos, plt=plt, cpt=cpt ).astype( 'uint8' )
+    labels = get_HammingWeight( atk_round=hp.atk_round, byte_pos=byte_pos, plt=plt, cpt=cpt ).astype( 'uint8' )
     DV = TO_device()
     DV.get_default_device()
 
@@ -98,8 +98,10 @@ def nn_train(hp, plt, cpt, data, bit_poss, byte_pos):
 
     for i in range(1):
         folder_comment = f'CNN_Comp_ASCADde50_first_HW-byte={byte_pos}'
-        for key_guess in range(1):
-            key_guess = key[byte_pos]
+        for key_guess in range(10):
+            #key_guess = 0   #key[byte_pos]
+            if(key_guess ==0):
+                key_guess = key[byte_pos]
             Data1.no_resample(key_guess, hp)
             Data1.data_spilt()
             Data1.features_normal_db()
@@ -123,10 +125,13 @@ def nn_train(hp, plt, cpt, data, bit_poss, byte_pos):
 
            # optimizer = optim.Adam(network.parameters(), lr=0.0001)
             optimizer = optim.SGD(network.parameters(), lr=0.0002, momentum=0.9, nesterov=True)
-
+            
+            scheduler = optim.lr_scheduler.CyclicLR(optimizer, base_lr=hp.learning_rate, max_lr=0.001, step_size_up=60, mode='triangular', cycle_momentum=False, last_epoch=-1)
+                
             train_total_loss = 0
 
-            for epoch in range(500):
+            
+            for epoch in range(50):
 
                 vali_loss, vali_total_correct = test(network,DV.device,vali_loader,Data1)
                 print(

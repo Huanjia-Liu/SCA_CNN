@@ -9,6 +9,8 @@ from lib.function_initialization import read_plts
 from lib.SCA_preprocessing import sca_preprocessing as scap
 from mine_train import nn_train
 import wandb
+import torch
+
 
 def byte_machine( byte, plts, hp, trcs):
     # srt = [30800, 24500, 45000, 32500, 47500, 41000, 37000, 34500, 26500, 39000, 28500, 43000, 20000, 22000, 49000, 18000]
@@ -53,7 +55,6 @@ def main():
 
 # test code
 import time
-
 if "__main__" == __name__:
 
     # sweep_configuration = {
@@ -72,8 +73,10 @@ if "__main__" == __name__:
 
 
     # }
-
-
+        
+    torch.manual_seed(0)
+    np.random.seed(0)
+    
     start_time = time.time()
 
 
