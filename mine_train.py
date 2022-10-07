@@ -6,7 +6,7 @@ from lib.nerual.nn_utils import *
 from lib.custom_dataset import mydataset
 # from nn_class_MLP import Network
 # from nn_class_CNN import ascadCNNbest
-from lib.nerual.nn_class_CNN import Network
+from lib.nerual.nn_class_CNN import Network_l2, Network_l3
 # from nn_save import nn_save
 # from plot_accuracy import plot_acc
 #from nn_tensorboard import *
@@ -105,11 +105,13 @@ def test(models, device, test_loader, data_temp):
 def nn_train(hp, plt, cpt, data, bit_poss, byte_pos):
 
 
-
-    network = Network( traceLen=hp.sample_num, num_classes=hp.output )
+    if(wandb.config.layer==2):
+        network = Network_l3( traceLen=hp.sample_num, num_classes=hp.output )
+    elif(wandb.config.layer==3):
+        network = Network_l2( traceLen=hp.sample_num, num_classes=hp.output )
     stat_params = network.state_dict()
     #labels = get_LSB( atk_round=hp.atk_round, byte_pos=byte_pos, plt=plt, cpt=cpt ).astype( 'uint8' )
-    labels = get_LSB( atk_round=hp.atk_round, byte_pos=byte_pos, plt=plt, cpt=cpt ).astype( 'uint8' )
+    labels = get_HammingWeight( atk_round=hp.atk_round, byte_pos=byte_pos, plt=plt, cpt=cpt ).astype( 'uint8' )
     DV = TO_device()
     DV.get_default_device()
 
@@ -118,8 +120,19 @@ def nn_train(hp, plt, cpt, data, bit_poss, byte_pos):
 
     for i in range(1):
         folder_comment = f'CNN_Comp_ASCADde50_first_HW-byte={byte_pos}'
+        
+
+        #Wrong key or right key
+        key_list = np.arange(256)
+        key_list = key_list[key_list!= key[byte_pos]]
+    
         for key_guess in range(1):
-            key_guess = key[byte_pos]
+            if(wandb.config.wrong_key!=0):
+                key_guess = np.random.choice(key_list)
+            else:
+                key_guess = key[byte_pos]
+
+
             Data1.no_resample(key_guess, hp)
             Data1.data_spilt()
             Data1.features_normal_db()
@@ -132,7 +145,11 @@ def nn_train(hp, plt, cpt, data, bit_poss, byte_pos):
             vali_loader = torch.utils.data.DataLoader(md_vali, batch_size=hp.vali_batch_size)
             print(Data1.vali_labels.max())
             vali_loader = DeviceDataLoader(vali_loader, DV.device)
-            network = Network( traceLen=hp.sample_num, num_classes=hp.output )
+
+            if(wandb.config.layer==2):
+                network = Network_l3( traceLen=hp.sample_num, num_classes=hp.output )
+            elif(wandb.config.layer==3):
+                network = Network_l2( traceLen=hp.sample_num, num_classes=hp.output )
             network.load_state_dict( stat_params )
             network.train()
             # move network to deivce
@@ -141,6 +158,7 @@ def nn_train(hp, plt, cpt, data, bit_poss, byte_pos):
 
             if wandb.config.optimizer=='sgd':
                 optimizer = optim.SGD(network.parameters(), lr=wandb.config.lr, momentum=0.9, nesterov=True)
+                scheduler = optim.lr_scheduler.CyclicLR(optimizer, base_lr=wandb.config.lr, max_lr=0.001, step_size_up=60, mode='triangular', cycle_momentum=False, last_epoch=-1)
             elif wandb.config.optimizer=='rmsprop':
                 optimizer = optim.RMSprop(network.parameters(), lr=wandb.config.lr, weight_decay=1e-5)
             elif wandb.config.optimizer=='adam':
@@ -149,7 +167,7 @@ def nn_train(hp, plt, cpt, data, bit_poss, byte_pos):
                 optimizer = optim.NAdam(network.parameters(), lr=wandb.config.lr, betas=(0.9,0.999))
 
 
-
+         
             train_total_loss = 0
 
             wandb.watch(network,log='all')
@@ -166,7 +184,8 @@ def nn_train(hp, plt, cpt, data, bit_poss, byte_pos):
                 wandb.log({"epoch":epoch, 
                             "vali_set_total_correct": vali_total_correct,
                             "vali_loss": vali_loss.item(),
-                            "loss": train_total_loss
+                            "loss": train_total_loss,
+
                 })
 
 

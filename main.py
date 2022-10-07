@@ -24,7 +24,7 @@ def byte_machine( byte, plts, hp, trcs):
 def main():
 
 
-    wandb.init(project='pytorch-sca-binary-LSB-10_05')
+    wandb.init(project='pytorch-sca-HW-10_08')
 
     hp = hyperparams()
     
@@ -57,17 +57,23 @@ import time
 
 if "__main__" == __name__:
     sweep_configuration = {
-    'method': 'grid',
+    'method': 'random',
     'name': 'sweep',
     'metric': {'goal': 'minimize', 'name': 'loss'},
     'parameters': 
     {
-        'epochs': {'values': [2000]},
-        'lr': {'values':[0.0002]},
+        'epochs': {'values': [50]},
+        'lr': {'max':0.001, 'min':0.0001 },
         'Q' : {'values' : [16,20,24,32]},
         'J' : {'values' : [1,2]},
         'optimizer' : {'values': ['sgd']},
-        'loss_function' : {'values': ['mine_cross']}
+        'loss_function' : {'values': ['mine_cross']},
+        'wrong_key': {'values':[0]},        #add number to increase wrong key number
+        'layer' : {'values': [2,3]},
+        'kernel' : {'values': [2,3,4]},
+        'kernel_width' : {'values':[16,24,32,36]}
+
+
     #    'normalize':{'values':[0,1]}
         }
      
@@ -91,7 +97,7 @@ if "__main__" == __name__:
 
 
     start_time = time.time()
-    sweep_id = wandb.sweep(sweep=sweep_configuration, project='pytorch-sca-binary-LSB-10_05')
+    sweep_id = wandb.sweep(sweep=sweep_configuration, project='pytorch-sca-HW-10_08')
     wandb.agent(sweep_id, function = main, count=50)
 
     stop_time = time.time()
