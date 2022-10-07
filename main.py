@@ -66,7 +66,7 @@ if "__main__" == __name__:
         'lr': {'max':0.001, 'min':0.0001 },
         'Q' : {'values' : [16,20,24,32]},
         'J' : {'values' : [1,2]},
-        'optimizer' : {'values': ['sgd']},
+        'optimizer' : {'values': ['sgd', 'rmsprop', 'adam', 'nadam']},
         'loss_function' : {'values': ['mine_cross']},
         'wrong_key': {'values':[0]},        #add number to increase wrong key number
         'layer' : {'values': [2,3]},

@@ -158,13 +158,15 @@ def nn_train(hp, plt, cpt, data, bit_poss, byte_pos):
 
             if wandb.config.optimizer=='sgd':
                 optimizer = optim.SGD(network.parameters(), lr=wandb.config.lr, momentum=0.9, nesterov=True)
-                scheduler = optim.lr_scheduler.CyclicLR(optimizer, base_lr=wandb.config.lr, max_lr=0.001, step_size_up=60, mode='triangular', cycle_momentum=False, last_epoch=-1)
+                
             elif wandb.config.optimizer=='rmsprop':
                 optimizer = optim.RMSprop(network.parameters(), lr=wandb.config.lr, weight_decay=1e-5)
             elif wandb.config.optimizer=='adam':
                 optimizer = optim.Adam(network.parameters(), lr=wandb.config.lr)  
             elif wandb.config.optimizer=='nadam':
                 optimizer = optim.NAdam(network.parameters(), lr=wandb.config.lr, betas=(0.9,0.999))
+
+            scheduler = optim.lr_scheduler.CyclicLR(optimizer, base_lr=wandb.config.lr, max_lr=0.001, step_size_up=60, mode='triangular', cycle_momentum=False, last_epoch=-1)
 
 
          
