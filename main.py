@@ -57,7 +57,7 @@ import time
 
 if "__main__" == __name__:
     sweep_configuration = {
-    'method': 'random',
+    'method': 'bayes',
     'name': 'sweep',
     'metric': {'goal': 'minimize', 'name': 'loss'},
     'parameters': 
@@ -98,7 +98,7 @@ if "__main__" == __name__:
 
     start_time = time.time()
     sweep_id = wandb.sweep(sweep=sweep_configuration, project='pytorch-sca-HW-10_08')
-    wandb.agent(sweep_id, function = main, count=50)
+    wandb.agent(sweep_id, function = main, count=100)
 
     stop_time = time.time()
 

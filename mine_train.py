@@ -106,9 +106,9 @@ def nn_train(hp, plt, cpt, data, bit_poss, byte_pos):
 
 
     if(wandb.config.layer==2):
-        network = Network_l3( traceLen=hp.sample_num, num_classes=hp.output )
-    elif(wandb.config.layer==3):
         network = Network_l2( traceLen=hp.sample_num, num_classes=hp.output )
+    elif(wandb.config.layer==3):
+        network = Network_l3( traceLen=hp.sample_num, num_classes=hp.output )
     stat_params = network.state_dict()
     #labels = get_LSB( atk_round=hp.atk_round, byte_pos=byte_pos, plt=plt, cpt=cpt ).astype( 'uint8' )
     labels = get_HammingWeight( atk_round=hp.atk_round, byte_pos=byte_pos, plt=plt, cpt=cpt ).astype( 'uint8' )

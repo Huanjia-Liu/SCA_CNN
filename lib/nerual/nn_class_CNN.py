@@ -37,8 +37,8 @@ class Network_l3(nn.Module):
         self.cov2fc_W = int( (traceLen[1]-wandb.config.kernel+1)/2 )
         #self.cov2fc_W = int( (self.cov2fc_W-3+1)/2 )
         # self.cov2fc = int( (self.cov2fc-16+1) )
-        self.cov2fc_W = int( (self.cov2fc_W-wandb.config.kernel+1)/2 )
-        self.cov2fc_W = int( (self.cov2fc_W-wandb.config.kernel+1)/2 )
+        self.cov2fc_W = int( (self.cov2fc_W-wandb.config.kernel_width+1)/2 )
+        self.cov2fc_W = int( (self.cov2fc_W-wandb.config.kernel_width+1)/2 )
 
 
         # self.conv_2L = int( (self.conv_1L)/2 )
