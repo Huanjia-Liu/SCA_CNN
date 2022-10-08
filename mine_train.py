@@ -6,7 +6,7 @@ from lib.nerual.nn_utils import *
 from lib.custom_dataset import mydataset
 # from nn_class_MLP import Network
 # from nn_class_CNN import ascadCNNbest
-from lib.nerual.nn_class_CNN import Network_l2, Network_l3
+from lib.nerual.nn_class_CNN import Network_l2, Network_l3, Network_l3_u
 # from nn_save import nn_save
 # from plot_accuracy import plot_acc
 #from nn_tensorboard import *
@@ -109,6 +109,9 @@ def nn_train(hp, plt, cpt, data, bit_poss, byte_pos):
         network = Network_l2( traceLen=hp.sample_num, num_classes=hp.output )
     elif(wandb.config.layer==3):
         network = Network_l3( traceLen=hp.sample_num, num_classes=hp.output )
+    elif(wandb.config.layer==4):
+        network = Network_l3_u(traceLen=hp.sample_num, num_classes=hp.output)
+
     stat_params = network.state_dict()
     #labels = get_LSB( atk_round=hp.atk_round, byte_pos=byte_pos, plt=plt, cpt=cpt ).astype( 'uint8' )
     labels = get_HammingWeight( atk_round=hp.atk_round, byte_pos=byte_pos, plt=plt, cpt=cpt ).astype( 'uint8' )
@@ -150,6 +153,9 @@ def nn_train(hp, plt, cpt, data, bit_poss, byte_pos):
                 network = Network_l3( traceLen=hp.sample_num, num_classes=hp.output )
             elif(wandb.config.layer==3):
                 network = Network_l2( traceLen=hp.sample_num, num_classes=hp.output )
+            elif(wandb.config.layer==4):
+                network = Network_l3_u(traceLen=hp.sample_num, num_classes=hp.output)
+
             network.load_state_dict( stat_params )
             network.train()
             # move network to deivce

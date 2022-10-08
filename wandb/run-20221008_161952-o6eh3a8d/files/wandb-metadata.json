@@ -1,0 +1,24 @@
+{
+    "os": "Linux-5.13.0-30-generic-x86_64-with-glibc2.31",
+    "python": "3.10.5",
+    "heartbeatAt": "2022-10-08T08:19:53.385678",
+    "startedAt": "2022-10-08T08:19:52.766216",
+    "docker": null,
+    "gpu": "NVIDIA RTX A5000",
+    "gpu_count": 1,
+    "cpu_count": 32,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/home/admin1/git/SCA_CNN/main.py",
+    "codePath": "main.py",
+    "git": {
+        "remote": "https://github.com/Huanjia-Liu/SCA_CNN.git",
+        "commit": "6215180715c75e814b0e13529ea9e1ee9fb23ab8"
+    },
+    "email": "huanjia.liu21@alumni.colostate.edu",
+    "root": "/home/admin1/git/SCA_CNN",
+    "host": "workstation-lin1",
+    "username": "admin1",
+    "executable": "/home/admin1/conda/envs/py_sca/bin/python"
+}

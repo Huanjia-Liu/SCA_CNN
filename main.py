@@ -69,7 +69,7 @@ if "__main__" == __name__:
         'optimizer' : {'values': ['sgd', 'rmsprop', 'adam', 'nadam']},
         'loss_function' : {'values': ['mine_cross']},
         'wrong_key': {'values':[0]},        #add number to increase wrong key number
-        'layer' : {'values': [2,3]},
+        'layer' : {'values': [2,3,4]},
         'kernel' : {'values': [2,3,4]},
         'kernel_width' : {'values':[16,24,32,36]}
 
