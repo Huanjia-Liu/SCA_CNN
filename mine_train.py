@@ -35,7 +35,7 @@ import wandb
 
 
 
-def train(model, device, train_loader, optimizer, epoch, data_temp):
+def train(model, device, train_loader, optimizer, epoch, data_temp, scheduler):
     model.train()
     model.eval()
 
@@ -61,6 +61,7 @@ def train(model, device, train_loader, optimizer, epoch, data_temp):
 
         train_loss.backward()
         optimizer.step()
+        scheduler.step()
         train_total_loss += train_loss.item()
     return train_total_loss
 
@@ -98,10 +99,11 @@ def nn_train(hp, plt, cpt, data, bit_poss, byte_pos):
 
     for i in range(1):
         folder_comment = f'CNN_Comp_ASCADde50_first_HW-byte={byte_pos}'
-        for key_guess in range(10):
+        for key_guess in range(1):
             #key_guess = 0   #key[byte_pos]
             if(key_guess ==0):
                 key_guess = key[byte_pos]
+            key_guess = 162
             Data1.no_resample(key_guess, hp)
             Data1.data_spilt()
             Data1.features_normal_db()
@@ -124,9 +126,11 @@ def nn_train(hp, plt, cpt, data, bit_poss, byte_pos):
 
 
            # optimizer = optim.Adam(network.parameters(), lr=0.0001)
-            optimizer = optim.SGD(network.parameters(), lr=0.0002, momentum=0.9, nesterov=True)
+
+            #optimizer = optim.SGD(network.parameters(), lr=0.0002, momentum=0.9, nesterov=True)
+            optimizer = optim.NAdam(network.parameters(), lr=0.0002, betas=(0.9,0.999))
             
-            scheduler = optim.lr_scheduler.CyclicLR(optimizer, base_lr=hp.learning_rate, max_lr=0.001, step_size_up=60, mode='triangular', cycle_momentum=False, last_epoch=-1)
+            scheduler = optim.lr_scheduler.CyclicLR(optimizer, base_lr=0.0002, max_lr=0.001, step_size_up=60, mode='triangular', cycle_momentum=False, last_epoch=-1)
                 
             train_total_loss = 0
 
@@ -144,7 +148,7 @@ def nn_train(hp, plt, cpt, data, bit_poss, byte_pos):
 
 
 
-                train_total_loss = train(network, DV.device, train_loader, optimizer,epoch, Data1)
+                train_total_loss = train(network, DV.device, train_loader, optimizer,epoch, Data1, scheduler)
             torch.save(network.state_dict(), 'model.h5')
 
 

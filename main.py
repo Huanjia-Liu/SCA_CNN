@@ -33,7 +33,7 @@ def main():
     trcs, metadata = load_raw_ascad(ascad_database_file=hp.path_trace, idx_srt=0, idx_end=num_trc, start=hp.start, end=hp.end, load_metadata=True)
     
     J = 1
-    Q = 32
+    Q = 24
     scattered_trcs = scap.scattering( trcs=trcs.astype(np.float32), J=J, M=trcs.shape[1], Q=Q )
 
     #normalize here
