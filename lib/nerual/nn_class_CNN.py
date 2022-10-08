@@ -34,13 +34,15 @@ class Network(nn.Module):
         #self.cov2fc_H = int( (self.cov2fc_H-3+1)/2 )
         # self.cov2fc = int( (self.cov2fc-16+1) )
         self.cov2fc_H = int( (self.cov2fc_H-3+1)/2 )
+        self.cov2fc_H = int( (self.cov2fc_H-3+1)/2 )
         # self.cov2fc = int( (self.cov2fc-16+1)/4 )
         # self.conv_2L = int( (self.conv_1L)/2 )
         self.cov2fc_W = int( (traceLen[1]-3+1)/2 )
         #self.cov2fc_W = int( (self.cov2fc_W-3+1)/2 )
         # self.cov2fc = int( (self.cov2fc-16+1) )
-        self.cov2fc_W = int( (self.cov2fc_W-3+1)/2 )
+        self.cov2fc_W = int( (self.cov2fc_W-32+1)/2 )
 
+        self.cov2fc_W = int( (self.cov2fc_W-32+1)/2 )
 
         # self.conv_2L = int( (self.conv_1L)/2 )
         
@@ -60,10 +62,11 @@ class Network(nn.Module):
         self.conv1 = nn.Conv2d(self.conv1_inchannel, self.conv1_outchannel, kernel_size=3, stride=1, padding=0)
         self.bn1 = nn.BatchNorm2d(num_features=self.conv1_outchannel)
         # self.bn1 = BatchInstanceNorm1d(num_features=self.conv1_outchannel)
-        self.conv2 = nn.Conv2d(self.conv2_inchannel, self.conv2_outchannel, kernel_size=3, stride=1, padding=0)
+        self.conv2 = nn.Conv2d(self.conv2_inchannel, self.conv2_outchannel, kernel_size=(3,32), stride=1, padding=0)
         self.bn2 = nn.BatchNorm2d(num_features=self.conv2_outchannel)
         # self.bn2 = BatchInstanceNorm1d(num_features=self.conv2_outchannel)
-        self.conv3 = nn.Conv2d(self.conv3_inchannel, self.conv3_outchannel, kernel_size=3, stride=1, padding=0)
+
+        self.conv3 = nn.Conv2d(self.conv3_inchannel, self.conv3_outchannel, kernel_size=(3,32), stride=1, padding=0)
         self.bn3 = nn.BatchNorm2d(num_features=self.conv3_outchannel)
         # # self.bn3 = BatchInstanceNorm1d(num_features=self.conv3_outchannel)
 
@@ -77,7 +80,7 @@ class Network(nn.Module):
         # self.dt0 = nn.Dropout(0.5)
         #self.fc1 = nn.Linear(self.conv3_outchannel*self.cov2fc_W*self.cov2fc_H, num_classes)
 
-        self.fc1 = nn.Linear(self.conv2_outchannel*self.cov2fc_W*self.cov2fc_H, 9)
+        self.fc1 = nn.Linear(self.conv3_outchannel*self.cov2fc_W*self.cov2fc_H, 9)
 
         # self.dt1 = nn.Dropout(0.5)
         # self.fc2 = nn.Linear(64, num_classes)
@@ -107,6 +110,9 @@ class Network(nn.Module):
         #out1 = F.max_pool2d(out1, 2)
 
         out1 = F.selu(self.bn2(self.conv2(out1)))
+        out1 = F.max_pool2d(out1, 2)
+
+        out1 = F.selu(self.bn3(self.conv3(out1)))
         out1 = F.max_pool2d(out1, 2)
 
             # if ( loop == 0 ):
