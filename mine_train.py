@@ -26,11 +26,12 @@ import torch.nn.functional as F
 import torch.optim as optim
 from itertools import product
 from lib.nerual.nn_loss_functions import loss_functions
+import math
 # import torch
 # test
 
 
-import wandb
+
 
 
 
@@ -46,12 +47,10 @@ def train(model, device, train_loader, optimizer, epoch, data_temp, scheduler):
         traces = sca_preprocessing.trcs_scaled_centrolize_agmt( traces, torch.from_numpy(data_temp.mean).to(device), torch.sqrt( torch.from_numpy(data_temp.var) ).to(device) )
         traces = traces.unsqueeze(1)
         preds = model(traces)
-        #train_loss = loss_functions.KNLL( preds, labels.long() )
+       # train_loss = loss_functions.KNLL( preds, labels.long() )
+
 
         train_loss = loss_functions.corr_loss(preds, labels)
-
-        #loss = torch.nn.NLLLoss()
-        #train_loss = loss(preds, labels.long())
 
 
 
@@ -72,10 +71,10 @@ def test(models, device, test_loader, data_temp):
     with torch.no_grad():
         all_vali_preds, all_vali_labels = get_all_preds_labels(model=models, loader=test_loader, device=device, mean=data_temp.mean, var=data_temp.var)
         #vali_loss = loss_functions.KNLL( all_vali_preds, all_vali_labels.long() )
+
+
         vali_loss = loss_functions.corr_loss(all_vali_preds, all_vali_labels)
 
-        #loss = torch.nn.NLLLoss()
-        #vali_loss = loss(all_vali_preds, all_vali_labels.long())
 
 
 
@@ -87,7 +86,8 @@ def nn_train(hp, plt, cpt, data, bit_poss, byte_pos):
 
 
 
-    network = Network_l3_u( traceLen=hp.sample_num, num_classes=hp.output )
+    network = Network_l3_u(traceLen=hp.sample_num, num_classes=hp.output)
+
     stat_params = network.state_dict()
     #labels = get_LSB( atk_round=hp.atk_round, byte_pos=byte_pos, plt=plt, cpt=cpt ).astype( 'uint8' )
     labels = get_HammingWeight( atk_round=hp.atk_round, byte_pos=byte_pos, plt=plt, cpt=cpt ).astype( 'uint8' )
@@ -99,11 +99,16 @@ def nn_train(hp, plt, cpt, data, bit_poss, byte_pos):
 
     for i in range(1):
         folder_comment = f'CNN_Comp_ASCADde50_first_HW-byte={byte_pos}'
+        
+
+        #Wrong key or right key
+        key_list = np.arange(256)
+        key_list = key_list[key_list!= key[byte_pos]]
+    
         for key_guess in range(1):
-            #key_guess = 0   #key[byte_pos]
-            if(key_guess ==0):
-                key_guess = key[byte_pos]
-            key_guess = 162
+
+            key_guess =162
+
             Data1.no_resample(key_guess, hp)
             Data1.data_spilt()
             Data1.features_normal_db()
@@ -116,7 +121,10 @@ def nn_train(hp, plt, cpt, data, bit_poss, byte_pos):
             vali_loader = torch.utils.data.DataLoader(md_vali, batch_size=hp.vali_batch_size)
             print(Data1.vali_labels.max())
             vali_loader = DeviceDataLoader(vali_loader, DV.device)
-            network = Network_l3_u( traceLen=hp.sample_num, num_classes=hp.output )
+
+
+            network = Network_l3_u(traceLen=hp.sample_num, num_classes=hp.output)
+
             network.load_state_dict( stat_params )
             network.train()
             # move network to deivce
@@ -124,17 +132,15 @@ def nn_train(hp, plt, cpt, data, bit_poss, byte_pos):
 
 
 
-
-           # optimizer = optim.Adam(network.parameters(), lr=0.0001)
-
-            #optimizer = optim.SGD(network.parameters(), lr=0.0002, momentum=0.9, nesterov=True)
             optimizer = optim.NAdam(network.parameters(), lr=0.0002, betas=(0.9,0.999))
-            
+
             scheduler = optim.lr_scheduler.CyclicLR(optimizer, base_lr=0.0002, max_lr=0.001, step_size_up=60, mode='triangular', cycle_momentum=False, last_epoch=-1)
-                
+
+
+         
             train_total_loss = 0
 
-            
+
             for epoch in range(50):
 
                 vali_loss, vali_total_correct = test(network,DV.device,vali_loader,Data1)
@@ -146,9 +152,12 @@ def nn_train(hp, plt, cpt, data, bit_poss, byte_pos):
                         "train_total_loss:", train_total_loss
                     )
 
+                if(math.isnan(vali_loss.item())):
+                    continue
 
 
                 train_total_loss = train(network, DV.device, train_loader, optimizer,epoch, Data1, scheduler)
+            
             torch.save(network.state_dict(), 'model.h5')
 
 

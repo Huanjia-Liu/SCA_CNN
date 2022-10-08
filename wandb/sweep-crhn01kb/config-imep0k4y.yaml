@@ -1,0 +1,24 @@
+wandb_version: 1
+
+J:
+  value: 1
+Q:
+  value: 24
+dense:
+  value: 1
+epochs:
+  value: 50
+kernel:
+  value: 3
+kernel_width:
+  value: 32
+layer:
+  value: 4
+loss_function:
+  value: mine_cross
+lr:
+  value: 0.0002
+optimizer:
+  value: nadam
+wrong_key:
+  value: 0

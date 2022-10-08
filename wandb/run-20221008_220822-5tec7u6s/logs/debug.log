@@ -1,0 +1,27 @@
+2022-10-08 22:08:22,625 INFO    Thread-2 (_run_job):1973128 [wandb_setup.py:_flush():68] Configure stats pid to 1973128
+2022-10-08 22:08:22,625 INFO    Thread-2 (_run_job):1973128 [wandb_setup.py:_flush():68] Loading settings from /home/admin1/.config/wandb/settings
+2022-10-08 22:08:22,625 INFO    Thread-2 (_run_job):1973128 [wandb_setup.py:_flush():68] Loading settings from /home/admin1/git/SCA_CNN/wandb/settings
+2022-10-08 22:08:22,625 INFO    Thread-2 (_run_job):1973128 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True', 'project': 'pytorch-sca-HW-10_08_wrong_key', 'entity': 'aceleo', 'root_dir': '/home/admin1/git/SCA_CNN', 'sweep_id': '9lk84slt', 'run_id': '5tec7u6s', 'sweep_param_path': '/home/admin1/git/SCA_CNN/wandb/sweep-9lk84slt/config-5tec7u6s.yaml'}
+2022-10-08 22:08:22,625 INFO    Thread-2 (_run_job):1973128 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'main.py', 'program': '/home/admin1/git/SCA_CNN/main.py'}
+2022-10-08 22:08:22,625 INFO    Thread-2 (_run_job):1973128 [wandb_init.py:_log_setup():476] Logging user logs to /home/admin1/git/SCA_CNN/wandb/run-20221008_220822-5tec7u6s/logs/debug.log
+2022-10-08 22:08:22,625 INFO    Thread-2 (_run_job):1973128 [wandb_init.py:_log_setup():477] Logging internal logs to /home/admin1/git/SCA_CNN/wandb/run-20221008_220822-5tec7u6s/logs/debug-internal.log
+2022-10-08 22:08:22,625 INFO    Thread-2 (_run_job):1973128 [wandb_init.py:init():516] calling init triggers
+2022-10-08 22:08:22,625 INFO    Thread-2 (_run_job):1973128 [wandb_init.py:init():519] wandb.init called with sweep_config: {'J': 1, 'Q': 24, 'dense': 1, 'epochs': 50, 'kernel': 3, 'kernel_width': 32, 'layer': 4, 'loss_function': 'mine_cross', 'lr': 0.0002, 'optimizer': 'nadam', 'wrong_key': 0}
+config: {}
+2022-10-08 22:08:22,625 INFO    Thread-2 (_run_job):1973128 [wandb_init.py:init():569] starting backend
+2022-10-08 22:08:22,626 INFO    Thread-2 (_run_job):1973128 [wandb_init.py:init():573] setting up manager
+2022-10-08 22:08:22,628 INFO    Thread-2 (_run_job):1973128 [backend.py:_multiprocessing_setup():102] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2022-10-08 22:08:22,630 INFO    Thread-2 (_run_job):1973128 [wandb_init.py:init():580] backend started and connected
+2022-10-08 22:08:22,633 INFO    Thread-2 (_run_job):1973128 [wandb_run.py:_config_callback():1145] config_cb None None {'J': 1, 'Q': 24, 'dense': 1, 'epochs': 50, 'kernel': 3, 'kernel_width': 32, 'layer': 4, 'loss_function': 'mine_cross', 'lr': 0.0002, 'optimizer': 'nadam', 'wrong_key': 0}
+2022-10-08 22:08:22,633 INFO    Thread-2 (_run_job):1973128 [wandb_init.py:init():658] updated telemetry
+2022-10-08 22:08:22,635 INFO    Thread-2 (_run_job):1973128 [wandb_init.py:init():692] communicating run to backend with 30 second timeout
+2022-10-08 22:08:23,150 INFO    Thread-2 (_run_job):1973128 [wandb_run.py:_on_init():1974] communicating current version
+2022-10-08 22:08:23,175 INFO    Thread-2 (_run_job):1973128 [wandb_run.py:_on_init():1978] got version response upgrade_message: "wandb version 0.13.4 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2022-10-08 22:08:23,175 INFO    Thread-2 (_run_job):1973128 [wandb_init.py:init():727] starting run threads in backend
+2022-10-08 22:08:25,411 INFO    Thread-2 (_run_job):1973128 [wandb_run.py:_console_start():1954] atexit reg
+2022-10-08 22:08:25,411 INFO    Thread-2 (_run_job):1973128 [wandb_run.py:_redirect():1812] redirect: SettingsConsole.WRAP_RAW
+2022-10-08 22:08:25,411 INFO    Thread-2 (_run_job):1973128 [wandb_run.py:_redirect():1877] Wrapping output streams.
+2022-10-08 22:08:25,411 INFO    Thread-2 (_run_job):1973128 [wandb_run.py:_redirect():1899] Redirects installed.
+2022-10-08 22:08:25,412 INFO    Thread-2 (_run_job):1973128 [wandb_init.py:init():764] run started, returning control to user process
+2022-10-08 22:08:45,822 INFO    Thread-2 (_run_job):1973128 [wandb_watch.py:watch():51] Watching
