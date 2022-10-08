@@ -26,6 +26,7 @@ import torch.nn.functional as F
 import torch.optim as optim
 from itertools import product
 from lib.nerual.nn_loss_functions import loss_functions
+import math
 # import torch
 # test
 
@@ -35,7 +36,7 @@ import wandb
 
 
 
-def train(model, device, train_loader, optimizer, epoch, data_temp):
+def train(model, device, train_loader, optimizer, epoch, data_temp, scheduler):
     model.train()
     model.eval()
 
@@ -70,6 +71,7 @@ def train(model, device, train_loader, optimizer, epoch, data_temp):
 
         train_loss.backward()
         optimizer.step()
+        scheduler.step()
         train_total_loss += train_loss.item()
     return train_total_loss
 
@@ -150,9 +152,9 @@ def nn_train(hp, plt, cpt, data, bit_poss, byte_pos):
             vali_loader = DeviceDataLoader(vali_loader, DV.device)
 
             if(wandb.config.layer==2):
-                network = Network_l3( traceLen=hp.sample_num, num_classes=hp.output )
-            elif(wandb.config.layer==3):
                 network = Network_l2( traceLen=hp.sample_num, num_classes=hp.output )
+            elif(wandb.config.layer==3):
+                network = Network_l3( traceLen=hp.sample_num, num_classes=hp.output )
             elif(wandb.config.layer==4):
                 network = Network_l3_u(traceLen=hp.sample_num, num_classes=hp.output)
 
@@ -193,11 +195,15 @@ def nn_train(hp, plt, cpt, data, bit_poss, byte_pos):
                             "vali_set_total_correct": vali_total_correct,
                             "vali_loss": vali_loss.item(),
                             "loss": train_total_loss,
+                            "key" : key_guess,
 
                 })
+                if(math.isnan(vali_loss.item())):
+                    continue
 
 
-                train_total_loss = train(network, DV.device, train_loader, optimizer,epoch, Data1)
+                train_total_loss = train(network, DV.device, train_loader, optimizer,epoch, Data1, scheduler)
+            
             torch.save(network.state_dict(), 'model.h5')
             wandb.save('model.h5')
 

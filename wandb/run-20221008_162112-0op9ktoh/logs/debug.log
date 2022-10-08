@@ -1,7 +1,0 @@
-2022-10-08 16:21:12,049 INFO    Thread-14 (_run_job):1763525 [wandb_setup.py:_flush():68] Configure stats pid to 1763525
-2022-10-08 16:21:12,049 INFO    Thread-14 (_run_job):1763525 [wandb_setup.py:_flush():68] Loading settings from /home/admin1/.config/wandb/settings
-2022-10-08 16:21:12,049 INFO    Thread-14 (_run_job):1763525 [wandb_setup.py:_flush():68] Loading settings from /home/admin1/git/SCA_CNN/wandb/settings
-2022-10-08 16:21:12,049 INFO    Thread-14 (_run_job):1763525 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True', 'project': 'pytorch-sca-HW-10_08', 'entity': 'aceleo', 'root_dir': '/home/admin1/git/SCA_CNN', 'run_id': '0op9ktoh', 'sweep_param_path': '/home/admin1/git/SCA_CNN/wandb/sweep-p3eq5oxi/config-0op9ktoh.yaml', 'sweep_id': 'p3eq5oxi'}
-2022-10-08 16:21:12,049 INFO    Thread-14 (_run_job):1763525 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'main.py', 'program': '/home/admin1/git/SCA_CNN/main.py'}
-2022-10-08 16:21:12,050 INFO    Thread-14 (_run_job):1763525 [wandb_init.py:_log_setup():476] Logging user logs to /home/admin1/git/SCA_CNN/wandb/run-20221008_162112-0op9ktoh/logs/debug.log
-2022-10-08 16:21:12,050 INFO    Thread-14 (_run_job):1763525 [wandb_init.py:_log_setup():477] Logging internal logs to /home/admin1/git/SCA_CNN/wandb/run-20221008_162112-0op9ktoh/logs/debug-internal.log

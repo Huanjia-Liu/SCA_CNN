@@ -1,3 +1,0 @@
-get hamming weight done!
-train set shape: (16000, 24, 175) (16000,) vali set shape: (4000, 24, 175) (4000,) test set shape: (0, 24, 175) (0,)
-tensor(8, dtype=torch.uint8)

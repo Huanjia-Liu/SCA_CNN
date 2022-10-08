@@ -24,7 +24,7 @@ def byte_machine( byte, plts, hp, trcs):
 def main():
 
 
-    wandb.init(project='pytorch-sca-HW-10_08')
+    wandb.init(project='pytorch-sca-HW-10_08_wrong_key')
 
     hp = hyperparams()
     
@@ -57,22 +57,22 @@ import time
 
 if "__main__" == __name__:
     sweep_configuration = {
-    'method': 'bayes',
+    'method': 'grid',              #'bayes',
     'name': 'sweep',
     'metric': {'goal': 'minimize', 'name': 'loss'},
     'parameters': 
     {
         'epochs': {'values': [50]},
-        'lr': {'max':0.001, 'min':0.0001 },
-        'Q' : {'values' : [16,20,24,32]},
-        'J' : {'values' : [1,2]},
-        'optimizer' : {'values': ['sgd', 'rmsprop', 'adam', 'nadam']},
+        'lr':  {'values' : [0.0002]},                    #{'max':0.001, 'min':0.0001 },
+        'Q' : {'values' : [24]},                            #[16,20,24,28,32]
+        'J' : {'values' : [1]},
+        'optimizer' : {'values': ['nadam']},                           #['sgd', 'rmsprop', 'adam', 'nadam']},
         'loss_function' : {'values': ['mine_cross']},
-        'wrong_key': {'values':[0]},        #add number to increase wrong key number
-        'layer' : {'values': [2,3,4]},
-        'kernel' : {'values': [2,3,4]},
-        'kernel_width' : {'values':[16,24,32,36]}
-
+        'wrong_key': {'values':[0, 1,2,3,4,5,6,7,8,9,10]},        #add number to increase wrong key number
+        'layer' : {'values': [4]},
+        'kernel' : {'values': [3]},
+        'kernel_width' : {'values':[32]},                       #[16,24,32,36]
+        'dense' : {'values': [1]}
 
     #    'normalize':{'values':[0,1]}
         }
@@ -97,7 +97,7 @@ if "__main__" == __name__:
 
 
     start_time = time.time()
-    sweep_id = wandb.sweep(sweep=sweep_configuration, project='pytorch-sca-HW-10_08')
+    sweep_id = wandb.sweep(sweep=sweep_configuration, project='pytorch-sca-HW-10_08_wrong_key')
     wandb.agent(sweep_id, function = main, count=100)
 
     stop_time = time.time()

@@ -61,9 +61,11 @@ class Network_l3(nn.Module):
         self.dt0 = nn.Dropout(0.5)
         # self.dt0 = nn.Dropout(0.5)
         #self.fc1 = nn.Linear(self.conv3_outchannel*self.cov2fc_W*self.cov2fc_H, num_classes)
-
+        
         self.fc1 = nn.Linear(self.conv3_outchannel*self.cov2fc_W*self.cov2fc_H, 9)
 
+        self.fc2 = nn.Linear(self.conv3_outchannel*self.cov2fc_W*self.cov2fc_H, 64)
+        self.fc3 = nn.Linear(64,9)
 
 
     def forward(self, x):
@@ -97,8 +99,11 @@ class Network_l3(nn.Module):
 
         out1 = self.dt0(out1)
         
-
-        out1 = F.softmax(self.fc1(out1), dim=1)
+        if(wandb.config.dense==2):
+            out1 = F.relu(self.fc2(out1))
+            out1 = F.softmax(self.fc3(out1), dim=1)
+        else:
+            out1 = F.softmax(self.fc1(out1), dim=1)
 
         '''branch 2: bits compressing'''
         # out2 = F.selu(self.rfc1(x2))
@@ -170,6 +175,8 @@ class Network_l2(nn.Module):
 
         self.fc1 = nn.Linear(self.conv2_outchannel*self.cov2fc_W*self.cov2fc_H, 9)
 
+        self.fc2 = nn.Linear(self.conv3_outchannel*self.cov2fc_W*self.cov2fc_H, 64)
+        self.fc3 = nn.Linear(64,9)
 
 
     def forward(self, x):
@@ -200,8 +207,11 @@ class Network_l2(nn.Module):
 
         out1 = self.dt0(out1)
         
-
-        out1 = F.softmax(self.fc1(out1), dim=1)
+        if(wandb.config.dense==2):
+            out1 = F.relu(self.fc2(out1))
+            out1 = F.softmax(self.fc3(out1), dim=1)
+        else:
+            out1 = F.softmax(self.fc1(out1), dim=1)
 
         '''branch 2: bits compressing'''
         # out2 = F.selu(self.rfc1(x2))
@@ -218,7 +228,7 @@ class Network_l3_u(nn.Module):
         Args:
             num_classes: number of classes
         """
-        super(Network_l2, self).__init__()
+        super(Network_l3_u, self).__init__()
         '''branch 1: traces compressing'''
         # traceLen, bitLen = input_size
 
@@ -272,7 +282,8 @@ class Network_l3_u(nn.Module):
         #self.fc1 = nn.Linear(self.conv3_outchannel*self.cov2fc_W*self.cov2fc_H, num_classes)
 
         self.fc1 = nn.Linear(self.conv3_outchannel*self.cov2fc_W*self.cov2fc_H, 9)
-
+        self.fc2 = nn.Linear(self.conv3_outchannel*self.cov2fc_W*self.cov2fc_H, 64)
+        self.fc3 = nn.Linear(64,9)
 
 
     def forward(self, x):
@@ -306,7 +317,11 @@ class Network_l3_u(nn.Module):
         out1 = self.dt0(out1)
         
 
-        out1 = F.softmax(self.fc1(out1), dim=1)
+        if(wandb.config.dense==2):
+            out1 = F.relu(self.fc2(out1))
+            out1 = F.softmax(self.fc3(out1), dim=1)
+        else:
+            out1 = F.softmax(self.fc1(out1), dim=1)
 
         '''branch 2: bits compressing'''
         # out2 = F.selu(self.rfc1(x2))
