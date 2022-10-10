@@ -57,22 +57,7 @@ import time
 
 if "__main__" == __name__:
 
-    # sweep_configuration = {
-    # 'method': 'random',
-    # 'name': 'sweep',
-    # 'metric': {'goal': 'minimize', 'name': 'train_total_loss'},
-    # 'parameters': 
-    # {
-    #     'epochs': {'values': [20000]},
-    #     'lr': {'values': [0.001]},
-    #     'Q' : {'values' : [8]},
-    #     'J' : {'values' : [3]},
-    #     'optimizer' : {'values': ['rmsprop']}
 
-    #  }
-
-
-    # }
 
     np.random.seed(0)
     torch.manual_seed(0)

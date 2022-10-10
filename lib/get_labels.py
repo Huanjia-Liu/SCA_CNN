@@ -21,6 +21,9 @@ def get_HammingWeight( atk_round, byte_pos, plt, cpt ):
     return ( np.array( HW_f_kg ) )
 
 
+    
+
+
 
 
 
