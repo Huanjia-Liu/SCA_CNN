@@ -117,7 +117,7 @@ class Data():
     
     def features_normal_db(self):
         self.mean = np.array(np.mean(self.train,axis=0))
-        self.var = np.array(np.var(self.train, axis=0))
+        self.var = np.array(np.var(self.train, axis =0))
     
     def max_normal(self):
         self.max = np.amax( self.train )

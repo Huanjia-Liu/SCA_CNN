@@ -30,7 +30,7 @@ class hyperparams():
         self.atk_round = 1
         # self.byte_pos = 4
         #
-        self.train_batch_size =  1000
+        self.train_batch_size =  1024
         self.vali_batch_size = 1000
 
         self.test_batch_size = 0
@@ -54,8 +54,8 @@ class hyperparams():
     
         self.key_guess_num = 256
 
-        self.train_size = 4000
-        self.vali_size = 1000
+        self.train_size = 8000
+        self.vali_size = 2000
         self.test_size = 0
 
         self.ratio_arr = torch.tensor( [1,0.5] ).double()

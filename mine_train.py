@@ -31,7 +31,7 @@ import math
 # test
 
 
-
+from wandb_config import wandb_config
 
 
 
@@ -48,9 +48,20 @@ def train(model, device, train_loader, optimizer, epoch, data_temp, scheduler):
         traces = traces.unsqueeze(1)
         preds = model(traces)
        # train_loss = loss_functions.KNLL( preds, labels.long() )
+        if(wandb_config.loss_function=='mse'):
+            loss = torch.nn.MSELoss()
+            train_loss = loss(preds, labels.long())
+        elif(wandb_config.loss_function =='nll'):
 
+            loss = torch.nn.NLLLoss()
+            train_loss = loss(preds, labels.long())
+        elif(wandb_config.loss_function == 'cross'):
 
-        train_loss = loss_functions.corr_loss(preds, labels)
+            loss = torch.nn.CrossEntropyLoss()
+            train_loss = loss(preds, labels.long())
+        elif(wandb_config.loss_function == 'mine_cross'):
+
+            train_loss = loss_functions.corr_loss(preds, labels)
 
 
 
@@ -60,6 +71,8 @@ def train(model, device, train_loader, optimizer, epoch, data_temp, scheduler):
 
         train_loss.backward()
         optimizer.step()
+
+
         scheduler.step()
         train_total_loss += train_loss.item()
     return train_total_loss
@@ -71,9 +84,20 @@ def test(models, device, test_loader, data_temp):
     with torch.no_grad():
         all_vali_preds, all_vali_labels = get_all_preds_labels(model=models, loader=test_loader, device=device, mean=data_temp.mean, var=data_temp.var)
         #vali_loss = loss_functions.KNLL( all_vali_preds, all_vali_labels.long() )
+        if(wandb_config.loss_function=='mse'):
+            loss = torch.nn.MSELoss()
+            vali_loss = loss(all_vali_preds, all_vali_labels.long())
+        elif(wandb_config.loss_function =='nll'):
 
+            loss = torch.nn.NLLLoss()
+            vali_loss = loss(all_vali_preds, all_vali_labels.long())
+        elif(wandb_config.loss_function == 'cross'):
 
-        vali_loss = loss_functions.corr_loss(all_vali_preds, all_vali_labels)
+            loss = torch.nn.CrossEntropyLoss()
+            vali_loss = loss(all_vali_preds, all_vali_labels.long())
+        elif(wandb_config.loss_function == 'mine_cross'):
+
+            vali_loss = loss_functions.corr_loss(all_vali_preds, all_vali_labels)
 
 
 
@@ -85,8 +109,12 @@ def test(models, device, test_loader, data_temp):
 def nn_train(hp, plt, cpt, data, bit_poss, byte_pos):
 
 
-
-    network = Network_l3_u(traceLen=hp.sample_num, num_classes=hp.output)
+    if(wandb_config.layer==2):
+        network = Network_l2( traceLen=hp.sample_num, num_classes=hp.output )
+    elif(wandb_config.layer==3):
+        network = Network_l3( traceLen=hp.sample_num, num_classes=hp.output )
+    elif(wandb_config.layer==4):
+        network = Network_l3_u(traceLen=hp.sample_num, num_classes=hp.output)
 
     stat_params = network.state_dict()
     #labels = get_LSB( atk_round=hp.atk_round, byte_pos=byte_pos, plt=plt, cpt=cpt ).astype( 'uint8' )
@@ -106,8 +134,11 @@ def nn_train(hp, plt, cpt, data, bit_poss, byte_pos):
         key_list = key_list[key_list!= key[byte_pos]]
     
         for key_guess in range(1):
+            if(wandb_config.wrong_key!=0):
+                key_guess = np.random.choice(key_list)
+            else:
+                key_guess = key[byte_pos]
 
-            key_guess =162
 
             Data1.no_resample(key_guess, hp)
             Data1.data_spilt()
@@ -122,8 +153,12 @@ def nn_train(hp, plt, cpt, data, bit_poss, byte_pos):
             print(Data1.vali_labels.max())
             vali_loader = DeviceDataLoader(vali_loader, DV.device)
 
-
-            network = Network_l3_u(traceLen=hp.sample_num, num_classes=hp.output)
+            if(wandb_config.layer==2):
+                network = Network_l2( traceLen=hp.sample_num, num_classes=hp.output )
+            elif(wandb_config.layer==3):
+                network = Network_l3( traceLen=hp.sample_num, num_classes=hp.output )
+            elif(wandb_config.layer==4):
+                network = Network_l3_u(traceLen=hp.sample_num, num_classes=hp.output)
 
             network.load_state_dict( stat_params )
             network.train()
@@ -131,17 +166,23 @@ def nn_train(hp, plt, cpt, data, bit_poss, byte_pos):
             TO_device.to_device(network, DV.device)
 
 
+            if wandb_config.optimizer=='sgd':
+                optimizer = optim.SGD(network.parameters(), lr=wandb_config.lr, momentum=0.9, nesterov=True)
+                
+            elif wandb_config.optimizer=='rmsprop':
+                optimizer = optim.RMSprop(network.parameters(), lr=wandb_config.lr, weight_decay=1e-5)
+            elif wandb_config.optimizer=='adam':
+                optimizer = optim.Adam(network.parameters(), lr=wandb_config.lr)  
+            elif wandb_config.optimizer=='nadam':
+                optimizer = optim.NAdam(network.parameters(), lr=wandb_config.lr, betas=(0.9,0.999))
 
-            optimizer = optim.NAdam(network.parameters(), lr=0.0002, betas=(0.9,0.999))
-
-            scheduler = optim.lr_scheduler.CyclicLR(optimizer, base_lr=0.0002, max_lr=0.001, step_size_up=60, mode='triangular', cycle_momentum=False, last_epoch=-1)
+            scheduler = optim.lr_scheduler.CyclicLR(optimizer, base_lr=wandb_config.lr, max_lr=0.001, step_size_up=60, mode='triangular', cycle_momentum=False, last_epoch=-1)
 
 
          
             train_total_loss = 0
 
-
-            for epoch in range(50):
+            for epoch in range(wandb_config.epochs):
 
                 vali_loss, vali_total_correct = test(network,DV.device,vali_loader,Data1)
                 print(
