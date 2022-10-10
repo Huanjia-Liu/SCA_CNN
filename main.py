@@ -9,6 +9,7 @@ from lib.function_initialization import read_plts
 from lib.SCA_preprocessing import sca_preprocessing as scap
 from mine_train import nn_train
 import wandb
+import torch
 
 def byte_machine( byte, plts, hp, trcs):
     # srt = [30800, 24500, 45000, 32500, 47500, 41000, 37000, 34500, 26500, 39000, 28500, 43000, 20000, 22000, 49000, 18000]
@@ -95,6 +96,8 @@ if "__main__" == __name__:
 
     # }
 
+    np.random.seed(0)
+    torch.manual_seed(0)
 
     start_time = time.time()
     sweep_id = wandb.sweep(sweep=sweep_configuration, project='pytorch-sca-HW-10_08_wrong_key')

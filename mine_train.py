@@ -71,7 +71,10 @@ def train(model, device, train_loader, optimizer, epoch, data_temp, scheduler):
 
         train_loss.backward()
         optimizer.step()
-        scheduler.step()
+        if epoch <= 189: scheduler.step()
+        else: 
+            for g in optimizer.param_groups: g['lr'] = g['lr'] * 0.95
+
         train_total_loss += train_loss.item()
     return train_total_loss
 
