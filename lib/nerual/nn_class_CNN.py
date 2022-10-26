@@ -505,8 +505,6 @@ class mlp(nn.Module):
         return out1
 
 
-import torch.nn as nn
-import torch.nn.functional as F
 
 
 class mlp_jc(nn.Module):
@@ -533,6 +531,54 @@ class mlp_jc(nn.Module):
         out1 = self.fc3(out1)
  
 
+
+
+        return out1
+
+
+
+class mlp_3(nn.Module):
+
+    def __init__(self, traceLen, num_classes):
+        """ Constructor
+        Args:
+            num_classes: number of classes
+        """
+        super(mlp_3, self).__init__()
+        '''branch 1: traces compressing'''
+        # traceLen, bitLen = input_size
+
+        self.num_classes = num_classes
+
+       
+
+        self.fc1 = nn.Linear(traceLen, wandb.config.channel_1)
+
+        self.fc2 = nn.Linear(wandb.config.channel_1, wandb.config.channel_2)
+        self.fc3 = nn.Linear(wandb.config.channel_2, 1)
+        
+        # self.fc3 = nn.Linear(32, num_classes)
+        
+        '''branch 2: bits compressing'''
+        # self.bitLen = bitLen
+        # self.rfc1 = nn.Linear(self.bitLen, num_classes)
+
+
+    def forward(self, x):
+        # x1, x2 = x
+
+
+
+ 
+        #out1 = x.view(x.size(0), -1)
+        out1 = F.selu(self.fc1(x))
+        out1 = F.selu(self.fc2(out1))
+        out1 = F.selu(self.fc3(out1))
+        #out1 = F.selu(self.fc3(out1))
+        # # out = out.mean(2)
+        # out = self.fc3(out)
+        '''branch 2: bits compressing'''
+        # out2 = F.selu(self.rfc1(x2))
 
 
         return out1

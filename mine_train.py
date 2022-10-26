@@ -6,7 +6,7 @@ from lib.nerual.nn_utils import *
 from lib.custom_dataset import mydataset
 # from nn_class_MLP import Network
 # from nn_class_CNN import ascadCNNbest
-from lib.nerual.nn_class_CNN import Network_l2, Network_l3, Network_l3_u, mlp, mlp_jc, Network_jc
+from lib.nerual.nn_class_CNN import Network_l2, Network_l3, Network_l3_u, mlp, mlp_jc, Network_jc, mlp_3
 # from nn_save import nn_save
 # from plot_accuracy import plot_acc
 #from nn_tensorboard import *
@@ -60,7 +60,8 @@ def train(model, device, train_loader, optimizer, epoch, data_temp, scheduler):
             loss = torch.nn.CrossEntropyLoss()
             train_loss = loss(preds, labels.long())
         elif(wandb.config.loss_function == 'mine_cross'):
-
+            if(wandb.config.layer==8 or wandb.config.layer==9):
+                preds = torch.sum(preds,dim=2)
             train_loss = loss_functions.corr_loss(preds, labels)
 
 
@@ -97,7 +98,8 @@ def test(models, device, test_loader, data_temp):
             loss = torch.nn.CrossEntropyLoss()
             vali_loss = loss(all_vali_preds, all_vali_labels.long())
         elif(wandb.config.loss_function == 'mine_cross'):
-
+            if(wandb.config.layer==8 or wandb.config.layer==9):
+                all_vali_preds = torch.sum(all_vali_preds,dim=2)
             vali_loss = loss_functions.corr_loss(all_vali_preds, all_vali_labels)
 
 
@@ -122,6 +124,8 @@ def nn_train( plt, cpt, data, bit_poss, byte_pos, sample_num):
         network = mlp(traceLen=sample_num, num_classes=1)
     elif(wandb.config.layer==8):
         network = mlp_jc(traceLen=sample_num, num_classes=1)
+    elif(wandb.config.layer==9):
+        network = mlp_3(traceLen=sample_num, num_classes=1)
 
 
 

@@ -1,4 +1,5 @@
-import time  
+import time
+from matplotlib.pyplot import scatter  
 import numpy as np
 
 from hyperparam import hyperparams        
@@ -50,31 +51,31 @@ wrong_key = [x for x in range(256)]
 
 
 sweep_configuration00 = {
-    'method': 'grid',              #'bayes',
+    'method': 'bayes',              #'bayes',
     'name': 'sweep',
     'metric': {'goal': 'minimize', 'name': 'vali_loss'},
     'parameters': 
     {
         'epochs': {'values': [200]},
-        'lr':  {'values': [0.00001]},              #{'max':0.001, 'min':0.0001 },
-        'Q' : {'values' : [32]},                            #[16,20,24,28,32]
-        'J' : {'values' : [2]},
+        'lr':  {'max':0.0005, 'min':0.00001 },              #{'max':0.001, 'min':0.0001 },
+        'Q' : {'values' : [8,12,16,20,24,36,48,52,64]},                            #[16,20,24,28,32]
+        'J' : {'values' : [1,2,3,4]},
         #'windows' : {'values': [84]},
 
         'optimizer' : {'values': ['adam']},                         #['sgd', 'rmsprop', 'adam', 'nadam']},
         'loss_function' : {'values': ['mine_cross']},
-        'wrong_key': {'values':wrong_key},        #add number to increase wrong key number
-        'layer' : {'values': [6]},                  #[2,3,4]
+        'wrong_key': {'values':[0]},        #add number to increase wrong key number
+        'layer' : {'values': [7]},                  #[2,3,4]
         'kernel' : {'values': [2]},
         'kernel_width' : {'values':[3]},                       #[16,24,32,36]
         'dense' : {'values': [1]},
-        'path' : {'values': ["/data/SCA_data/ASCAD_data/ASCAD_databases/ASCAD.h5"]},               #\ASCAD_desync50.h5"
+        'path' : {'values': ["/data/SCA_data/ASCAD_data/ASCAD_databases/ASCAD_desync50.h5"]},               #\ASCAD_desync50.h5"
         'traces_num': {'values': [2500]},
         'project_name': {'values': ['total_50_2.5k_scattering']},
-        'channel_1' : {'values': [4]},
-        'channel_2' : {'values': [16]},
+        'channel_1' : {'values': [10,20,30,50,64,128,256,512]},
+        'channel_2' : {'values': [64]},
         'channel_3' : {'values': [32]},
-        "train_batch_size" : {'values': [1024]},
+        "train_batch_size" : {'values': [500]},
         "vali_batch_size" : {'values': [1000]}
      
         }
@@ -168,8 +169,18 @@ def main():
 
     #STFT
     #f,t,scattered_trcs = scipy.signal.stft(trcs, nperseg=wandb.config.windows)
-    sample_num = ( scattered_trcs.shape[1], scattered_trcs.shape[2] )
 
+#####################################################
+    #scattered_trcs = scattered_trcs.reshape(scattered_trcs.shape[0], -1)
+    #scattered_trcs = np.log10( abs(scattered_trcs))
+
+
+
+######################################################
+
+
+    sample_num = ( scattered_trcs.shape[1], scattered_trcs.shape[2] )
+#    sample_num = scattered_trcs.shape[1]
 
 
     #normalize here
@@ -205,8 +216,8 @@ if "__main__" == __name__:
     for i in range(1):
 
         start_time = time.time()
-        sweep_id = wandb.sweep(sweep=sweep_config_list[i], project=f"test_for_new_commit")
-        wandb.agent(sweep_id, function = main, count=256)
+        sweep_id = wandb.sweep(sweep=sweep_config_list[i], project=f"test_for_new_50")
+        wandb.agent(sweep_id, function = main, count=80)
 
         stop_time = time.time()
 
