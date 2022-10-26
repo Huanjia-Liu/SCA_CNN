@@ -10,8 +10,140 @@ from lib.SCA_preprocessing import sca_preprocessing as scap
 from mine_train import nn_train
 import wandb
 import torch
+wrong_key = [x for x in range(256)] 
+#############################################Scattering#######################################
+'''
+    sweep_configuration00 = {
+    'method': 'grid',              #'bayes',
+    'name': 'sweep',
+    'metric': {'goal': 'minimize', 'name': 'vali_loss'},
+    'parameters': 
+    {
+        'epochs': {'values': [200]},
+        'lr':  {'values': [0.00001]},              #{'max':0.001, 'min':0.0001 },
+        'Q' : {'values' : [32]},                            #[16,20,24,28,32]
+        'J' : {'values' : [2]},
+        #'windows' : {'values': [84]},
 
-def byte_machine( byte, plts, hp, trcs):
+        'optimizer' : {'values': ['adam']},                         #['sgd', 'rmsprop', 'adam', 'nadam']},
+        'loss_function' : {'values': ['mine_cross']},
+        'wrong_key': {'values':wrong_key},        #add number to increase wrong key number
+        'layer' : {'values': [6]},                  #[2,3,4]
+        'kernel' : {'values': [2]},
+        'kernel_width' : {'values':[3]},                       #[16,24,32,36]
+        'dense' : {'values': [1]},
+        'path' : {'values': ["/data/SCA_data/ASCAD_data/ASCAD_databases/ASCAD.h5"]},               #\ASCAD_desync50.h5"
+        'traces_num': {'values': [2500]},
+        'project_name': {'values': ['total_50_2.5k_scattering']},
+        'channel_1' : {'values': [4]},
+        'channel_2' : {'values': [16]},
+        'channel_3' : {'values': [32]},
+        "train_batch_size" : {'values': [1024]},
+        "test_batch_size" : {'values': [1000]}
+     
+        }
+    }
+     
+
+'''
+
+
+
+sweep_configuration00 = {
+    'method': 'grid',              #'bayes',
+    'name': 'sweep',
+    'metric': {'goal': 'minimize', 'name': 'vali_loss'},
+    'parameters': 
+    {
+        'epochs': {'values': [200]},
+        'lr':  {'values': [0.00001]},              #{'max':0.001, 'min':0.0001 },
+        'Q' : {'values' : [32]},                            #[16,20,24,28,32]
+        'J' : {'values' : [2]},
+        #'windows' : {'values': [84]},
+
+        'optimizer' : {'values': ['adam']},                         #['sgd', 'rmsprop', 'adam', 'nadam']},
+        'loss_function' : {'values': ['mine_cross']},
+        'wrong_key': {'values':wrong_key},        #add number to increase wrong key number
+        'layer' : {'values': [6]},                  #[2,3,4]
+        'kernel' : {'values': [2]},
+        'kernel_width' : {'values':[3]},                       #[16,24,32,36]
+        'dense' : {'values': [1]},
+        'path' : {'values': ["/data/SCA_data/ASCAD_data/ASCAD_databases/ASCAD.h5"]},               #\ASCAD_desync50.h5"
+        'traces_num': {'values': [2500]},
+        'project_name': {'values': ['total_50_2.5k_scattering']},
+        'channel_1' : {'values': [4]},
+        'channel_2' : {'values': [16]},
+        'channel_3' : {'values': [32]},
+        "train_batch_size" : {'values': [1024]},
+        "vali_batch_size" : {'values': [1000]}
+     
+        }
+    }
+
+
+
+
+#############################################STFT#######################################
+'''
+    sweep_stft_10 = {
+    'method': 'bayes',              #'bayes',
+    'name': 'sweep',
+    'metric': {'goal': 'minimize', 'name': 'vali_loss'},
+    'parameters': 
+    {
+        'epochs': {'values': [200]},
+        'lr':  {'values': [0.00005]},              #{'max':0.001, 'min':0.0001 },
+
+        'windows' : {'values': [36,40,48,54,64,72,84,96,128]},
+
+        'optimizer' : {'values': ['sgd', 'rmsprop', 'adam', 'nadam']},                         #['sgd', 'rmsprop', 'adam', 'nadam']},
+        'loss_function' : {'values': ['mine_cross']},
+        'wrong_key': {'values':[0]},        #add number to increase wrong key number
+        'layer' : {'values': [2]},                  #[2,3,4]
+        'kernel' : {'values': [2,3,4,5]},
+        'kernel_width' : {'values':[2,3,4,5]},                       #[16,24,32,36]
+        'dense' : {'values': [1,2]},
+        'path' : {'values': ["/data/SCA_data/ASCAD_data/ASCAD_databases/ASCAD_desync50.h5"]},               #\ASCAD_desync50.h5"
+        'traces_num': {'values': [7000]},
+        'project_name': {'values': ['stft_6k_50']},
+        'channel_1' : {'values': [2,4,8]},
+        'channel_2' : {'values': [8,16,32]},
+        'channel_3' : {'values': [32]},
+        "train_batch_size" : {'values': [1024]},
+        "vali_batch_size" : {'values': [1000]}
+     
+        }
+     
+    }
+'''
+
+##############################################Test_generate##############################
+
+
+
+def config_extract(project_name, index):
+    api = wandb.Api()
+    # Project is specified by <entity/project-name>
+    project_name = "scattering_5k_100_final"
+    runs = api.runs(f'aceleo/{project_name}')
+    wrong_key = [x for x in range(256)]   
+    run = runs[0]
+    for key in run:
+        run[key] = {'values': [run[key]]}
+    run['wrong_key']['values'] = wrong_key
+
+    sweep_configuration = {
+        'method': 'grid',              
+        'name': 'sweep',
+        'metric': {'goal': 'minimize', 'name': 'vali_loss'},
+        'parameters': run
+    }
+    return sweep_configuration
+
+
+
+
+def byte_machine( byte, plts,  trcs, sample_num):
     # srt = [30800, 24500, 45000, 32500, 47500, 41000, 37000, 34500, 26500, 39000, 28500, 43000, 20000, 22000, 49000, 18000]
     # end = [33800, 27500, 48000, 35500, 50500, 44000, 40000, 37500, 29500, 42000, 31500, 46000, 23000, 25000, 52000, 21000]
     # srt = 0
@@ -19,23 +151,26 @@ def byte_machine( byte, plts, hp, trcs):
     for bit in range(1):
         bit = 0
         # traces = load_raw_ascad( ascad_database_file=hp.path_reproduce, num_trc=num_trc, start=srt, end=end )
-        nn_train( hp, plts, None, trcs.astype(np.float32), bit, byte)
+        nn_train( plts, None, trcs.astype(np.float32), bit, byte, sample_num)
 
 
 def main():
 
 
-    wandb.init(project='pytorch-sca-HW-10_08_wrong_key')
+    wandb.init(project=f"total_test")
 
-    hp = hyperparams()
-    
-    num_trc = hp.train_size + hp.vali_size
-    trcs, metadata = load_raw_ascad(ascad_database_file=hp.path_trace, idx_srt=0, idx_end=num_trc, start=hp.start, end=hp.end, load_metadata=True)
+
+    trcs, metadata = load_raw_ascad(ascad_database_file=wandb.config.path, idx_srt=0, idx_end=wandb.config.traces_num, start=0, end=700, load_metadata=True)
     
     J = wandb.config.J
     Q = wandb.config.Q
     scattered_trcs = scap.scattering( trcs=trcs.astype(np.float32), J=J, M=trcs.shape[1], Q=Q )
-    hp.sample_num = ( scattered_trcs.shape[1], scattered_trcs.shape[2] )
+
+    #STFT
+    #f,t,scattered_trcs = scipy.signal.stft(trcs, nperseg=wandb.config.windows)
+    sample_num = ( scattered_trcs.shape[1], scattered_trcs.shape[2] )
+
+
 
     #normalize here
     # if(wandb.config.normalize):
@@ -49,7 +184,7 @@ def main():
     
     for byte in range(1):
         byte=2
-        byte_machine( byte, plts, hp, scattered_trcs )
+        byte_machine( byte, plts, scattered_trcs ,sample_num)
         print("byte:", byte, "Done!")
 
 
@@ -57,52 +192,22 @@ def main():
 import time
 
 if "__main__" == __name__:
-    sweep_configuration = {
-    'method': 'grid',              #'bayes',
-    'name': 'sweep',
-    'metric': {'goal': 'minimize', 'name': 'loss'},
-    'parameters': 
-    {
-        'epochs': {'values': [50]},
-        'lr':  {'values' : [0.0002]},                    #{'max':0.001, 'min':0.0001 },
-        'Q' : {'values' : [24]},                            #[16,20,24,28,32]
-        'J' : {'values' : [1]},
-        'optimizer' : {'values': ['nadam']},                           #['sgd', 'rmsprop', 'adam', 'nadam']},
-        'loss_function' : {'values': ['mine_cross']},
-        'wrong_key': {'values':[0, 1,2,3,4,5,6,7,8,9,10]},        #add number to increase wrong key number
-        'layer' : {'values': [4]},
-        'kernel' : {'values': [3]},
-        'kernel_width' : {'values':[32]},                       #[16,24,32,36]
-        'dense' : {'values': [1]}
+    sweep_config_list  = [sweep_configuration00]
 
-    #    'normalize':{'values':[0,1]}
-        }
-     
-    }
-    # sweep_configuration = {
-    # 'method': 'random',
-    # 'name': 'sweep',
-    # 'metric': {'goal': 'minimize', 'name': 'train_total_loss'},
-    # 'parameters': 
-    # {
-    #     'epochs': {'values': [20000]},
-    #     'lr': {'values': [0.001]},
-    #     'Q' : {'values' : [8]},
-    #     'J' : {'values' : [3]},
-    #     'optimizer' : {'values': ['rmsprop']}
-
-    #  }
-
-
-    # }
 
     np.random.seed(0)
     torch.manual_seed(0)
+    torch.cuda.manual_seed_all(0)
+    torch.backends.cudnn.benchmark = False
+    torch.backends.cudnn.deterministic = True
+    torch.cuda.empty_cache() 
 
-    start_time = time.time()
-    sweep_id = wandb.sweep(sweep=sweep_configuration, project='pytorch-sca-HW-10_08_wrong_key')
-    wandb.agent(sweep_id, function = main, count=100)
+    for i in range(1):
 
-    stop_time = time.time()
+        start_time = time.time()
+        sweep_id = wandb.sweep(sweep=sweep_config_list[i], project=f"test_for_new_commit")
+        wandb.agent(sweep_id, function = main, count=256)
 
-    print('Duration: {}'.format(time.strftime('%H:%M:%S', time.gmtime(stop_time - start_time))))
+        stop_time = time.time()
+
+        print('Duration: {}'.format(time.strftime('%H:%M:%S', time.gmtime(stop_time - start_time))))
