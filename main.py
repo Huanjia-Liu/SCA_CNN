@@ -128,7 +128,7 @@ def config_extract(project_name, index):
     project_name = "scattering_5k_100_final"
     runs = api.runs(f'aceleo/{project_name}')
     wrong_key = [x for x in range(256)]   
-    run = runs[0]
+    run = runs[index]
     for key in run:
         run[key] = {'values': [run[key]]}
     run['wrong_key']['values'] = wrong_key
@@ -203,6 +203,9 @@ def main():
 import time
 
 if "__main__" == __name__:
+
+
+
     sweep_config_list  = [sweep_configuration00]
 
 
