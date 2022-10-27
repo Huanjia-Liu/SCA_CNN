@@ -57,9 +57,9 @@ sweep_configuration00 = {
     'parameters': 
     {
         'epochs': {'values': [200]},
-        'lr':  {'max':0.0005, 'min':0.00001 },              #{'max':0.001, 'min':0.0001 },
-        'Q' : {'values' : [8,12,16,20,24,36,48,52,64]},                            #[16,20,24,28,32]
-        'J' : {'values' : [1,2,3,4]},
+        'lr':  {'max':0.0001, 'min':0.00001 },             #{'max':0.001, 'min':0.0001 },
+        'Q' : {'values' : [8,12,16,20,24,36,48,52,64]},                            #[8,12,16,20,24,36,48,52,64]
+        'J' : {'values' : [1,2,3,4,5]},
         #'windows' : {'values': [84]},
 
         'optimizer' : {'values': ['adam']},                         #['sgd', 'rmsprop', 'adam', 'nadam']},
@@ -72,7 +72,7 @@ sweep_configuration00 = {
         'path' : {'values': ["/data/SCA_data/ASCAD_data/ASCAD_databases/ASCAD_desync50.h5"]},               #\ASCAD_desync50.h5"
         'traces_num': {'values': [2500]},
         'project_name': {'values': ['total_50_2.5k_scattering']},
-        'channel_1' : {'values': [10,20,30,50,64,128,256,512]},
+        'channel_1' : {'values': [10,20,30,40,52,64,72,84,96,128,256,512]},
         'channel_2' : {'values': [64]},
         'channel_3' : {'values': [32]},
         "train_batch_size" : {'values': [500]},
@@ -158,7 +158,15 @@ def byte_machine( byte, plts,  trcs, sample_num):
 def main():
 
 
+
     wandb.init(project=f"total_test")
+    np.random.seed(0)
+    torch.manual_seed(0)
+    torch.cuda.manual_seed_all(0)
+    torch.backends.cudnn.benchmark = False
+    torch.backends.cudnn.deterministic = True
+    torch.cuda.empty_cache() 
+
 
 
     trcs, metadata = load_raw_ascad(ascad_database_file=wandb.config.path, idx_srt=0, idx_end=wandb.config.traces_num, start=0, end=700, load_metadata=True)
@@ -206,18 +214,13 @@ if "__main__" == __name__:
     sweep_config_list  = [sweep_configuration00]
 
 
-    np.random.seed(0)
-    torch.manual_seed(0)
-    torch.cuda.manual_seed_all(0)
-    torch.backends.cudnn.benchmark = False
-    torch.backends.cudnn.deterministic = True
-    torch.cuda.empty_cache() 
+
 
     for i in range(1):
 
         start_time = time.time()
-        sweep_id = wandb.sweep(sweep=sweep_config_list[i], project=f"test_for_new_50")
-        wandb.agent(sweep_id, function = main, count=80)
+        sweep_id = wandb.sweep(sweep=sweep_config_list[i], project=f"2.5k_50_final1")
+        wandb.agent(sweep_id, function = main, count=1)
 
         stop_time = time.time()
 
