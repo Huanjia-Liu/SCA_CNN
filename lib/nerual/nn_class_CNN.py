@@ -551,9 +551,9 @@ class mlp_3(nn.Module):
         self.num_classes = num_classes
 
        
-
-        self.fc1 = nn.Linear(traceLen, wandb.config.channel_1)
-
+        self.dt0 = nn.Dropout(0.25)
+        self.fc1 = nn.Linear(traceLen[1]*traceLen[0], wandb.config.channel_1)
+        self.dt1 = nn.Dropout(0.25)
         self.fc2 = nn.Linear(wandb.config.channel_1, wandb.config.channel_2)
         self.fc3 = nn.Linear(wandb.config.channel_2, 1)
         
@@ -570,8 +570,8 @@ class mlp_3(nn.Module):
 
 
  
-        #out1 = x.view(x.size(0), -1)
-        out1 = F.selu(self.fc1(x))
+        out1 = x.view(x.size(0), -1)
+        out1 = F.selu(self.fc1(out1))
         out1 = F.selu(self.fc2(out1))
         out1 = F.selu(self.fc3(out1))
         #out1 = F.selu(self.fc3(out1))

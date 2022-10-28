@@ -30,7 +30,7 @@ import math
 # import torch
 # test
 
-
+import h5py
 import wandb
 
 
@@ -41,11 +41,12 @@ def train(model, device, train_loader, optimizer, epoch, data_temp, scheduler):
     model.eval()
 
     train_total_loss = 0
-
+    total_grad = []
     for batch in train_loader:
         index, traces, labels = batch
         traces = sca_preprocessing.trcs_scaled_centrolize_agmt( traces, torch.from_numpy(data_temp.mean).to(device), torch.sqrt( torch.from_numpy(data_temp.var) ).to(device) )
         traces = traces.unsqueeze(1)
+        traces.requires_grad=True
         preds = model(traces)
        # train_loss = loss_functions.KNLL( preds, labels.long() )
         if(wandb.config.loss_function=='mse'):
@@ -77,7 +78,12 @@ def train(model, device, train_loader, optimizer, epoch, data_temp, scheduler):
             for g in optimizer.param_groups: g['lr'] = g['lr'] * 0.95
 
         train_total_loss += train_loss.item()
-    return train_total_loss
+        temp_grad = traces.grad
+        #temp_grad = torch.abs(temp_grad)
+        temp_grad_cpu = torch.sum(temp_grad,dim=(0,1)).cpu().detach().numpy()
+        total_grad.append(temp_grad_cpu)
+
+    return train_total_loss, total_grad
 
 
 def test(models, device, test_loader, data_temp):
@@ -149,10 +155,10 @@ def nn_train( plt, cpt, data, bit_poss, byte_pos, sample_num):
         key_list = key_list[key_list!= key[byte_pos]]
     
         for key_guess in range(1):
-            if(wandb.config.wrong_key!=0):
-                key_guess = np.random.choice(key_list)
-            else:
+            if(wandb.config.wrong_key==0):
                 key_guess = key[byte_pos]
+            else:
+                key_guess = key_list[wandb.config.wrong_key-1]
 
 
             Data1.no_resample(key_guess, wandb.config.traces_num*0.8, wandb.config.traces_num*0.2, 0)
@@ -189,6 +195,7 @@ def nn_train( plt, cpt, data, bit_poss, byte_pos, sample_num):
 
          
             train_total_loss = 0
+            total_grad_list = []
 
             wandb.watch(network,log='all')
             for epoch in range(wandb.config.epochs):
@@ -211,9 +218,14 @@ def nn_train( plt, cpt, data, bit_poss, byte_pos, sample_num):
                 if(math.isnan(vali_loss.item())):
                     continue
 
+                train_total_loss,total_grad = train(network, DV.device, train_loader, optimizer,epoch, Data1, scheduler)
 
-                train_total_loss = train(network, DV.device, train_loader, optimizer,epoch, Data1, scheduler)
-            
+                total_grad_list.append(total_grad)
+            total_grad_np = np.array(total_grad_list).astype(np.float32)
+                
+            with h5py.File(f'grad5/{wandb.config.project_name}_{wandb.config.wrong_key}.h5', 'w') as f:
+                  f.create_dataset('grad', data=total_grad_np)
+
             torch.save(network.state_dict(), 'model/model.h5')
             wandb.save('model.h5')
 
