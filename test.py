@@ -21,3 +21,4 @@ class new_test():
         global a
         print(a)
 print(wp.scattering_sweep['parameters']['J']['values'])
+just for test
