@@ -188,7 +188,27 @@ def main():
 		pass
 
 
+def load_sx_file(sx_file, idx_srt, idx_end, start, end, load_metadata=False ):
 
+	# Open the ASCAD database HDF5 for reading
+	try:
+		in_file  = h5py.File(sx_file, "r")
+	except:
+		print("Error: can't open HDF5 file '%s' for reading (it might be malformed) ..." % ascad_database_file)
+		sys.exit(-1)
+	# Load raw traces
+	idx = np.arange(idx_srt, idx_end, dtype=np.uint32)
+	idx = idx.tolist()
+	traces = np.array(in_file['traces'][idx, start:end])
+
+	if load_metadata == False:
+		return traces
+	else:
+		return traces, in_file['metadata'] 
+
+def read_plts_sx(metadata, trace_num):
+	return metadata['plain_text'][0:trace_num]
+ 
 
 
 if "__main__" == __name__:

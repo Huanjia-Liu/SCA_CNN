@@ -5,7 +5,7 @@ from lib.function_initialization import read_plaintextANDmask
 from lib.hdf5_files_import import load_ascad
 from lib.data_transforms import Data
 from lib.get_labels import *
-from hyperparam import hyperparams 
+#from hyperparam import hyperparams 
 import matplotlib.pyplot as plt
 from lib.SCA_preprocessing import sca_preprocessing
 

@@ -145,28 +145,28 @@ class Data():
 # test code
 import time
 from lib.get_labels import get_MSB
-from hyperparam import hyperparams
+#from hyperparam import hyperparams
 from lib.function_initialization import read_plaintextANDmask
 from lib.hdf5_files_import import load_ascad
 
-def main():
-
-    path_trace = r'Data\ASCAD\ASCAD.h5'
-    hp = hyperparams()
-
-    (X_profiling, Y_profiling), (X_attack, Y_attack), (Metadata_profiling, Metadata_attack) = load_ascad( path_trace, True )
-    plt, masks = read_plaintextANDmask(Metadata_profiling)
-
-    labels = get_MSB( atk_round=hp.atk_round, byte_pos=hp.byte_pos, plt=plt, cpt=None )
-    Data1 = Data( X_profiling, labels.T )
-    for key_guess in range(1):
-        key_guess = 1
-        Data1.no_resample(key_guess, hp)
-        Data1.data_randomize()
-        Data1.data_spilt()
-        Data1.features_normal_db()
-        Data1.to_torch()
-
+#def main():
+#
+#    path_trace = r'Data\ASCAD\ASCAD.h5'
+#    hp = hyperparams()
+#
+#    (X_profiling, Y_profiling), (X_attack, Y_attack), (Metadata_profiling, Metadata_attack) = load_ascad( path_trace, True )
+#    plt, masks = read_plaintextANDmask(Metadata_profiling)
+#
+#    labels = get_MSB( atk_round=hp.atk_round, byte_pos=hp.byte_pos, plt=plt, cpt=None )
+#    Data1 = Data( X_profiling, labels.T )
+#    for key_guess in range(1):
+#        key_guess = 1
+#        Data1.no_resample(key_guess, hp)
+#        Data1.data_randomize()
+#        Data1.data_spilt()
+#        Data1.features_normal_db()
+#        Data1.to_torch()
+#
 
 # test
 import time
