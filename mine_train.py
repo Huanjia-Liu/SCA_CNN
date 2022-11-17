@@ -6,7 +6,7 @@ from lib.nerual.nn_utils import *
 from lib.custom_dataset import mydataset
 # from nn_class_MLP import Network
 # from nn_class_CNN import ascadCNNbest
-from lib.nerual.nn_class_CNN import Network
+from lib.nerual.nn_class_CNN import Network_l2, Network_l3, Network_l3_u, mlp, mlp_jc, Network_jc, mlp_3
 # from nn_save import nn_save
 # from plot_accuracy import plot_acc
 #from nn_tensorboard import *
@@ -26,6 +26,7 @@ import torch.nn.functional as F
 import torch.optim as optim
 from itertools import product
 from lib.nerual.nn_loss_functions import loss_functions
+import math
 # import torch
 # test
 
@@ -35,7 +36,7 @@ import wandb
 
 
 
-def train(model, device, train_loader, optimizer, epoch, data_temp):
+def train(model, device, train_loader, optimizer, epoch, data_temp, scheduler):
     model.train()
     model.eval()
 
@@ -47,15 +48,21 @@ def train(model, device, train_loader, optimizer, epoch, data_temp):
         traces = traces.unsqueeze(1)
         preds = model(traces)
        # train_loss = loss_functions.KNLL( preds, labels.long() )
-        if(wandb.config.loss=='mse'):
+        if(wandb.config.loss_function=='mse'):
             loss = torch.nn.MSELoss()
-        elif(wandb.config.loss =='nll'):
+            train_loss = loss(preds, labels.long())
+        elif(wandb.config.loss_function =='nll'):
 
             loss = torch.nn.NLLLoss()
-        elif(wandb.config.loss == 'cross'):
+            train_loss = loss(preds, labels.long())
+        elif(wandb.config.loss_function == 'cross'):
 
             loss = torch.nn.CrossEntropyLoss()
-        train_loss = loss(preds, labels.long())
+            train_loss = loss(preds, labels.long())
+        elif(wandb.config.loss_function == 'mine_cross'):
+            if(wandb.config.layer==8 or wandb.config.layer==9):
+                preds = torch.sum(preds,dim=2)
+            train_loss = loss_functions.corr_loss(preds, labels)
 
 
 
@@ -65,6 +72,10 @@ def train(model, device, train_loader, optimizer, epoch, data_temp):
 
         train_loss.backward()
         optimizer.step()
+        if epoch <= 189: scheduler.step()
+        else: 
+            for g in optimizer.param_groups: g['lr'] = g['lr'] * 0.95
+
         train_total_loss += train_loss.item()
     return train_total_loss
 
@@ -75,15 +86,22 @@ def test(models, device, test_loader, data_temp):
     with torch.no_grad():
         all_vali_preds, all_vali_labels = get_all_preds_labels(model=models, loader=test_loader, device=device, mean=data_temp.mean, var=data_temp.var)
         #vali_loss = loss_functions.KNLL( all_vali_preds, all_vali_labels.long() )
-        if(wandb.config.loss=='mse'):
+        if(wandb.config.loss_function=='mse'):
             loss = torch.nn.MSELoss()
-        elif(wandb.config.loss =='nll'):
+            vali_loss = loss(all_vali_preds, all_vali_labels.long())
+        elif(wandb.config.loss_function =='nll'):
 
             loss = torch.nn.NLLLoss()
-        elif(wandb.config.loss == 'cross'):
+            vali_loss = loss(all_vali_preds, all_vali_labels.long())
+        elif(wandb.config.loss_function == 'cross'):
 
             loss = torch.nn.CrossEntropyLoss()
-        vali_loss = loss(all_vali_preds, all_vali_labels.long())
+            vali_loss = loss(all_vali_preds, all_vali_labels.long())
+        elif(wandb.config.loss_function == 'mine_cross'):
+            if(wandb.config.layer==8 or wandb.config.layer==9):
+                all_vali_preds = torch.sum(all_vali_preds,dim=2)
+            vali_loss = loss_functions.corr_loss(all_vali_preds, all_vali_labels)
+
 
 
 
@@ -91,14 +109,31 @@ def test(models, device, test_loader, data_temp):
 
     return vali_loss, vali_total_correct
 
-def nn_train(hp, plt, cpt, data, bit_poss, byte_pos):
+def nn_train( plt, cpt, data, bit_poss, byte_pos, sample_num):
+
+    #Network part
+    if(wandb.config.layer==2):
+        network = Network_l2( traceLen=sample_num, num_classes=1 )
+    elif(wandb.config.layer==3):
+        network = Network_l3( traceLen=sample_num, num_classes=1 )
+    elif(wandb.config.layer==4):
+        network = Network_l3_u(traceLen=sample_num, num_classes=1)
+    elif(wandb.config.layer==6):
+        network = Network_jc(traceLen=sample_num, num_classes=1)
+    elif(wandb.config.layer==7):
+        network = mlp(traceLen=sample_num, num_classes=1)
+    elif(wandb.config.layer==8):
+        network = mlp_jc(traceLen=sample_num, num_classes=1)
+    elif(wandb.config.layer==9):
+        network = mlp_3(traceLen=sample_num, num_classes=1)
 
 
 
-    network = Network( traceLen=hp.sample_num, num_classes=hp.output )
-    stat_params = network.state_dict()
+
+
+
     #labels = get_LSB( atk_round=hp.atk_round, byte_pos=byte_pos, plt=plt, cpt=cpt ).astype( 'uint8' )
-    labels = get_MSB( atk_round=hp.atk_round, byte_pos=byte_pos, plt=plt, cpt=cpt ).astype( 'uint8' )
+    labels = get_HammingWeight( atk_round=1, byte_pos=byte_pos, plt=plt, cpt=cpt ).astype( 'uint8' )
     DV = TO_device()
     DV.get_default_device()
 
@@ -106,30 +141,42 @@ def nn_train(hp, plt, cpt, data, bit_poss, byte_pos):
     key = [77, 251, 224, 242, 114, 33, 254, 16, 167, 141, 74, 220, 142, 73, 4, 105]
 
     for i in range(1):
-        folder_comment = f'CNN_Comp_ASCADde50_first_HW-byte={byte_pos}'
+
+        
+
+        #Wrong key or right key
+        key_list = np.arange(256)
+        key_list = key_list[key_list!= key[byte_pos]]
+    
         for key_guess in range(1):
-            key_guess = key[byte_pos]
-            Data1.no_resample(key_guess, hp)
+            if(wandb.config.wrong_key!=0):
+                key_guess = np.random.choice(key_list)
+            else:
+                key_guess = key[byte_pos]
+
+
+            Data1.no_resample(key_guess, wandb.config.traces_num*0.8, wandb.config.traces_num*0.2, 0)
             Data1.data_spilt()
             Data1.features_normal_db()
             Data1.to_torch() 
             md_train = mydataset( Data1.train, Data1.train_labels.byte() )
-            train_loader = torch.utils.data.DataLoader(md_train, batch_size=hp.train_batch_size, shuffle=True, drop_last=True)
+            train_loader = torch.utils.data.DataLoader(md_train, batch_size=wandb.config.train_batch_size, shuffle=True, drop_last=True)
             train_loader = DeviceDataLoader(train_loader, DV.device)
 
             md_vali = mydataset( Data1.vali, Data1.vali_labels.byte() )
-            vali_loader = torch.utils.data.DataLoader(md_vali, batch_size=hp.vali_batch_size)
+            vali_loader = torch.utils.data.DataLoader(md_vali, batch_size=wandb.config.vali_batch_size)
             print(Data1.vali_labels.max())
             vali_loader = DeviceDataLoader(vali_loader, DV.device)
-            network = Network( traceLen=hp.sample_num, num_classes=hp.output )
-            network.load_state_dict( stat_params )
+
+
             network.train()
             # move network to deivce
             TO_device.to_device(network, DV.device)
 
-
+            #Optimizer part
             if wandb.config.optimizer=='sgd':
                 optimizer = optim.SGD(network.parameters(), lr=wandb.config.lr, momentum=0.9, nesterov=True)
+                
             elif wandb.config.optimizer=='rmsprop':
                 optimizer = optim.RMSprop(network.parameters(), lr=wandb.config.lr, weight_decay=1e-5)
             elif wandb.config.optimizer=='adam':
@@ -137,8 +184,10 @@ def nn_train(hp, plt, cpt, data, bit_poss, byte_pos):
             elif wandb.config.optimizer=='nadam':
                 optimizer = optim.NAdam(network.parameters(), lr=wandb.config.lr, betas=(0.9,0.999))
 
+            scheduler = optim.lr_scheduler.CyclicLR(optimizer, base_lr=wandb.config.lr, max_lr=0.001, step_size_up=60, mode='triangular', cycle_momentum=False, last_epoch=-1)
 
 
+         
             train_total_loss = 0
 
             wandb.watch(network,log='all')
@@ -155,12 +204,17 @@ def nn_train(hp, plt, cpt, data, bit_poss, byte_pos):
                 wandb.log({"epoch":epoch, 
                             "vali_set_total_correct": vali_total_correct,
                             "vali_loss": vali_loss.item(),
-                            "loss": train_total_loss
+                            "loss": train_total_loss,
+                            "key" : key_guess,
+
                 })
+                if(math.isnan(vali_loss.item())):
+                    continue
 
 
-                train_total_loss = train(network, DV.device, train_loader, optimizer,epoch, Data1)
-            torch.save(network.state_dict(), 'model.h5')
+                train_total_loss = train(network, DV.device, train_loader, optimizer,epoch, Data1, scheduler)
+            
+            torch.save(network.state_dict(), 'model/model.h5')
             wandb.save('model.h5')
 
 

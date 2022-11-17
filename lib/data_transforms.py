@@ -65,13 +65,13 @@ class Data():
         self.vali_size = data_size - self.train_size
         print( "used data size is:", data_size )
     
-    def no_resample(self, key_guess, hp):
+    def no_resample(self, key_guess, train_size, vali_size, test_size):
         self.tempsamples = self.samples
         self.templabels = self.labels[:, key_guess]
         
-        self.train_size = hp.train_size
-        self.vali_size =  hp.vali_size
-        self.test_size =  hp.test_size
+        self.train_size = int(train_size)
+        self.vali_size =  int(vali_size)
+        self.test_size =  int(test_size)
         
         # return (ratio+1)*num_class0
 
@@ -116,8 +116,8 @@ class Data():
     #     print( "training set no. of 1:", self.train_labels[:,key_guess].sum(), " vali set no. of 1:", self.vali_labels[:,key_guess].sum() )
     
     def features_normal_db(self):
-        self.mean = np.array(np.mean(self.train))
-        self.var = np.array(np.var(self.train))
+        self.mean = np.array(np.mean(self.train,axis=0))
+        self.var = np.array(np.var(self.train, axis =0))
     
     def max_normal(self):
         self.max = np.amax( self.train )
