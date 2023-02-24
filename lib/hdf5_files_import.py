@@ -208,6 +208,8 @@ def load_sx_file(sx_file, idx_srt, idx_end, start, end, load_metadata=False ):
 
 def read_plts_sx(metadata, trace_num):
 	return metadata['plain_text'][0:trace_num]
+def read_cpts_sx(metadata, trace_num):
+	return metadata['cipher_text'][0:trace_num]
  
 
 

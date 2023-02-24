@@ -8,21 +8,22 @@ from lib.get_labels import *
 #from hyperparam import hyperparams 
 import matplotlib.pyplot as plt
 from lib.SCA_preprocessing import sca_preprocessing
-
+import wandb
 # define utility function
-def get_all_preds_labels(model, loader, device, mean, var):
+def get_all_preds_labels(model, loader, device, data_temp):
 
     # # print sum of first layer weight
     # print(np.sum(model.fc1.weight.data.to('cpu').numpy()))
 
     all_preds = torch.tensor([]).to(device).float()
     all_labels = torch.tensor([]).to(device).byte()
-    mean = torch.from_numpy(mean).to(device)
-    var = torch.from_numpy(var).to(device)
+    mean = data_temp.mean.to(device)
+    var = data_temp.var.to(device)
     for batch in loader:
         indices, traces, labels = batch
         
         # traces = F.batch_norm(traces.float(), mean.float(), var.float())
+        traces = sca_preprocessing.scattering(traces, J = wandb.config.J, M = traces.shape[1], Q = wandb.config.Q)
         traces = sca_preprocessing.trcs_scaled_centrolize_agmt( traces, mean, torch.sqrt(var)  )
         traces = traces.unsqueeze(1)   
         

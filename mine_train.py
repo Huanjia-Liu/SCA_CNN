@@ -3,7 +3,7 @@ from lib.data_transforms import Data
 from lib.TO_device import TO_device, DeviceDataLoader
 from lib.nerual.nn_utils import *
 from lib.custom_dataset import mydataset
-from lib.nerual.nn_class_CNN import Network_l2, Network_l3, Network_l3_u, mlp, mlp_jc, Network_jc, mlp_3, assign_variable_nn
+from lib.nerual.nn_class_CNN import Network_l2, Network_l3, Network_l3_u, mlp, mlp_jc, Network_jc, mlp_3, assign_variable_nn, cnn_co
 from lib.hdf5_files_import import read_multi_plt, read_multi_h5, load_ascad_metadata, load_raw_ascad  
 from lib.function_initialization import read_plts
 from lib.SCA_preprocessing import sca_preprocessing
@@ -34,8 +34,13 @@ def train(model, device, train_loader, optimizer, epoch, data_temp):
     train_total_loss = 0
     total_grad = []
     for batch in train_loader:
+
         index, traces, labels = batch
-        traces = sca_preprocessing.trcs_scaled_centrolize_agmt( traces, torch.from_numpy(data_temp.mean).to(device), torch.sqrt( torch.from_numpy(data_temp.var) ).to(device) )
+        traces = sca_preprocessing.scattering(traces, J = wandb.config.J, M = traces.shape[1], Q = wandb.config.Q)
+
+
+
+        traces = sca_preprocessing.trcs_scaled_centrolize_agmt( traces, data_temp.mean.to(device), torch.sqrt(data_temp.var).to(device) )
         traces = traces.unsqueeze(1)
         traces.requires_grad=True
         preds = model(traces)
@@ -52,8 +57,8 @@ def train(model, device, train_loader, optimizer, epoch, data_temp):
             loss = torch.nn.CrossEntropyLoss()
             train_loss = loss(preds, labels.long())
         elif(loss_function == 'mine_cross'):
-            if(layer==8 or layer==9):
-                preds = torch.sum(preds,dim=2)
+            #if(layer == 7 or layer==8 or layer==9):
+            #    preds = torch.sum(preds,dim=1)
             train_loss = loss_functions.corr_loss(preds, labels)
 
 
@@ -69,10 +74,13 @@ def train(model, device, train_loader, optimizer, epoch, data_temp):
         #     for g in optimizer.param_groups: g['lr'] = g['lr'] * 0.95
 
         train_total_loss += train_loss.item()
-        temp_grad = traces.grad
-        #temp_grad = torch.abs(temp_grad)
-        temp_grad_cpu = torch.sum(temp_grad,dim=(0,1)).cpu().detach().numpy()
-        total_grad.append(temp_grad_cpu)
+        if(False):
+            temp_grad = traces.grad
+            temp_grad = torch.abs(temp_grad)
+            temp_grad_cpu = torch.sum(temp_grad,dim=(0,1)).cpu().detach().numpy()
+            total_grad.append(temp_grad_cpu)
+        else:
+            total_grad = 0
 
     return train_total_loss, total_grad
 
@@ -82,7 +90,7 @@ def test(models, device, test_loader, data_temp):
     models.eval()
 
     with torch.no_grad():
-        all_vali_preds, all_vali_labels = get_all_preds_labels(model=models, loader=test_loader, device=device, mean=data_temp.mean, var=data_temp.var)
+        all_vali_preds, all_vali_labels = get_all_preds_labels(model=models, loader=test_loader, device=device, data_temp= data_temp)
         #vali_loss = loss_functions.KNLL( all_vali_preds, all_vali_labels.long() )
         if(loss_function=='mse'):
             loss = torch.nn.MSELoss()
@@ -96,14 +104,14 @@ def test(models, device, test_loader, data_temp):
             loss = torch.nn.CrossEntropyLoss()
             vali_loss = loss(all_vali_preds, all_vali_labels.long())
         elif(loss_function == 'mine_cross'):
-            if(layer==8 or layer==9):
-                all_vali_preds = torch.sum(all_vali_preds,dim=2)
-            vali_loss = loss_functions.corr_loss(all_vali_preds, all_vali_labels)
+            #if(layer ==7 or layer==8 or layer==9):
+            #    all_vali_preds = torch.sum(all_vali_preds,dim=1)
+            vali_loss = loss_functions.corr_loss(all_vali_preds, all_vali_labels)    #shape (n,1) (n)
 
 
 
 
-        vali_total_correct = get_num_correct(all_vali_preds, all_vali_labels)
+        vali_total_correct =0 #get_num_correct(all_vali_preds, all_vali_labels)
 
     return vali_loss, vali_total_correct
 
@@ -142,6 +150,7 @@ def nn_train( plt, cpt, data, bit_poss, byte_pos, sample_num, sweep_mode):
     assign_variable_nn(sweep_mode)
     
     
+    
     #Network part
     if(layer==2):
         network = Network_l2( traceLen=sample_num, num_classes=1 )
@@ -157,6 +166,8 @@ def nn_train( plt, cpt, data, bit_poss, byte_pos, sample_num, sweep_mode):
         network = mlp_jc(traceLen=sample_num, num_classes=1)
     elif(layer==9):
         network = mlp_3(traceLen=sample_num, num_classes=1)
+    elif(layer==10):
+        network = cnn_co(traceLen=sample_num, num_classes=1)
 
 
 
@@ -164,16 +175,23 @@ def nn_train( plt, cpt, data, bit_poss, byte_pos, sample_num, sweep_mode):
 
 
     #labels = get_LSB( atk_round=hp.atk_round, byte_pos=byte_pos, plt=plt, cpt=cpt ).astype( 'uint8' )
-    labels = get_HammingWeight( atk_round=1, byte_pos=byte_pos, plt=plt, cpt=cpt ).astype( 'uint8' )
+    #labels = get_HammingWeight( atk_round=1, byte_pos=byte_pos, plt=plt, cpt=cpt ).astype( 'uint8' )
+
+    labels = get_HD_last(atk_round=10, byte_pos=byte_pos, plt=plt, cpt=cpt ).astype( 'uint8' )
     DV = TO_device()
     DV.get_default_device()
 
     Data1 = Data(data, labels.T)
-    key = [77, 251, 224, 242, 114, 33, 254, 16, 167, 141, 74, 220, 142, 73, 4, 105]
+    #key = [77, 251, 224, 242, 114, 33, 254, 16, 167, 141, 74, 220, 142, 73, 4, 105]
 
+    key = [220,250,102,75,101,200,156,56,14,20,62,177,76,142,57,8]  #for jc's data
+    #key = [208, 20, 249, 168]  #aes_rd
+    #key = [43, 126, 21, 22, 40, 174, 210, 166, 171, 247, 21, 136, 9, 207, 79, 60]  #aes_hd
+    #key = [202, 8, 7, 6, 5, 4, 3, 2, 1] #reassure
+    #key = [43, 126, 21, 22]    #aes_rd
     for i in range(1):
 
-        
+    
 
         #Wrong key or right key
         key_list = np.arange(256)
@@ -188,18 +206,20 @@ def nn_train( plt, cpt, data, bit_poss, byte_pos, sample_num, sweep_mode):
 
             Data1.no_resample(key_guess, (hp.trace_end-hp.trace_start)*0.8, (hp.trace_end-hp.trace_start)*0.2, 0)
             Data1.data_spilt()
-            Data1.features_normal_db()
+
+            Data1.features_normal_db()                      #######NEED CHECK
+            
             Data1.to_torch() 
             md_train = mydataset( Data1.train, Data1.train_labels.byte() )
             train_loader = torch.utils.data.DataLoader(md_train, batch_size=hp.train_batch, shuffle=True, drop_last=True)
             train_loader = DeviceDataLoader(train_loader, DV.device)
-
+            print(f"finish---{torch.cuda.memory_reserved(0)/1024/1024/1024}")
             md_vali = mydataset( Data1.vali, Data1.vali_labels.byte() )
             vali_loader = torch.utils.data.DataLoader(md_vali, batch_size=hp.vali_batch)
             print(Data1.vali_labels.max())
             vali_loader = DeviceDataLoader(vali_loader, DV.device)
 
-
+            print(f"finish---{torch.cuda.memory_reserved(0)/1024/1024/1024}")
             network.train()
             # move network to deivce
             TO_device.to_device(network, DV.device)
@@ -218,14 +238,14 @@ def nn_train( plt, cpt, data, bit_poss, byte_pos, sample_num, sweep_mode):
             scheduler = optim.lr_scheduler.CyclicLR(optimizer, base_lr=lr, max_lr=0.001, step_size_up=60, mode='triangular', cycle_momentum=False, last_epoch=-1)
 
 
-         
+            total_vali_list = []
             train_total_loss = 0
             total_grad_list = []
             if(sweep_mode == 'wandb'):
                 wandb.watch(network,log='all')
             for epoch in range(epochs):
 
-                vali_loss, vali_total_correct = test(network,DV.device,vali_loader,Data1)
+                vali_loss, vali_total_correct = test(network,DV.device,vali_loader, Data1)
                 print(
                         "key guess j:", key_guess,
                         "epoch:", epoch,
@@ -241,13 +261,19 @@ def nn_train( plt, cpt, data, bit_poss, byte_pos, sample_num, sweep_mode):
                                 "key" : key_guess,
 
                     })
+                print(f"g-ram ---{torch.cuda.memory_reserved(0)/1024/1024/1024}GB")
+
+                total_vali_list.append(vali_loss.item())
+
+
+
                 if(math.isnan(vali_loss.item())):
                     continue
 
                 train_total_loss,total_grad = train(network, DV.device, train_loader, optimizer,epoch, Data1)
 
-                total_grad_list.append(total_grad)
-            total_grad_np = np.array(total_grad_list).astype(np.float32)
+                #total_grad_list.append(total_grad)
+                #total_grad_np = np.array(total_grad_list).astype(np.float32)
                 
 #            with h5py.File(f'{save_path}grad/{wandb.config.project_name}_{wandb.config.wrong_key}.h5', 'w') as f:
 #                  f.create_dataset('grad', data=total_grad_np)
@@ -255,6 +281,7 @@ def nn_train( plt, cpt, data, bit_poss, byte_pos, sample_num, sweep_mode):
             torch.save(network.state_dict(), f'{save_path}model.h5')
             if(sweep_mode == 'wandb'):
                 wandb.save(f'{save_path}wandb/model.h5')
+    return total_vali_list
 
 
 

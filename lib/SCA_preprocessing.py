@@ -9,7 +9,8 @@ import matplotlib.pyplot as plt
 from scipy.signal import hamming
 import numpy as np
 from mpl_toolkits.axes_grid1 import make_axes_locatable
-from kymatio.numpy import Scattering1D
+from kymatio.torch import Scattering1D
+import torch
 
 
 class sca_preprocessing():
@@ -143,8 +144,22 @@ class sca_preprocessing():
 
     @staticmethod
     def scattering(trcs, J, M, Q):
+        torch.cuda.empty_cache()
+        device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+        if(isinstance(trcs, np.ndarray)):
+            tensor = False
+        else:
+            tensor = True
+
+
+
+        if(not tensor):
+            trcs = torch.from_numpy(trcs).float().to(device)
         S = Scattering1D(J, M, Q)
-        Sx = S.scattering(trcs)
+        S.cuda()
+        Sx = S(trcs)
+        if(not tensor):
+            Sx = Sx.cpu()
 
         return Sx
 ####################################################### Data Normalization ################################################

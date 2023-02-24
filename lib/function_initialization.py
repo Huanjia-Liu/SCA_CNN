@@ -124,8 +124,8 @@ def init_cpa_hd(atk_round, byte_pos, plt=None, cpt=None):
     print( 'plaintext or ciphertext byte %x:' % byte_pos, byte1 )
     
     # disabled when processing ascad data
-    byte1 = np.array([ int(element,16) for element in byte1 ])
-    byte2 = np.array([ int(element,16) for element in byte2 ])
+    #byte1 = np.array([ int(element,16) for element in byte1 ])
+    #byte2 = np.array([ int(element,16) for element in byte2 ])
 
     return byte1, byte2
 

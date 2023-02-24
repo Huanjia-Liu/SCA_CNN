@@ -2,17 +2,23 @@
 import torch 
 import torch.nn.functional as F
 import numpy as np
+from kymatio.torch import Scattering1D
+import wandb
+from hyperparam import hyperparam as hp
+
 
 class Data():
     def __init__(self, samples=None, labels=None):
-        if ( (samples==None).all() ):
-            self.samples = []
-        else:
-            self.samples = samples
-        if ( (labels==None).all() ):
-            self.labels = []
-        else:
-            self.labels = labels
+        # if ( (samples==None).all() ):
+        #     self.samples = []
+        # else:
+        #     self.samples = samples
+        # if ( (labels==None).all() ):
+        #     self.labels = []
+        # else:
+        #     self.labels = labels
+        self.samples = samples
+        self.labels = labels
 
         self.tempsamples = None
         self.templabels = None
@@ -116,8 +122,15 @@ class Data():
     #     print( "training set no. of 1:", self.train_labels[:,key_guess].sum(), " vali set no. of 1:", self.vali_labels[:,key_guess].sum() )
     
     def features_normal_db(self):
-        self.mean = np.array(np.mean(self.train,axis=0))
-        self.var = np.array(np.var(self.train, axis =0))
+
+        torch.cuda.empty_cache()
+        device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+        S = Scattering1D(wandb.config.J, self.train.shape[1], wandb.config.Q)
+        S.cuda()
+        trcs = torch.from_numpy(self.train[:hp.vali_batch]).float().to(device)
+        Sx = S(trcs)
+        self.mean = torch.mean(Sx,axis=0).cpu()
+        self.var = torch.var(Sx,axis=0).cpu()
     
     def max_normal(self):
         self.max = np.amax( self.train )
