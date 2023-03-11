@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 from lib.SCA_preprocessing import sca_preprocessing
 import wandb
 # define utility function
-def get_all_preds_labels(model, loader, device, data_temp):
+def get_all_preds_labels_gpu(model, loader, device, data_temp):
 
     # # print sum of first layer weight
     # print(np.sum(model.fc1.weight.data.to('cpu').numpy()))
@@ -37,6 +37,32 @@ def get_all_preds_labels(model, loader, device, data_temp):
             ,dim=0
         )
     return all_preds,all_labels
+
+def get_all_preds_labels(model, loader, device, mean, var):
+
+        # # print sum of first layer weight
+            # print(np.sum(model.fc1.weight.data.to('cpu').numpy()))
+
+    all_preds = torch.tensor([]).to(device).float()
+    all_labels = torch.tensor([]).to(device).byte()
+    mean = torch.from_numpy(mean).to(device)
+    var = torch.from_numpy(var).to(device)
+    for batch in loader:
+        indices, traces, labels = batch
+        traces = sca_preprocessing.trcs_scaled_centrolize_agmt( traces, mean, torch.sqrt(var)   )
+        traces = traces.unsqueeze(1)   
+
+        preds = model(traces)
+        all_preds = torch.cat(
+            (all_preds, preds)
+            ,dim=0
+        )
+        all_labels = torch.cat(
+            (all_labels, labels)
+            ,dim=0
+        )
+    return all_preds,all_labels
+
 
 def get_all_preds_labels_indices(model, loader, device, mean, var):
 

@@ -121,7 +121,7 @@ class Data():
     #         self.test_pairs  = np.concatenate( (self.test,  np.expand_dims(self.test_labels[:,key_guess],  axis=1)), axis=1 )
     #     print( "training set no. of 1:", self.train_labels[:,key_guess].sum(), " vali set no. of 1:", self.vali_labels[:,key_guess].sum() )
     
-    def features_normal_db(self):
+    def features_normal_db_gpu(self):
 
         torch.cuda.empty_cache()
         device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
@@ -131,6 +131,11 @@ class Data():
         Sx = S(trcs)
         self.mean = torch.mean(Sx,axis=0).cpu()
         self.var = torch.var(Sx,axis=0).cpu()
+
+    def features_normal_db(self):
+        self.mean = np.array(np.mean(self.train, axis=0))
+        self.var = np.array(np.var(self.train, axis =0))
+
     
     def max_normal(self):
         self.max = np.amax( self.train )
