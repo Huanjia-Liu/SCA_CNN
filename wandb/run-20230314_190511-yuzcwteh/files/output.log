@@ -1,8 +1,0 @@
-pre_process is finished
-shape is (24, 75)
-get hamming weight done!
-train set shape: (160000, 600) (160000,) vali set shape: (40000, 600) (40000,) test set shape: (0, 600) (0,)
-tensor(8, dtype=torch.uint8)
-G-RAM---0.5703125GB
-/home/admin1/conda/envs/py_sca/lib/python3.10/site-packages/torch/nn/init.py:405: UserWarning: Initializing zero-element tensors is a no-op
-  warnings.warn("Initializing zero-element tensors is a no-op")
