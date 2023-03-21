@@ -1,0 +1,1478 @@
+2023-03-11 11:57:49,569 INFO    StreamThr :655774 [internal.py:wandb_internal():88] W&B internal server running at pid: 655774, started at: 2023-03-11 11:57:49.568526
+2023-03-11 11:57:49,572 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: status
+2023-03-11 11:57:49,574 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: status
+2023-03-11 11:57:49,576 INFO    WriterThread:655774 [datastore.py:open_for_write():75] open: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/run-hlxch5ep.wandb
+2023-03-11 11:57:49,577 DEBUG   SenderThread:655774 [sender.py:send():303] send: header
+2023-03-11 11:57:49,577 DEBUG   SenderThread:655774 [sender.py:send():303] send: run
+2023-03-11 11:57:50,185 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: check_version
+2023-03-11 11:57:50,188 INFO    SenderThread:655774 [dir_watcher.py:__init__():216] watching files in: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files
+2023-03-11 11:57:50,188 INFO    SenderThread:655774 [sender.py:_start_run_threads():928] run started: hlxch5ep with start time 1678507069.564416
+2023-03-11 11:57:50,188 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 11:57:50,188 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 11:57:50,189 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: check_version
+2023-03-11 11:57:50,225 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: run_start
+2023-03-11 11:57:50,232 DEBUG   HandlerThread:655774 [meta.py:__init__():34] meta init
+2023-03-11 11:57:50,232 DEBUG   HandlerThread:655774 [meta.py:__init__():49] meta init done
+2023-03-11 11:57:50,232 DEBUG   HandlerThread:655774 [meta.py:probe():215] probe
+2023-03-11 11:57:50,239 DEBUG   HandlerThread:655774 [meta.py:_setup_git():205] setup git
+2023-03-11 11:57:50,249 DEBUG   HandlerThread:655774 [meta.py:_setup_git():212] setup git done
+2023-03-11 11:57:50,249 DEBUG   HandlerThread:655774 [meta.py:_save_pip():53] save pip
+2023-03-11 11:57:50,251 DEBUG   HandlerThread:655774 [meta.py:_save_pip():67] save pip done
+2023-03-11 11:57:50,251 DEBUG   HandlerThread:655774 [meta.py:_save_conda():74] save conda
+2023-03-11 11:57:51,191 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_created():275] file/dir created: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/requirements.txt
+2023-03-11 11:57:51,191 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_created():275] file/dir created: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/conda-environment.yaml
+2023-03-11 11:57:51,192 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_created():275] file/dir created: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 11:57:51,560 DEBUG   HandlerThread:655774 [meta.py:_save_conda():84] save conda done
+2023-03-11 11:57:51,560 DEBUG   HandlerThread:655774 [meta.py:probe():253] probe done
+2023-03-11 11:57:51,594 DEBUG   SenderThread:655774 [sender.py:send():303] send: files
+2023-03-11 11:57:51,594 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-metadata.json with policy now
+2023-03-11 11:57:51,605 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 11:57:51,605 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 11:57:51,853 DEBUG   SenderThread:655774 [sender.py:send():303] send: telemetry
+2023-03-11 11:57:52,173 DEBUG   SenderThread:655774 [sender.py:send():303] send: telemetry
+2023-03-11 11:57:52,188 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/conda-environment.yaml
+2023-03-11 11:57:52,192 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_created():275] file/dir created: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-metadata.json
+2023-03-11 11:57:52,193 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_created():275] file/dir created: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 11:57:52,287 INFO    Thread-23 :655774 [upload_job.py:push():143] Uploaded file /tmp/tmpr1hc46t9wandb/28gyivic-wandb-metadata.json
+2023-03-11 11:57:53,344 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 11:57:53,346 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 11:57:53,346 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 11:57:53,347 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 11:57:54,189 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 11:57:54,190 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 11:58:02,919 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 11:58:02,920 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 11:58:02,920 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 11:58:02,925 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 11:58:03,193 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 11:58:04,194 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 11:58:06,890 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 11:58:06,891 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 11:58:12,465 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 11:58:12,466 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 11:58:12,467 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 11:58:12,474 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 11:58:13,198 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 11:58:14,198 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 11:58:18,517 DEBUG   SenderThread:655774 [sender.py:send():303] send: stats
+2023-03-11 11:58:21,201 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/config.yaml
+2023-03-11 11:58:22,040 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 11:58:22,042 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 11:58:22,043 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 11:58:22,049 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 11:58:22,162 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 11:58:22,162 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 11:58:22,201 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 11:58:24,202 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 11:58:31,682 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 11:58:31,684 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 11:58:31,684 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 11:58:31,689 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 11:58:32,205 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 11:58:34,206 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 11:58:37,426 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 11:58:37,426 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 11:58:41,194 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 11:58:41,196 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 11:58:41,197 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 11:58:41,204 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 11:58:41,209 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 11:58:42,209 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 11:58:48,809 DEBUG   SenderThread:655774 [sender.py:send():303] send: stats
+2023-03-11 11:58:50,847 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 11:58:50,848 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 11:58:50,848 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 11:58:50,848 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 11:58:51,212 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 11:58:52,213 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 11:58:52,682 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 11:58:52,682 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 11:59:00,369 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 11:59:00,370 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 11:59:00,371 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 11:59:00,377 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 11:59:01,216 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 11:59:02,216 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 11:59:07,946 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 11:59:07,946 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 11:59:09,944 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 11:59:09,947 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 11:59:09,948 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 11:59:09,949 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 11:59:10,219 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 11:59:12,220 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 11:59:19,080 DEBUG   SenderThread:655774 [sender.py:send():303] send: stats
+2023-03-11 11:59:19,520 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 11:59:19,521 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 11:59:19,521 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 11:59:19,522 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 11:59:20,224 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 11:59:20,224 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 11:59:23,245 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 11:59:23,246 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 11:59:29,095 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 11:59:29,097 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 11:59:29,097 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 11:59:29,102 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 11:59:29,227 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 11:59:30,227 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 11:59:38,500 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 11:59:38,500 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 11:59:38,677 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 11:59:38,760 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 11:59:38,761 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 11:59:38,761 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 11:59:39,230 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 11:59:40,231 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 11:59:48,284 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 11:59:48,285 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 11:59:48,286 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 11:59:48,286 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 11:59:49,234 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 11:59:49,348 DEBUG   SenderThread:655774 [sender.py:send():303] send: stats
+2023-03-11 11:59:50,234 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 11:59:53,762 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 11:59:53,762 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 11:59:57,984 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 11:59:57,985 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 11:59:57,986 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 11:59:57,986 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 11:59:58,237 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:00:00,238 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:00:07,698 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:00:07,699 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:00:07,700 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:00:07,700 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:00:08,242 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:00:09,043 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:00:09,043 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:00:10,242 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:00:17,263 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:00:17,263 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:00:17,264 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:00:17,264 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:00:18,246 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:00:18,246 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:00:19,610 DEBUG   SenderThread:655774 [sender.py:send():303] send: stats
+2023-03-11 12:00:24,299 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:00:24,299 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:00:26,882 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:00:26,884 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:00:26,884 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:00:26,890 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:00:27,249 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:00:28,249 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:00:36,446 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:00:36,447 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:00:36,448 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:00:36,448 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:00:37,253 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:00:38,253 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:00:39,568 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:00:39,568 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:00:46,004 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:00:46,005 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:00:46,005 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:00:46,006 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:00:46,256 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:00:48,257 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:00:49,880 DEBUG   SenderThread:655774 [sender.py:send():303] send: stats
+2023-03-11 12:00:54,836 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:00:54,836 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:00:55,537 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:00:55,539 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:00:55,539 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:00:55,539 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:00:56,260 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:00:56,260 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:01:05,225 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:01:05,227 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:01:05,228 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:01:05,235 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:01:05,263 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:01:06,264 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:01:10,087 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:01:10,087 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:01:14,808 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:01:14,810 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:01:14,810 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:01:14,811 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:01:15,268 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:01:16,268 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:01:20,150 DEBUG   SenderThread:655774 [sender.py:send():303] send: stats
+2023-03-11 12:01:24,454 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:01:24,455 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:01:24,456 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:01:24,456 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:01:25,271 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:01:25,337 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:01:25,338 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:01:26,272 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:01:33,976 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:01:33,978 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:01:33,978 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:01:33,979 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:01:34,275 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:01:36,276 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:01:40,589 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:01:40,590 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:01:43,527 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:01:43,529 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:01:43,529 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:01:43,530 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:01:44,279 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:01:44,279 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:01:50,419 DEBUG   SenderThread:655774 [sender.py:send():303] send: stats
+2023-03-11 12:01:51,873 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:01:51,874 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:01:51,874 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:01:51,875 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:01:51,875 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:01:51,876 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:01:51,876 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:01:51,877 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:01:51,877 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:01:51,877 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:01:51,878 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:01:51,878 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:01:51,879 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:01:51,879 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:01:51,880 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:01:51,880 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:01:51,880 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:01:51,880 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:01:53,158 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:01:53,162 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:01:53,164 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:01:53,165 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:01:53,282 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:01:54,283 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:01:55,864 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:01:55,864 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:02:02,691 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:02:02,693 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:02:02,694 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:02:02,699 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:02:03,286 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:02:04,287 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:02:11,112 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:02:11,113 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:02:12,365 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:02:12,368 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:02:12,369 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:02:12,370 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:02:13,290 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:02:14,290 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:02:20,679 DEBUG   SenderThread:655774 [sender.py:send():303] send: stats
+2023-03-11 12:02:21,933 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:02:21,937 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:02:21,938 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:02:21,940 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:02:22,293 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:02:24,294 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:02:26,372 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:02:26,373 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:02:31,498 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:02:31,500 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:02:31,501 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:02:31,503 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:02:32,297 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:02:32,297 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:02:41,098 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:02:41,100 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:02:41,101 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:02:41,107 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:02:41,300 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:02:41,645 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:02:41,645 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:02:42,301 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:02:50,619 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:02:50,620 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:02:50,621 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:02:50,622 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:02:50,955 DEBUG   SenderThread:655774 [sender.py:send():303] send: stats
+2023-03-11 12:02:51,304 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:02:52,304 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:02:52,677 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:02:52,678 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:02:52,680 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:02:52,680 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:02:52,683 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:02:52,684 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:02:52,692 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:02:52,693 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:02:52,702 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:02:52,703 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:02:52,726 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:02:52,727 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:02:52,737 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:02:52,737 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:02:56,929 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:02:56,929 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:03:00,258 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:03:00,262 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:03:00,264 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:03:00,268 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:03:00,307 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:03:02,308 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:03:09,898 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:03:09,901 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:03:09,901 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:03:09,904 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:03:10,311 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:03:12,183 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:03:12,183 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:03:12,312 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:03:19,484 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:03:19,487 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:03:19,487 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:03:19,491 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:03:20,316 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:03:20,316 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:03:21,232 DEBUG   SenderThread:655774 [sender.py:send():303] send: stats
+2023-03-11 12:03:27,456 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:03:27,456 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:03:29,053 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:03:29,056 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:03:29,056 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:03:29,058 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:03:29,319 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:03:31,319 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:03:38,730 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:03:38,733 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:03:38,733 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:03:38,735 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:03:39,323 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:03:41,324 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:03:42,713 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:03:42,713 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:03:48,281 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:03:48,286 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:03:48,287 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:03:48,293 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:03:48,326 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:03:51,328 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:03:51,494 DEBUG   SenderThread:655774 [sender.py:send():303] send: stats
+2023-03-11 12:03:57,898 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:03:57,901 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:03:57,902 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:03:57,905 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:03:57,973 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:03:57,973 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:03:58,330 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:04:01,332 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:04:07,513 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:04:07,516 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:04:07,516 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:04:07,520 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:04:08,335 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:04:09,335 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:04:13,228 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:04:13,228 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:04:17,056 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:04:17,062 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:04:17,063 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:04:17,066 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:04:17,338 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:04:19,339 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:04:21,759 DEBUG   SenderThread:655774 [sender.py:send():303] send: stats
+2023-03-11 12:04:26,642 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:04:26,645 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:04:26,646 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:04:26,648 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:04:27,342 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:04:28,635 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:04:28,635 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:04:29,343 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:04:36,187 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:04:36,190 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:04:36,191 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:04:36,193 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:04:36,346 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:04:39,347 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:04:43,894 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:04:43,895 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:04:45,751 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:04:45,754 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:04:45,754 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:04:45,758 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:04:46,350 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:04:47,350 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:04:52,038 DEBUG   SenderThread:655774 [sender.py:send():303] send: stats
+2023-03-11 12:04:55,362 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:04:55,365 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:04:55,366 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:04:55,368 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:04:56,354 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:04:57,354 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:04:59,149 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:04:59,149 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:05:04,867 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:05:04,871 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:05:04,871 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:05:04,874 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:05:05,357 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:05:07,358 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:05:14,404 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:05:14,404 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:05:14,488 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:05:14,655 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:05:14,655 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:05:14,659 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:05:15,361 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:05:17,362 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:05:22,307 DEBUG   SenderThread:655774 [sender.py:send():303] send: stats
+2023-03-11 12:05:24,082 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:05:24,085 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:05:24,085 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:05:24,088 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:05:24,365 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:05:27,366 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:05:29,666 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:05:29,667 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:05:33,647 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:05:33,650 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:05:33,651 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:05:33,653 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:05:34,368 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:05:35,369 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:05:43,246 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:05:43,249 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:05:43,249 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:05:43,251 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:05:43,372 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:05:44,924 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:05:44,925 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:05:45,373 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:05:51,552 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:05:51,552 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:05:51,553 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:05:51,553 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:05:51,553 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:05:51,554 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:05:51,554 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:05:51,554 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:05:51,555 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:05:51,600 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:05:51,600 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:05:51,600 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:05:51,600 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:05:51,601 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:05:51,601 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:05:51,601 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:05:51,601 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:05:51,601 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:05:52,586 DEBUG   SenderThread:655774 [sender.py:send():303] send: stats
+2023-03-11 12:05:52,778 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:05:52,783 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:05:52,785 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:05:52,788 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:05:53,376 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:05:55,377 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:06:00,180 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:06:00,181 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:06:02,341 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:06:02,344 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:06:02,345 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:06:02,347 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:06:02,379 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:06:05,380 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:06:11,935 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:06:11,939 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:06:11,939 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:06:11,943 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:06:12,383 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:06:13,384 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:06:15,448 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:06:15,448 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:06:21,496 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:06:21,499 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:06:21,499 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:06:21,502 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:06:22,388 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:06:22,846 DEBUG   SenderThread:655774 [sender.py:send():303] send: stats
+2023-03-11 12:06:23,388 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:06:30,708 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:06:30,709 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:06:31,038 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:06:31,041 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:06:31,042 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:06:31,044 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:06:31,392 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:06:33,393 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:06:40,600 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:06:40,605 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:06:40,606 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:06:40,609 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:06:41,396 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:06:43,397 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:06:45,966 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:06:45,967 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:06:50,093 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:06:50,097 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:06:50,097 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:06:50,101 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:06:50,401 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:06:53,119 DEBUG   SenderThread:655774 [sender.py:send():303] send: stats
+2023-03-11 12:06:53,402 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:06:59,638 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:06:59,642 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:06:59,642 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:06:59,646 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:07:00,405 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:07:01,250 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:07:01,250 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:07:01,406 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:07:09,219 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:07:09,222 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:07:09,223 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:07:09,226 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:07:09,409 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:07:11,411 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:07:16,510 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:07:16,510 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:07:18,709 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:07:18,712 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:07:18,713 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:07:18,716 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:07:19,414 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:07:21,415 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:07:23,391 DEBUG   SenderThread:655774 [sender.py:send():303] send: stats
+2023-03-11 12:07:28,209 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:07:28,213 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:07:28,213 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:07:28,216 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:07:28,418 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:07:31,419 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:07:31,804 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:07:31,804 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:07:37,737 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:07:37,741 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:07:37,742 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:07:37,745 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:07:38,422 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:07:39,423 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:07:47,147 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:07:47,148 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:07:47,263 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:07:47,400 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:07:47,400 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:07:47,403 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:07:47,426 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:07:49,427 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:07:51,398 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:07:51,399 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:07:51,401 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:07:51,401 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:07:51,404 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:07:51,404 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:07:51,413 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:07:51,413 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:07:51,423 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:07:51,424 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:07:51,447 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:07:51,447 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:07:51,457 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:07:51,457 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:07:53,656 DEBUG   SenderThread:655774 [sender.py:send():303] send: stats
+2023-03-11 12:07:56,817 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:07:56,821 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:07:56,824 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:07:56,827 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:07:57,431 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:07:59,432 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:08:02,428 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:08:02,429 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:08:06,400 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:08:06,403 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:08:06,404 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:08:06,407 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:08:06,436 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:08:09,437 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:08:16,018 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:08:16,021 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:08:16,022 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:08:16,024 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:08:16,440 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:08:17,441 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:08:17,682 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:08:17,682 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:08:23,920 DEBUG   SenderThread:655774 [sender.py:send():303] send: stats
+2023-03-11 12:08:25,559 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:08:25,563 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:08:25,564 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:08:25,567 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:08:26,444 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:08:27,444 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:08:32,969 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:08:32,969 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:08:35,123 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:08:35,127 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:08:35,127 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:08:35,131 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:08:35,447 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:08:37,448 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:08:44,700 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:08:44,705 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:08:44,705 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:08:44,708 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:08:45,451 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:08:47,452 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:08:48,225 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:08:48,225 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:08:54,162 DEBUG   SenderThread:655774 [sender.py:send():303] send: stats
+2023-03-11 12:08:54,300 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:08:54,303 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:08:54,304 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:08:54,306 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:08:54,454 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:08:57,456 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:09:03,473 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:09:03,474 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:09:03,890 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:09:03,893 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:09:03,893 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:09:03,895 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:09:04,459 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:09:05,459 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:09:13,567 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:09:13,570 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:09:13,570 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:09:13,572 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:09:14,463 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:09:15,463 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:09:18,726 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:09:18,726 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:09:23,166 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:09:23,169 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:09:23,169 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:09:23,172 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:09:23,466 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:09:24,410 DEBUG   SenderThread:655774 [sender.py:send():303] send: stats
+2023-03-11 12:09:25,468 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:09:32,838 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:09:32,841 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:09:32,842 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:09:32,844 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:09:33,471 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:09:33,975 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:09:33,976 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:09:35,471 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:09:42,369 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:09:42,373 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:09:42,374 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:09:42,377 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:09:42,474 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:09:45,475 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:09:49,225 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:09:49,226 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:09:50,709 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:09:50,709 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:09:50,710 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:09:50,710 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:09:50,710 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:09:50,711 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:09:50,711 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:09:50,711 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:09:50,712 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:09:50,712 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:09:50,712 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:09:50,713 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:09:50,713 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:09:50,713 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:09:50,714 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:09:50,714 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:09:50,714 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:09:50,714 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:09:51,935 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:09:51,940 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:09:51,942 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:09:51,944 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:09:52,478 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:09:53,478 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:09:54,663 DEBUG   SenderThread:655774 [sender.py:send():303] send: stats
+2023-03-11 12:10:01,558 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:10:01,561 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:10:01,561 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:10:01,564 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:10:02,482 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:10:03,482 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:10:04,478 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:10:04,478 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:10:11,134 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:10:11,137 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:10:11,137 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:10:11,140 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:10:11,486 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:10:13,487 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:10:19,740 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:10:19,740 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:10:20,762 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:10:20,765 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:10:20,766 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:10:20,769 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:10:21,490 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:10:23,491 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:10:24,910 DEBUG   SenderThread:655774 [sender.py:send():303] send: stats
+2023-03-11 12:10:30,370 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:10:30,373 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:10:30,374 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:10:30,376 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:10:30,494 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:10:31,494 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:10:33,495 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:10:34,998 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:10:34,998 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:10:39,959 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:10:39,964 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:10:39,964 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:10:39,968 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:10:40,498 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:10:41,499 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:10:49,493 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:10:49,497 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:10:49,498 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:10:49,502 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:10:49,503 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:10:50,261 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:10:50,262 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:10:51,504 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:10:55,156 DEBUG   SenderThread:655774 [sender.py:send():303] send: stats
+2023-03-11 12:10:59,118 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:10:59,121 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:10:59,122 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:10:59,124 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:10:59,507 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:11:01,508 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:11:05,557 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:11:05,557 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:11:08,661 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:11:08,665 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:11:08,665 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:11:08,668 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:11:09,511 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:11:11,512 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:11:18,246 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:11:18,249 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:11:18,249 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:11:18,252 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:11:18,515 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:11:19,515 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:11:20,817 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:11:20,818 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:11:25,412 DEBUG   SenderThread:655774 [sender.py:send():303] send: stats
+2023-03-11 12:11:27,806 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:11:27,809 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:11:27,809 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:11:27,812 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:11:28,518 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:11:29,519 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:11:36,164 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:11:36,165 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:11:37,351 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:11:37,355 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:11:37,355 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:11:37,359 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:11:37,521 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:11:39,523 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:11:46,911 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:11:46,915 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:11:46,915 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:11:46,918 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:11:47,526 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:11:49,527 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:11:51,444 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:11:51,444 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:11:55,656 DEBUG   SenderThread:655774 [sender.py:send():303] send: stats
+2023-03-11 12:11:56,499 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:11:56,502 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:11:56,503 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:11:56,505 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:11:56,529 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:11:59,531 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:12:06,058 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:12:06,062 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:12:06,062 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:12:06,066 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:12:06,533 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:12:06,710 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:12:06,710 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:12:07,534 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:12:15,633 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:12:15,637 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:12:15,637 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:12:15,639 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:12:16,537 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:12:17,537 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:12:21,971 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:12:21,972 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:12:25,184 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:12:25,188 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:12:25,188 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:12:25,191 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:12:25,540 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:12:25,897 DEBUG   SenderThread:655774 [sender.py:send():303] send: stats
+2023-03-11 12:12:27,541 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:12:34,773 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:12:34,776 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:12:34,776 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:12:34,780 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:12:35,544 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:12:37,230 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:12:37,230 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:12:37,545 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:12:44,346 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:12:44,349 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:12:44,350 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:12:44,353 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:12:44,547 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:12:45,548 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:12:50,594 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:12:50,594 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:12:50,596 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:12:50,596 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:12:50,599 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:12:50,600 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:12:50,608 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:12:50,608 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:12:50,618 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:12:50,619 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:12:50,642 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:12:50,643 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:12:50,652 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:12:50,653 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:12:52,496 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:12:52,496 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:12:53,949 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:12:53,953 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:12:53,954 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:12:53,956 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:12:54,551 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:12:55,551 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:12:56,144 DEBUG   SenderThread:655774 [sender.py:send():303] send: stats
+2023-03-11 12:13:03,519 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:13:03,522 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:13:03,523 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:13:03,526 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:13:03,554 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:13:05,556 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:13:07,819 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:13:07,820 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:13:13,189 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:13:13,192 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:13:13,193 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:13:13,196 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:13:13,558 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:13:15,559 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:13:22,801 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:13:22,804 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:13:22,805 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:13:22,807 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:13:23,087 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:13:23,087 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:13:23,562 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:13:25,563 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:13:26,396 DEBUG   SenderThread:655774 [sender.py:send():303] send: stats
+2023-03-11 12:13:32,328 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:13:32,331 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:13:32,331 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:13:32,335 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:13:32,565 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:13:33,566 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:13:38,340 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:13:38,340 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:13:41,905 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:13:41,908 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:13:41,908 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:13:41,912 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:13:42,569 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:13:43,569 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:13:50,242 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:13:50,243 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:13:50,243 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:13:50,244 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:13:50,244 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:13:50,245 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:13:50,245 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:13:50,245 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:13:50,246 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:13:50,246 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:13:50,246 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:13:50,247 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:13:50,247 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:13:50,248 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:13:50,248 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:13:50,248 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:13:50,249 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:13:50,249 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:13:51,510 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:13:51,515 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:13:51,516 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:13:51,518 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:13:51,572 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:13:53,573 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:13:53,600 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:13:53,600 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:13:56,647 DEBUG   SenderThread:655774 [sender.py:send():303] send: stats
+2023-03-11 12:14:01,072 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:14:01,075 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:14:01,075 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:14:01,078 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:14:01,576 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:14:03,577 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:14:08,859 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:14:08,860 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:14:10,695 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:14:10,697 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:14:10,698 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:14:10,701 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:14:11,580 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:14:13,581 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:14:20,309 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:14:20,311 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:14:20,311 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:14:20,314 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:14:20,584 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:14:21,584 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:14:24,106 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:14:24,106 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:14:26,896 DEBUG   SenderThread:655774 [sender.py:send():303] send: stats
+2023-03-11 12:14:29,897 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:14:29,901 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:14:29,901 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:14:29,904 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:14:30,588 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:14:31,588 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:14:39,360 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:14:39,360 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:14:39,460 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:14:39,612 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:14:39,612 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:14:39,615 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:14:40,591 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:14:41,592 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:14:49,088 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:14:49,092 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:14:49,093 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:14:49,096 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:14:49,594 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:14:51,595 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:14:54,616 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:14:54,617 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:14:57,194 DEBUG   SenderThread:655774 [sender.py:send():303] send: stats
+2023-03-11 12:14:58,646 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:14:58,649 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:14:58,650 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:14:58,652 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:14:59,598 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:14:59,598 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:15:08,346 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:15:08,349 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:15:08,349 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:15:08,351 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:15:08,601 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:15:09,602 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:15:09,869 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:15:09,869 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:15:17,878 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:15:17,882 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:15:17,882 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:15:17,885 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:15:18,606 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:15:19,606 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:15:25,120 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:15:25,120 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:15:27,437 DEBUG   SenderThread:655774 [sender.py:send():303] send: stats
+2023-03-11 12:15:27,537 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:15:27,540 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:15:27,541 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:15:27,543 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:15:27,609 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:15:29,610 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:15:37,119 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:15:37,121 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:15:37,122 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:15:37,124 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:15:37,613 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:15:39,613 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:15:40,374 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:15:40,374 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:15:46,607 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:15:46,611 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:15:46,611 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:15:46,615 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:15:46,616 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:15:47,616 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:15:55,631 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:15:55,631 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:15:56,211 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:15:56,215 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:15:56,215 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:15:56,219 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:15:56,620 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:15:57,620 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:15:57,689 DEBUG   SenderThread:655774 [sender.py:send():303] send: stats
+2023-03-11 12:16:05,788 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:16:05,792 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:16:05,793 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:16:05,796 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:16:06,624 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:16:07,624 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:16:10,921 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:16:10,921 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:16:15,442 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:16:15,446 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:16:15,446 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:16:15,449 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:16:15,627 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:16:17,628 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:16:25,038 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:16:25,041 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:16:25,041 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:16:25,044 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:16:25,631 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:16:26,186 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:16:26,187 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:16:27,632 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:16:27,942 DEBUG   SenderThread:655774 [sender.py:send():303] send: stats
+2023-03-11 12:16:34,619 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:16:34,623 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:16:34,624 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:16:34,627 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:16:34,634 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:16:35,635 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:16:41,441 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:16:41,441 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:16:44,195 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:16:44,198 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:16:44,198 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:16:44,200 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:16:44,638 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:16:45,639 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:16:53,794 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:16:53,797 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:16:53,798 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:16:53,800 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:16:54,643 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:16:55,644 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:16:56,709 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:16:56,710 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:16:58,184 DEBUG   SenderThread:655774 [sender.py:send():303] send: stats
+2023-03-11 12:17:03,336 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:17:03,340 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:17:03,340 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:17:03,345 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:17:03,647 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:17:05,648 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:17:11,966 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:17:11,967 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:17:12,979 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:17:12,982 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:17:12,983 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:17:12,986 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:17:13,652 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:17:15,652 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:17:22,622 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:17:22,625 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:17:22,626 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:17:22,629 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:17:22,655 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:17:23,656 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:17:27,289 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:17:27,290 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:17:28,435 DEBUG   SenderThread:655774 [sender.py:send():303] send: stats
+2023-03-11 12:17:32,180 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:17:32,182 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:17:32,182 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:17:32,185 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:17:32,660 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:17:33,661 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:17:41,818 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:17:41,820 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:17:41,821 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:17:41,824 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:17:42,543 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:17:42,544 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:17:42,665 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:17:43,665 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:17:50,169 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:17:50,177 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:17:50,177 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:17:50,177 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:17:50,178 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:17:50,178 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:17:50,178 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:17:50,179 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:17:50,179 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:17:50,179 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:17:50,179 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:17:50,179 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:17:50,180 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:17:50,180 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:17:50,180 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:17:50,180 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:17:50,180 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:17:50,181 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:17:50,181 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:17:50,224 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:17:50,224 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:17:50,224 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:17:50,225 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:17:50,225 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:17:50,225 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:17:50,225 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:17:50,225 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:17:50,226 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:17:50,226 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:17:50,226 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:17:50,235 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:17:50,235 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:17:51,432 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:17:51,440 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:17:51,443 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:17:51,445 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:17:51,669 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:17:53,670 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:17:57,806 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:17:57,807 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:17:58,681 DEBUG   SenderThread:655774 [sender.py:send():303] send: stats
+2023-03-11 12:18:00,987 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:18:00,990 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:18:00,991 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:18:00,994 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:18:01,674 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:18:03,675 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:18:10,630 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:18:10,633 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:18:10,633 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:18:10,636 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:18:10,678 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:18:11,678 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:18:13,080 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:18:13,080 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:18:20,145 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:18:20,149 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:18:20,149 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:18:20,152 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:18:20,682 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:18:21,683 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:18:28,337 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:18:28,337 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:18:28,931 DEBUG   SenderThread:655774 [sender.py:send():303] send: stats
+2023-03-11 12:18:29,748 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:18:29,752 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:18:29,753 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:18:29,756 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:18:30,687 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:18:31,688 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:18:39,318 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:18:39,321 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:18:39,321 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:18:39,323 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:18:39,691 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:18:41,692 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:18:43,617 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:18:43,618 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:18:48,901 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:18:48,904 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:18:48,905 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:18:48,908 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:18:49,695 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:18:49,696 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:18:58,470 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:18:58,474 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:18:58,474 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:18:58,478 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:18:58,699 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:18:58,871 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:18:58,871 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:18:59,174 DEBUG   SenderThread:655774 [sender.py:send():303] send: stats
+2023-03-11 12:18:59,700 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:19:08,126 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:19:08,129 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:19:08,129 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:19:08,132 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:19:08,704 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:19:09,705 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:19:14,125 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:19:14,125 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:19:17,726 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:19:17,729 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:19:17,730 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:19:17,733 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:19:18,709 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:19:19,709 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:19:27,350 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:19:27,353 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:19:27,353 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:19:27,356 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:19:27,713 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:19:29,380 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:19:29,380 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:19:29,632 DEBUG   SenderThread:655774 [sender.py:send():303] send: stats
+2023-03-11 12:19:29,714 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:19:36,953 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:19:36,956 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:19:36,956 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:19:36,959 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:19:37,717 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:19:37,718 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:19:44,660 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:19:44,661 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:19:46,562 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:19:46,565 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:19:46,565 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:19:46,568 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:19:46,722 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:19:47,722 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:19:56,169 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:19:56,172 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:19:56,172 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:19:56,175 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:19:56,726 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:19:57,727 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:19:59,681 DEBUG   SenderThread:655774 [sender.py:send():303] send: stats
+2023-03-11 12:19:59,931 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:19:59,931 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:20:05,776 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:20:05,780 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:20:05,780 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:20:05,783 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:20:06,731 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:20:07,731 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:20:15,183 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:20:15,183 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:20:15,345 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:20:15,436 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:20:15,436 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:20:15,439 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:20:15,735 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:20:17,736 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:20:24,909 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:20:24,911 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:20:24,912 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:20:24,914 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:20:25,740 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:20:25,741 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:20:29,930 DEBUG   SenderThread:655774 [sender.py:send():303] send: stats
+2023-03-11 12:20:30,450 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:20:30,450 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:20:34,491 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:20:34,494 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:20:34,494 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:20:34,497 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:20:34,744 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:20:35,745 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:20:44,094 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:20:44,097 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:20:44,098 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:20:44,100 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:20:44,750 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:20:45,715 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:20:45,715 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:20:45,751 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:20:53,644 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:20:53,647 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:20:53,647 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:20:53,650 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:20:53,754 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:20:55,755 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:21:00,173 DEBUG   SenderThread:655774 [sender.py:send():303] send: stats
+2023-03-11 12:21:00,976 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:21:00,976 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:21:03,295 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:21:03,299 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:21:03,299 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:21:03,302 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:21:03,759 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:21:05,759 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:21:12,935 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:21:12,938 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:21:12,938 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:21:12,942 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:21:13,763 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:21:13,764 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:21:16,225 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:21:16,225 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:21:22,520 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:21:22,523 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:21:22,523 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:21:22,526 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:21:22,767 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:21:23,767 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:21:30,425 DEBUG   SenderThread:655774 [sender.py:send():303] send: stats
+2023-03-11 12:21:31,475 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:21:31,475 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:21:32,125 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:21:32,129 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:21:32,129 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:21:32,132 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:21:32,772 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:21:33,772 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:21:41,692 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:21:41,697 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:21:41,698 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:21:41,703 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:21:41,776 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:21:43,777 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:21:46,763 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:21:46,764 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:21:50,023 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:21:50,023 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:21:50,024 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:21:50,025 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:21:50,026 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:21:50,026 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:21:50,027 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:21:50,027 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:21:50,028 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:21:50,029 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:21:50,029 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:21:50,029 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:21:50,030 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:21:50,030 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:21:50,030 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:21:50,031 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:21:50,031 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:21:50,032 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:21:51,264 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:21:51,270 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:21:51,272 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:21:51,276 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:21:51,780 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:21:53,781 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:22:00,667 DEBUG   SenderThread:655774 [sender.py:send():303] send: stats
+2023-03-11 12:22:00,874 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:22:00,877 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:22:00,877 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:22:00,882 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:22:01,785 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:22:01,785 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:22:02,016 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:22:02,016 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:22:10,508 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:22:10,512 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:22:10,512 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:22:10,515 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:22:10,789 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:22:11,789 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:22:17,271 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:22:17,272 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:22:20,118 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:22:20,122 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:22:20,123 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:22:20,125 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:22:20,793 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:22:21,794 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:22:29,703 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:22:29,706 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:22:29,707 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:22:29,709 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:22:29,797 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:22:30,910 DEBUG   SenderThread:655774 [sender.py:send():303] send: stats
+2023-03-11 12:22:31,798 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:22:32,529 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:22:32,530 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:22:39,299 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:22:39,304 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:22:39,305 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:22:39,308 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:22:39,801 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:22:41,803 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:22:47,785 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:22:47,785 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:22:48,835 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:22:48,839 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:22:48,839 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:22:48,843 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:22:49,806 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:22:49,806 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:22:50,887 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:22:50,887 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:22:50,889 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:22:50,889 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:22:50,892 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:22:50,892 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:22:50,901 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:22:50,901 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:22:50,911 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:22:50,911 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:22:50,935 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:22:50,935 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:22:50,945 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:22:50,946 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:22:58,436 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:22:58,441 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:22:58,442 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:22:58,445 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:22:58,809 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:22:59,810 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:23:01,156 DEBUG   SenderThread:655774 [sender.py:send():303] send: stats
+2023-03-11 12:23:03,041 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:23:03,041 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:23:08,028 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:23:08,033 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:23:08,033 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:23:08,036 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:23:08,814 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:23:09,814 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:23:17,706 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:23:17,710 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:23:17,710 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:23:17,713 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:23:17,817 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:23:18,291 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:23:18,292 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:23:19,818 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:23:27,193 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:23:27,196 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:23:27,197 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:23:27,200 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:23:27,821 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:23:27,821 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:23:31,420 DEBUG   SenderThread:655774 [sender.py:send():303] send: stats
+2023-03-11 12:23:33,546 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:23:33,547 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:23:36,731 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:23:36,733 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:23:36,734 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:23:36,738 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:23:36,825 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:23:37,825 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:23:46,310 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:23:46,313 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:23:46,314 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:23:46,316 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:23:46,828 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:23:47,829 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:23:48,805 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:23:48,805 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:23:55,791 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:23:55,794 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:23:55,794 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:23:55,797 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:23:55,832 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:23:57,832 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:24:01,683 DEBUG   SenderThread:655774 [sender.py:send():303] send: stats
+2023-03-11 12:24:04,062 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:24:04,063 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:24:05,405 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:24:05,409 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:24:05,409 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:24:05,412 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:24:05,835 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:24:07,836 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:24:14,974 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:24:14,978 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:24:14,978 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:24:14,981 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:24:15,839 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:24:15,840 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log
+2023-03-11 12:24:19,320 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-11 12:24:19,320 DEBUG   SenderThread:655774 [sender.py:send_request():317] send_request: stop_status
+2023-03-11 12:24:24,579 DEBUG   HandlerThread:655774 [handler.py:handle_request():138] handle_request: partial_history
+2023-03-11 12:24:24,584 DEBUG   SenderThread:655774 [sender.py:send():303] send: history
+2023-03-11 12:24:24,584 DEBUG   SenderThread:655774 [sender.py:send():303] send: summary
+2023-03-11 12:24:24,587 INFO    SenderThread:655774 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-11 12:24:24,843 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/wandb-summary.json
+2023-03-11 12:24:25,843 INFO    Thread-19 :655774 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230311_115749-hlxch5ep/files/output.log

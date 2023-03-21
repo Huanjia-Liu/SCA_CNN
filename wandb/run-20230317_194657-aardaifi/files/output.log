@@ -1,0 +1,9 @@
+get hamming weight done!
+train set shape: (160000, 80, 37) (160000,) vali set shape: (40000, 80, 37) (40000,) test set shape: (0, 80, 37) (0,)
+tensor(8, dtype=torch.uint8)
+G-RAM---0.0GB
+key guess j: 102 epoch: 0 vali_loss: 0.9995982646942139 train_total_loss: 0
+g-ram ---0.5625GB
+key guess j: 102 epoch: 1 vali_loss: 0.9994670152664185 train_total_loss: 31.58092510700226
+g-ram ---1.798828125GB
+key guess j: 102 epoch: 2 vali_loss: 0.9994850754737854 train_total_loss: 31.64811545610428

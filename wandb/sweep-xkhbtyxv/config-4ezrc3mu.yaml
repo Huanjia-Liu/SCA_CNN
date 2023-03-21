@@ -1,0 +1,32 @@
+wandb_version: 1
+
+J:
+  value: 4
+Q:
+  value: 16
+channel_1:
+  value: 2
+channel_2:
+  value: 8
+channel_3:
+  value: 128
+dense:
+  value: 2
+epochs:
+  value: 200
+kernel_length:
+  value: 2
+kernel_width:
+  value: 5
+layer:
+  value: 3
+loss_function:
+  value: mine_cross
+lr:
+  value: 1.118381357369452e-05
+optimizer:
+  value: sgd
+project_name:
+  value: scattering_2.5k_100
+wrong_key:
+  value: 0

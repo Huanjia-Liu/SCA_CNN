@@ -1,0 +1,31 @@
+pre_process is finished
+shape is (43, 18)
+get hamming weight done!
+train set shape: (2000, 43, 18) (2000,) vali set shape: (500, 43, 18) (500,) test set shape: (0, 43, 18) (0,)
+tensor(8, dtype=torch.uint8)
+finish---0.0
+/home/admin1/git/SCA_CNN/main.py:64: ComplexWarning: Casting complex values to real discards the imaginary part
+  total_vali_list = nn_train( plts, cpts, trcs.astype(np.float32), bit, byte, sample_num, sweep_mode, pre_process, sweep_enable)
+key guess j: 224 epoch: 0 vali_loss: 0.9694607257843018 train_total_loss: 0
+g-ram ---0.037109375GB
+key guess j: 224 epoch: 1 vali_loss: 0.9491549134254456 train_total_loss: 3.752374589443207
+g-ram ---0.056640625GB
+key guess j: 224 epoch: 2 vali_loss: 0.9650417566299438 train_total_loss: 3.7603384256362915
+g-ram ---0.056640625GB
+key guess j: 224 epoch: 3 vali_loss: 0.975662887096405 train_total_loss: 3.9442965984344482
+g-ram ---0.056640625GB
+key guess j: 224 epoch: 4 vali_loss: 0.9659476280212402 train_total_loss: 3.8115833401679993
+g-ram ---0.056640625GB
+key guess j: 224 epoch: 5 vali_loss: 0.9674173593521118 train_total_loss: 3.7320693731307983
+g-ram ---0.056640625GB
+key guess j: 224 epoch: 6 vali_loss: 0.966887354850769 train_total_loss: 3.8332696557044983
+g-ram ---0.056640625GB
+key guess j: 224 epoch: 7 vali_loss: 0.9710582494735718 train_total_loss: 3.7777759432792664
+g-ram ---0.056640625GB
+key guess j: 224 epoch: 8 vali_loss: 0.9693806171417236 train_total_loss: 3.640471398830414
+g-ram ---0.056640625GB
+key guess j: 224 epoch: 9 vali_loss: 0.9669089317321777 train_total_loss: 3.6118277311325073
+g-ram ---0.056640625GB
+key guess j: 224 epoch: 10 vali_loss: 0.9655572175979614 train_total_loss: 3.4321795105934143
+g-ram ---0.056640625GB
+key guess j: 224 epoch: 11 vali_loss: 0.9711110591888428 train_total_loss: 3.279484272003174

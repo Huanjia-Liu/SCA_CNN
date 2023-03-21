@@ -98,21 +98,21 @@ class wandb_para():
         'parameters': 
         {
             'epochs': {'values': [200]},
-            'lr':  {'values': [0.000072] },             #{'max':0.001, 'min':0.0001 },
-            'Q' : {'values' : [48]},                            #[8,12,16,20,24,36,48,52,64]
+            'lr':  {'values': [0.0005847] },             #{'max':0.001, 'min':0.0001 },
+            'Q' : {'values' : [24]},                            #[8,12,16,20,24,36,48,52,64]
             'J' : {'values' : [4]},
             #'windows' : {'values': [84]},
     
             'optimizer' : {'values': [ 'adam']},                         #['sgd', 'rmsprop', 'adam', 'nadam']},
             'loss_function' : {'values': ['mine_cross']},
             'wrong_key': {'values': [x for x in range(256)]},        #add number to increase wrong key number
-            'layer' : {'values': [7]},                  #[2,3,4]
-            'kernel_length' : {'values': [2]},
-            'kernel_width' : {'values':[2]},                       #[16,24,32,36]
+            'layer' : {'values': [2]},                  #[2,3,4]
+            'kernel_length' : {'values': [4]},
+            'kernel_width' : {'values':[4]},                       #[16,24,32,36]
             'dense' : {'values': [1]},
             'project_name': {'values': ['scattering_2.5k_100']},
-            'channel_1' : {'values': [2]},
-            'channel_2' : {'values': [32]},
+            'channel_1' : {'values': [4]},
+            'channel_2' : {'values': [8]},
             'channel_3' : {'values': [64]},
             }
         }

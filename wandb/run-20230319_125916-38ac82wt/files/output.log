@@ -1,0 +1,406 @@
+get hamming weight done!
+train set shape: (160000, 80, 37) (160000,) vali set shape: (40000, 80, 37) (40000,) test set shape: (0, 80, 37) (0,)
+tensor(8, dtype=torch.uint8)
+G-RAM---0.001953125GB
+key guess j: 215 epoch: 0 vali_loss: 0.9939178824424744 train_total_loss: 0
+g-ram ---0.5625GB
+key guess j: 215 epoch: 1 vali_loss: 0.9930346608161926 train_total_loss: 31.646430671215057
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 2 vali_loss: 0.9910944700241089 train_total_loss: 31.597436249256134
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 3 vali_loss: 0.989970326423645 train_total_loss: 31.710814237594604
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 4 vali_loss: 0.9911693930625916 train_total_loss: 31.696022629737854
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 5 vali_loss: 0.9917374849319458 train_total_loss: 31.706985652446747
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 6 vali_loss: 0.9941108226776123 train_total_loss: 31.593251645565033
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 7 vali_loss: 0.9958510994911194 train_total_loss: 31.611249566078186
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 8 vali_loss: 0.9953156113624573 train_total_loss: 31.60779184103012
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 9 vali_loss: 0.9951102137565613 train_total_loss: 31.54524040222168
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 10 vali_loss: 0.9979217052459717 train_total_loss: 31.41562509536743
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 11 vali_loss: 0.9996105432510376 train_total_loss: 31.121499598026276
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 12 vali_loss: 0.9996774196624756 train_total_loss: 30.94348567724228
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 13 vali_loss: 0.9990395307540894 train_total_loss: 30.718274772167206
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 14 vali_loss: 0.9973148107528687 train_total_loss: 30.425014913082123
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 15 vali_loss: 0.9975208640098572 train_total_loss: 30.127312779426575
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 16 vali_loss: 0.9965155124664307 train_total_loss: 29.961439847946167
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 17 vali_loss: 0.9947561621665955 train_total_loss: 29.86914575099945
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 18 vali_loss: 0.9941861629486084 train_total_loss: 29.741355657577515
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 19 vali_loss: 0.9935874938964844 train_total_loss: 29.581548929214478
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 20 vali_loss: 0.9927076697349548 train_total_loss: 29.50839066505432
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 21 vali_loss: 0.9928373694419861 train_total_loss: 29.50598692893982
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 22 vali_loss: 0.9928380846977234 train_total_loss: 29.40250128507614
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 23 vali_loss: 0.993114173412323 train_total_loss: 29.289779007434845
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 24 vali_loss: 0.9938108921051025 train_total_loss: 29.28652733564377
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 25 vali_loss: 0.991942822933197 train_total_loss: 29.283967077732086
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 26 vali_loss: 0.9938233494758606 train_total_loss: 29.179249167442322
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 27 vali_loss: 0.9938833713531494 train_total_loss: 29.10092604160309
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 28 vali_loss: 0.9939872622489929 train_total_loss: 29.157496690750122
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 29 vali_loss: 0.9944452047348022 train_total_loss: 29.134119749069214
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 30 vali_loss: 0.9941874742507935 train_total_loss: 29.036487579345703
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 31 vali_loss: 0.9944326877593994 train_total_loss: 28.983060240745544
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 32 vali_loss: 0.9953793287277222 train_total_loss: 29.009752452373505
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 33 vali_loss: 0.9950217008590698 train_total_loss: 28.981765627861023
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 34 vali_loss: 0.9955645799636841 train_total_loss: 28.911979377269745
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 35 vali_loss: 0.9952223896980286 train_total_loss: 28.915877401828766
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 36 vali_loss: 0.9959098100662231 train_total_loss: 28.928549706935883
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 37 vali_loss: 0.9959554076194763 train_total_loss: 28.898750245571136
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 38 vali_loss: 0.9964074492454529 train_total_loss: 28.814306139945984
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 39 vali_loss: 0.9969722032546997 train_total_loss: 28.846023976802826
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 40 vali_loss: 0.9973009824752808 train_total_loss: 28.869390308856964
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 41 vali_loss: 0.996662437915802 train_total_loss: 28.81542670726776
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 42 vali_loss: 0.9971737265586853 train_total_loss: 28.74589294195175
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 43 vali_loss: 0.9972822666168213 train_total_loss: 28.78909808397293
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 44 vali_loss: 0.9966372847557068 train_total_loss: 28.803962349891663
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 45 vali_loss: 0.9980375170707703 train_total_loss: 28.74006414413452
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 46 vali_loss: 0.9972274303436279 train_total_loss: 28.6970494389534
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 47 vali_loss: 0.9974254369735718 train_total_loss: 28.753649473190308
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 48 vali_loss: 0.9979841113090515 train_total_loss: 28.732201516628265
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 49 vali_loss: 0.9979409575462341 train_total_loss: 28.668264627456665
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 50 vali_loss: 0.9970116019248962 train_total_loss: 28.667957425117493
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 51 vali_loss: 0.9991621375083923 train_total_loss: 28.689015448093414
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 52 vali_loss: 0.9984999895095825 train_total_loss: 28.664655685424805
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 53 vali_loss: 0.9980578422546387 train_total_loss: 28.60942977666855
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 54 vali_loss: 0.9990816116333008 train_total_loss: 28.634615778923035
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 55 vali_loss: 0.9982024431228638 train_total_loss: 28.68060076236725
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 56 vali_loss: 0.998115599155426 train_total_loss: 28.617271900177002
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 57 vali_loss: 0.9975053071975708 train_total_loss: 28.571214497089386
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 58 vali_loss: 0.9985101819038391 train_total_loss: 28.60793447494507
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 59 vali_loss: 0.9990710020065308 train_total_loss: 28.638147830963135
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 60 vali_loss: 0.9972293972969055 train_total_loss: 28.56577903032303
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 61 vali_loss: 0.9980208277702332 train_total_loss: 28.54930692911148
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 62 vali_loss: 0.9980577826499939 train_total_loss: 28.596790611743927
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 63 vali_loss: 0.9979308843612671 train_total_loss: 28.58133888244629
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 64 vali_loss: 0.9977372288703918 train_total_loss: 28.540954768657684
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 65 vali_loss: 0.9982298612594604 train_total_loss: 28.535182237625122
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 66 vali_loss: 0.9975336790084839 train_total_loss: 28.565813302993774
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 67 vali_loss: 0.9980942010879517 train_total_loss: 28.54532766342163
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 68 vali_loss: 0.9979401230812073 train_total_loss: 28.484847903251648
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 69 vali_loss: 0.9975669384002686 train_total_loss: 28.51966392993927
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 70 vali_loss: 0.9972532987594604 train_total_loss: 28.560077250003815
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 71 vali_loss: 0.9974942803382874 train_total_loss: 28.503869473934174
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 72 vali_loss: 0.9976912140846252 train_total_loss: 28.464603662490845
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 73 vali_loss: 0.9968544840812683 train_total_loss: 28.499793231487274
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 74 vali_loss: 0.9969347715377808 train_total_loss: 28.51079833507538
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 75 vali_loss: 0.9973514676094055 train_total_loss: 28.456980884075165
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 76 vali_loss: 0.9968657493591309 train_total_loss: 28.45938539505005
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 77 vali_loss: 0.9966312646865845 train_total_loss: 28.49225914478302
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 78 vali_loss: 0.9972233176231384 train_total_loss: 28.50095146894455
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 79 vali_loss: 0.9968228340148926 train_total_loss: 28.422552227973938
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 80 vali_loss: 0.9969421625137329 train_total_loss: 28.433758914470673
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 81 vali_loss: 0.9968215823173523 train_total_loss: 28.48576509952545
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 82 vali_loss: 0.9969808459281921 train_total_loss: 28.47131782770157
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 83 vali_loss: 0.9972907304763794 train_total_loss: 28.409544706344604
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 84 vali_loss: 0.9960774183273315 train_total_loss: 28.436254382133484
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 85 vali_loss: 0.9967256188392639 train_total_loss: 28.470689117908478
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 86 vali_loss: 0.9977346658706665 train_total_loss: 28.426485002040863
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 87 vali_loss: 0.9969120025634766 train_total_loss: 28.382546484470367
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 88 vali_loss: 0.9963792562484741 train_total_loss: 28.43167668581009
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 89 vali_loss: 0.9963668584823608 train_total_loss: 28.454713106155396
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 90 vali_loss: 0.9968315362930298 train_total_loss: 28.394564509391785
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 91 vali_loss: 0.9971416592597961 train_total_loss: 28.387093245983124
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 92 vali_loss: 0.9969781637191772 train_total_loss: 28.414977312088013
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 93 vali_loss: 0.9971305727958679 train_total_loss: 28.4207860827446
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 94 vali_loss: 0.9969257116317749 train_total_loss: 28.357884764671326
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 95 vali_loss: 0.9968657493591309 train_total_loss: 28.362344980239868
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 96 vali_loss: 0.9964423179626465 train_total_loss: 28.415129244327545
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 97 vali_loss: 0.9973741769790649 train_total_loss: 28.40019851922989
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 98 vali_loss: 0.9979373812675476 train_total_loss: 28.337892174720764
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 99 vali_loss: 0.9968326091766357 train_total_loss: 28.373263597488403
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 100 vali_loss: 0.9964802265167236 train_total_loss: 28.4119952917099
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 101 vali_loss: 0.9962671399116516 train_total_loss: 28.37182366847992
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 102 vali_loss: 0.9970844984054565 train_total_loss: 28.3249289393425
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 103 vali_loss: 0.9974278807640076 train_total_loss: 28.364526629447937
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 104 vali_loss: 0.9963676333427429 train_total_loss: 28.394570112228394
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 105 vali_loss: 0.9971473813056946 train_total_loss: 28.341007232666016
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 106 vali_loss: 0.9976282715797424 train_total_loss: 28.30531758069992
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 107 vali_loss: 0.9974481463432312 train_total_loss: 28.353187799453735
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 108 vali_loss: 0.9970629811286926 train_total_loss: 28.359439313411713
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 109 vali_loss: 0.9976630806922913 train_total_loss: 28.29822474718094
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 110 vali_loss: 0.9975640177726746 train_total_loss: 28.325592577457428
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 111 vali_loss: 0.9971559643745422 train_total_loss: 28.369518518447876
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 112 vali_loss: 0.9979714155197144 train_total_loss: 28.359052538871765
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 113 vali_loss: 0.9971513152122498 train_total_loss: 28.28820252418518
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 114 vali_loss: 0.9971452355384827 train_total_loss: 28.311390042304993
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 115 vali_loss: 0.9970007538795471 train_total_loss: 28.36966121196747
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 116 vali_loss: 0.9958418607711792 train_total_loss: 28.309085309505463
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 117 vali_loss: 0.9977104067802429 train_total_loss: 28.2688547372818
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 118 vali_loss: 0.9980668425559998 train_total_loss: 28.322876811027527
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 119 vali_loss: 0.9976051449775696 train_total_loss: 28.341420531272888
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 120 vali_loss: 0.9976158142089844 train_total_loss: 28.284422516822815
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 121 vali_loss: 0.9970142841339111 train_total_loss: 28.26591444015503
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 122 vali_loss: 0.9978715777397156 train_total_loss: 28.32532823085785
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 123 vali_loss: 0.9964543581008911 train_total_loss: 28.32127332687378
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 124 vali_loss: 0.9978204369544983 train_total_loss: 28.257470190525055
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 125 vali_loss: 0.99769526720047 train_total_loss: 28.273192882537842
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 126 vali_loss: 0.9979969263076782 train_total_loss: 28.314876317977905
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 127 vali_loss: 0.9978545904159546 train_total_loss: 28.29595935344696
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 128 vali_loss: 0.9981201887130737 train_total_loss: 28.249461710453033
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 129 vali_loss: 0.9984333515167236 train_total_loss: 28.273092925548553
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 130 vali_loss: 0.9972096085548401 train_total_loss: 28.312109649181366
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 131 vali_loss: 0.9981414675712585 train_total_loss: 28.27602344751358
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 132 vali_loss: 0.9978298544883728 train_total_loss: 28.237054407596588
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 133 vali_loss: 0.9974230527877808 train_total_loss: 28.27282953262329
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 134 vali_loss: 0.9979870915412903 train_total_loss: 28.303849756717682
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 135 vali_loss: 0.9972679018974304 train_total_loss: 28.245742201805115
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 136 vali_loss: 0.999049961566925 train_total_loss: 28.23350429534912
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 137 vali_loss: 0.9986802339553833 train_total_loss: 28.264909863471985
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 138 vali_loss: 0.9977412223815918 train_total_loss: 28.275762975215912
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 139 vali_loss: 0.9986708760261536 train_total_loss: 28.22593057155609
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 140 vali_loss: 0.998275101184845 train_total_loss: 28.229086101055145
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 141 vali_loss: 0.9984400868415833 train_total_loss: 28.262552440166473
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 142 vali_loss: 0.9970983862876892 train_total_loss: 28.2412611246109
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 143 vali_loss: 0.9981662034988403 train_total_loss: 28.194231867790222
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 144 vali_loss: 0.9984869956970215 train_total_loss: 28.234917163848877
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 145 vali_loss: 0.9987725615501404 train_total_loss: 28.269618690013885
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 146 vali_loss: 0.9986275434494019 train_total_loss: 28.22058993577957
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 147 vali_loss: 0.9984647631645203 train_total_loss: 28.17868858575821
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 148 vali_loss: 0.9987056851387024 train_total_loss: 28.221180617809296
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 149 vali_loss: 0.9995225071907043 train_total_loss: 28.256433129310608
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 150 vali_loss: 0.9977037310600281 train_total_loss: 28.20396852493286
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 151 vali_loss: 0.9979524612426758 train_total_loss: 28.19488698244095
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 152 vali_loss: 0.9989826083183289 train_total_loss: 28.23353797197342
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 153 vali_loss: 0.9981630444526672 train_total_loss: 28.218387007713318
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 154 vali_loss: 0.9988592267036438 train_total_loss: 28.17619353532791
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 155 vali_loss: 0.9998499751091003 train_total_loss: 28.177709996700287
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 156 vali_loss: 0.9986699223518372 train_total_loss: 28.23060643672943
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 157 vali_loss: 0.9994663000106812 train_total_loss: 28.202280580997467
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 158 vali_loss: 0.9993225932121277 train_total_loss: 28.162458837032318
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 159 vali_loss: 0.9984779357910156 train_total_loss: 28.190919756889343
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 160 vali_loss: 0.9997138381004333 train_total_loss: 28.242429554462433
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 161 vali_loss: 0.999683678150177 train_total_loss: 28.17814803123474
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 162 vali_loss: 0.9999979138374329 train_total_loss: 28.156482934951782
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 163 vali_loss: 0.999921977519989 train_total_loss: 28.19168198108673
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 164 vali_loss: 0.9990202188491821 train_total_loss: 28.23308289051056
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 165 vali_loss: 0.9988757371902466 train_total_loss: 28.156461894512177
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 166 vali_loss: 0.9997545480728149 train_total_loss: 28.16230833530426
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 167 vali_loss: 0.9996966123580933 train_total_loss: 28.20829862356186
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 168 vali_loss: 0.9992455840110779 train_total_loss: 28.208554685115814
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 169 vali_loss: 0.9998013973236084 train_total_loss: 28.155065953731537
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 170 vali_loss: 0.9991183280944824 train_total_loss: 28.16743940114975
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 171 vali_loss: 0.9989941716194153 train_total_loss: 28.197958946228027
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 172 vali_loss: 0.9997288584709167 train_total_loss: 28.184442281723022
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 173 vali_loss: 0.9997685551643372 train_total_loss: 28.13108652830124
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 174 vali_loss: 0.9992908239364624 train_total_loss: 28.150799930095673
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 175 vali_loss: 0.9989543557167053 train_total_loss: 28.194609880447388
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 176 vali_loss: 0.9997906684875488 train_total_loss: 28.164065301418304
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 177 vali_loss: 0.9997892379760742 train_total_loss: 28.122570157051086
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 178 vali_loss: 0.9997373819351196 train_total_loss: 28.174183011054993
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 179 vali_loss: 0.9994831681251526 train_total_loss: 28.20325219631195
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 180 vali_loss: 0.9996730089187622 train_total_loss: 28.13118302822113
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 181 vali_loss: 0.9998579621315002 train_total_loss: 28.119599878787994
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 182 vali_loss: 0.9986348748207092 train_total_loss: 28.159965932369232
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 183 vali_loss: 0.9992722868919373 train_total_loss: 28.16350680589676
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 184 vali_loss: 0.9994978904724121 train_total_loss: 28.117011666297913
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 185 vali_loss: 0.999873161315918 train_total_loss: 28.12748211622238
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 186 vali_loss: 0.9998406171798706 train_total_loss: 28.17388951778412
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 187 vali_loss: 0.9995526671409607 train_total_loss: 28.145869731903076
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 188 vali_loss: 0.9997004866600037 train_total_loss: 28.101580560207367
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 189 vali_loss: 0.9995777010917664 train_total_loss: 28.133941173553467
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 190 vali_loss: 0.9995951652526855 train_total_loss: 28.170367300510406
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 191 vali_loss: 0.9999985694885254 train_total_loss: 28.068454802036285
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 192 vali_loss: 0.9994910955429077 train_total_loss: 27.9813152551651
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 193 vali_loss: 0.9995013475418091 train_total_loss: 27.965526461601257
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 194 vali_loss: 0.9995039701461792 train_total_loss: 27.95866745710373
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 195 vali_loss: 0.999502420425415 train_total_loss: 27.958259224891663
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 196 vali_loss: 0.9995025396347046 train_total_loss: 27.95543211698532
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 197 vali_loss: 0.9995025992393494 train_total_loss: 27.958929479122162
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 198 vali_loss: 0.9995025992393494 train_total_loss: 27.958387672901154
+g-ram ---1.798828125GB
+key guess j: 215 epoch: 199 vali_loss: 0.9995025992393494 train_total_loss: 27.958035349845886
+g-ram ---1.798828125GB
+byte: 2 Done!
+[34m[1mwandb[39m[22m: [33mWARNING[39m Saving files without folders. If you want to preserve sub directories pass base_path to wandb.save, i.e. wandb.save("/mnt/folder/file.h5", base_path="/mnt")

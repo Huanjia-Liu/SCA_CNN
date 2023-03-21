@@ -1,6 +1,7 @@
 import numpy as np
 import torch
 from math import comb
+from sklearn.metrics import normalized_mutual_info_score
 # import ddks
 # from nn_label_transform import label_transform
 
@@ -80,6 +81,13 @@ class loss_functions():
 
         KNLL = ( -torch.log( preds.gather( dim=1, index=labels.view(-1,1)).squeeze(1) ) + invcoef[ labels ] ).sum()/len(labels)
         return KNLL
+
+    @staticmethod
+    def MI( preds, labels ):
+        mutual_information_loss = 1-normalized_mutual_info_score(preds, labels)
+        return mutual_information_loss
+
+
 
 
 # def vcorrcoef(trcs, p_models):

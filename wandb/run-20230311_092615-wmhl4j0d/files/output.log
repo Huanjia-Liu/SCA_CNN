@@ -1,0 +1,7 @@
+pre_process is finished
+shape is (36, 37)
+plaintext or ciphertext byte 2: [229   6 117 ...  87   0 182]
+get HD done: byte  2
+train set shape: (160000, 600) (160000,) vali set shape: (40000, 600) (40000,) test set shape: (0, 600) (0,)
+tensor(8, dtype=torch.uint8)
+G-RAM---0.65234375GB

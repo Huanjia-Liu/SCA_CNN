@@ -1,0 +1,151 @@
+2023-03-12 00:50:30,369 INFO    StreamThr :774304 [internal.py:wandb_internal():88] W&B internal server running at pid: 774304, started at: 2023-03-12 00:50:30.368992
+2023-03-12 00:50:30,370 DEBUG   HandlerThread:774304 [handler.py:handle_request():138] handle_request: status
+2023-03-12 00:50:30,371 DEBUG   SenderThread:774304 [sender.py:send_request():317] send_request: status
+2023-03-12 00:50:30,372 DEBUG   SenderThread:774304 [sender.py:send():303] send: header
+2023-03-12 00:50:30,372 DEBUG   SenderThread:774304 [sender.py:send():303] send: run
+2023-03-12 00:50:30,375 INFO    WriterThread:774304 [datastore.py:open_for_write():75] open: /home/admin1/git/SCA_CNN/wandb/run-20230312_005030-l6rx3pag/run-l6rx3pag.wandb
+2023-03-12 00:50:30,917 INFO    SenderThread:774304 [dir_watcher.py:__init__():216] watching files in: /home/admin1/git/SCA_CNN/wandb/run-20230312_005030-l6rx3pag/files
+2023-03-12 00:50:30,917 INFO    SenderThread:774304 [sender.py:_start_run_threads():928] run started: l6rx3pag with start time 1678553430.36752
+2023-03-12 00:50:30,917 DEBUG   SenderThread:774304 [sender.py:send():303] send: summary
+2023-03-12 00:50:30,917 INFO    SenderThread:774304 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-12 00:50:30,918 DEBUG   HandlerThread:774304 [handler.py:handle_request():138] handle_request: check_version
+2023-03-12 00:50:30,918 DEBUG   SenderThread:774304 [sender.py:send_request():317] send_request: check_version
+2023-03-12 00:50:30,977 DEBUG   HandlerThread:774304 [handler.py:handle_request():138] handle_request: run_start
+2023-03-12 00:50:30,983 DEBUG   HandlerThread:774304 [meta.py:__init__():34] meta init
+2023-03-12 00:50:30,983 DEBUG   HandlerThread:774304 [meta.py:__init__():49] meta init done
+2023-03-12 00:50:30,983 DEBUG   HandlerThread:774304 [meta.py:probe():215] probe
+2023-03-12 00:50:30,988 DEBUG   HandlerThread:774304 [meta.py:_setup_git():205] setup git
+2023-03-12 00:50:30,993 DEBUG   HandlerThread:774304 [meta.py:_setup_git():212] setup git done
+2023-03-12 00:50:30,993 DEBUG   HandlerThread:774304 [meta.py:_save_pip():53] save pip
+2023-03-12 00:50:30,994 DEBUG   HandlerThread:774304 [meta.py:_save_pip():67] save pip done
+2023-03-12 00:50:30,994 DEBUG   HandlerThread:774304 [meta.py:_save_conda():74] save conda
+2023-03-12 00:50:30,994 ERROR   HandlerThread:774304 [meta.py:_save_conda():83] Error saving conda packages
+Traceback (most recent call last):
+  File "/home/admin1/conda/envs/py_sca/lib/python3.10/site-packages/wandb/sdk/internal/meta.py", line 79, in _save_conda
+    subprocess.call(
+  File "/home/admin1/conda/envs/py_sca/lib/python3.10/subprocess.py", line 345, in call
+    with Popen(*popenargs, **kwargs) as p:
+  File "/home/admin1/conda/envs/py_sca/lib/python3.10/subprocess.py", line 966, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/home/admin1/conda/envs/py_sca/lib/python3.10/subprocess.py", line 1842, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'conda'
+2023-03-12 00:50:30,995 DEBUG   HandlerThread:774304 [meta.py:_save_conda():84] save conda done
+2023-03-12 00:50:30,995 DEBUG   HandlerThread:774304 [meta.py:probe():253] probe done
+2023-03-12 00:50:31,015 DEBUG   SenderThread:774304 [sender.py:send():303] send: files
+2023-03-12 00:50:31,015 INFO    SenderThread:774304 [sender.py:_save_file():1171] saving file wandb-metadata.json with policy now
+2023-03-12 00:50:31,019 DEBUG   HandlerThread:774304 [handler.py:handle_request():138] handle_request: stop_status
+2023-03-12 00:50:31,019 DEBUG   SenderThread:774304 [sender.py:send_request():317] send_request: stop_status
+2023-03-12 00:50:31,265 DEBUG   SenderThread:774304 [sender.py:send():303] send: telemetry
+2023-03-12 00:50:31,265 DEBUG   SenderThread:774304 [sender.py:send():303] send: telemetry
+2023-03-12 00:50:31,265 DEBUG   SenderThread:774304 [sender.py:send():303] send: exit
+2023-03-12 00:50:31,266 INFO    SenderThread:774304 [sender.py:send_exit():442] handling exit code: 1
+2023-03-12 00:50:31,266 INFO    SenderThread:774304 [sender.py:send_exit():444] handling runtime: 0
+2023-03-12 00:50:31,266 INFO    SenderThread:774304 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-12 00:50:31,266 INFO    SenderThread:774304 [sender.py:send_exit():450] send defer
+2023-03-12 00:50:31,267 DEBUG   HandlerThread:774304 [handler.py:handle_request():138] handle_request: defer
+2023-03-12 00:50:31,267 INFO    HandlerThread:774304 [handler.py:handle_request_defer():161] handle defer: 0
+2023-03-12 00:50:31,268 DEBUG   SenderThread:774304 [sender.py:send_request():317] send_request: defer
+2023-03-12 00:50:31,268 INFO    SenderThread:774304 [sender.py:send_request_defer():459] handle sender defer: 0
+2023-03-12 00:50:31,268 INFO    SenderThread:774304 [sender.py:transition_state():463] send defer: 1
+2023-03-12 00:50:31,268 DEBUG   HandlerThread:774304 [handler.py:handle_request():138] handle_request: defer
+2023-03-12 00:50:31,268 INFO    HandlerThread:774304 [handler.py:handle_request_defer():161] handle defer: 1
+2023-03-12 00:50:31,342 DEBUG   SenderThread:774304 [sender.py:send_request():317] send_request: defer
+2023-03-12 00:50:31,342 INFO    SenderThread:774304 [sender.py:send_request_defer():459] handle sender defer: 1
+2023-03-12 00:50:31,342 INFO    SenderThread:774304 [sender.py:transition_state():463] send defer: 2
+2023-03-12 00:50:31,343 DEBUG   SenderThread:774304 [sender.py:send():303] send: stats
+2023-03-12 00:50:31,343 DEBUG   HandlerThread:774304 [handler.py:handle_request():138] handle_request: defer
+2023-03-12 00:50:31,343 INFO    HandlerThread:774304 [handler.py:handle_request_defer():161] handle defer: 2
+2023-03-12 00:50:31,343 DEBUG   SenderThread:774304 [sender.py:send_request():317] send_request: defer
+2023-03-12 00:50:31,343 INFO    SenderThread:774304 [sender.py:send_request_defer():459] handle sender defer: 2
+2023-03-12 00:50:31,343 INFO    SenderThread:774304 [sender.py:transition_state():463] send defer: 3
+2023-03-12 00:50:31,343 DEBUG   HandlerThread:774304 [handler.py:handle_request():138] handle_request: defer
+2023-03-12 00:50:31,343 INFO    HandlerThread:774304 [handler.py:handle_request_defer():161] handle defer: 3
+2023-03-12 00:50:31,343 DEBUG   SenderThread:774304 [sender.py:send_request():317] send_request: defer
+2023-03-12 00:50:31,343 INFO    SenderThread:774304 [sender.py:send_request_defer():459] handle sender defer: 3
+2023-03-12 00:50:31,343 INFO    SenderThread:774304 [sender.py:transition_state():463] send defer: 4
+2023-03-12 00:50:31,343 DEBUG   HandlerThread:774304 [handler.py:handle_request():138] handle_request: defer
+2023-03-12 00:50:31,343 INFO    HandlerThread:774304 [handler.py:handle_request_defer():161] handle defer: 4
+2023-03-12 00:50:31,343 DEBUG   SenderThread:774304 [sender.py:send():303] send: summary
+2023-03-12 00:50:31,344 INFO    SenderThread:774304 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-03-12 00:50:31,344 DEBUG   SenderThread:774304 [sender.py:send_request():317] send_request: defer
+2023-03-12 00:50:31,344 INFO    SenderThread:774304 [sender.py:send_request_defer():459] handle sender defer: 4
+2023-03-12 00:50:31,344 INFO    SenderThread:774304 [sender.py:transition_state():463] send defer: 5
+2023-03-12 00:50:31,344 DEBUG   HandlerThread:774304 [handler.py:handle_request():138] handle_request: defer
+2023-03-12 00:50:31,344 INFO    HandlerThread:774304 [handler.py:handle_request_defer():161] handle defer: 5
+2023-03-12 00:50:31,344 DEBUG   SenderThread:774304 [sender.py:send_request():317] send_request: defer
+2023-03-12 00:50:31,344 INFO    SenderThread:774304 [sender.py:send_request_defer():459] handle sender defer: 5
+2023-03-12 00:50:31,628 INFO    SenderThread:774304 [sender.py:transition_state():463] send defer: 6
+2023-03-12 00:50:31,629 DEBUG   HandlerThread:774304 [handler.py:handle_request():138] handle_request: defer
+2023-03-12 00:50:31,629 INFO    HandlerThread:774304 [handler.py:handle_request_defer():161] handle defer: 6
+2023-03-12 00:50:31,629 DEBUG   SenderThread:774304 [sender.py:send_request():317] send_request: defer
+2023-03-12 00:50:31,629 INFO    SenderThread:774304 [sender.py:send_request_defer():459] handle sender defer: 6
+2023-03-12 00:50:31,629 INFO    SenderThread:774304 [sender.py:transition_state():463] send defer: 7
+2023-03-12 00:50:31,629 DEBUG   HandlerThread:774304 [handler.py:handle_request():138] handle_request: defer
+2023-03-12 00:50:31,629 INFO    HandlerThread:774304 [handler.py:handle_request_defer():161] handle defer: 7
+2023-03-12 00:50:31,629 DEBUG   SenderThread:774304 [sender.py:send_request():317] send_request: defer
+2023-03-12 00:50:31,629 INFO    SenderThread:774304 [sender.py:send_request_defer():459] handle sender defer: 7
+2023-03-12 00:50:31,629 INFO    SenderThread:774304 [dir_watcher.py:finish():362] shutting down directory watcher
+2023-03-12 00:50:31,802 INFO    Thread-17 :774304 [upload_job.py:push():143] Uploaded file /tmp/tmp_q64dy94wandb/1gkjjmb9-wandb-metadata.json
+2023-03-12 00:50:31,918 INFO    Thread-13 :774304 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/admin1/git/SCA_CNN/wandb/run-20230312_005030-l6rx3pag/files/config.yaml
+2023-03-12 00:50:31,919 INFO    SenderThread:774304 [dir_watcher.py:_on_file_created():275] file/dir created: /home/admin1/git/SCA_CNN/wandb/run-20230312_005030-l6rx3pag/files/wandb-summary.json
+2023-03-12 00:50:31,919 INFO    SenderThread:774304 [dir_watcher.py:_on_file_created():275] file/dir created: /home/admin1/git/SCA_CNN/wandb/run-20230312_005030-l6rx3pag/files/conda-environment.yaml
+2023-03-12 00:50:31,919 INFO    SenderThread:774304 [dir_watcher.py:_on_file_created():275] file/dir created: /home/admin1/git/SCA_CNN/wandb/run-20230312_005030-l6rx3pag/files/wandb-metadata.json
+2023-03-12 00:50:31,919 INFO    SenderThread:774304 [dir_watcher.py:_on_file_created():275] file/dir created: /home/admin1/git/SCA_CNN/wandb/run-20230312_005030-l6rx3pag/files/requirements.txt
+2023-03-12 00:50:31,919 INFO    SenderThread:774304 [dir_watcher.py:finish():392] scan: /home/admin1/git/SCA_CNN/wandb/run-20230312_005030-l6rx3pag/files
+2023-03-12 00:50:31,919 INFO    SenderThread:774304 [dir_watcher.py:finish():406] scan save: /home/admin1/git/SCA_CNN/wandb/run-20230312_005030-l6rx3pag/files/config.yaml config.yaml
+2023-03-12 00:50:31,920 INFO    SenderThread:774304 [dir_watcher.py:finish():406] scan save: /home/admin1/git/SCA_CNN/wandb/run-20230312_005030-l6rx3pag/files/wandb-metadata.json wandb-metadata.json
+2023-03-12 00:50:31,920 INFO    SenderThread:774304 [dir_watcher.py:finish():406] scan save: /home/admin1/git/SCA_CNN/wandb/run-20230312_005030-l6rx3pag/files/conda-environment.yaml conda-environment.yaml
+2023-03-12 00:50:31,920 INFO    SenderThread:774304 [dir_watcher.py:finish():406] scan save: /home/admin1/git/SCA_CNN/wandb/run-20230312_005030-l6rx3pag/files/requirements.txt requirements.txt
+2023-03-12 00:50:31,920 INFO    SenderThread:774304 [dir_watcher.py:finish():406] scan save: /home/admin1/git/SCA_CNN/wandb/run-20230312_005030-l6rx3pag/files/wandb-summary.json wandb-summary.json
+2023-03-12 00:50:31,920 INFO    SenderThread:774304 [sender.py:transition_state():463] send defer: 8
+2023-03-12 00:50:31,920 DEBUG   HandlerThread:774304 [handler.py:handle_request():138] handle_request: defer
+2023-03-12 00:50:31,920 INFO    HandlerThread:774304 [handler.py:handle_request_defer():161] handle defer: 8
+2023-03-12 00:50:31,923 DEBUG   SenderThread:774304 [sender.py:send_request():317] send_request: defer
+2023-03-12 00:50:31,923 INFO    SenderThread:774304 [sender.py:send_request_defer():459] handle sender defer: 8
+2023-03-12 00:50:31,923 INFO    SenderThread:774304 [file_pusher.py:finish():168] shutting down file pusher
+2023-03-12 00:50:32,028 DEBUG   HandlerThread:774304 [handler.py:handle_request():138] handle_request: poll_exit
+2023-03-12 00:50:32,028 DEBUG   SenderThread:774304 [sender.py:send_request():317] send_request: poll_exit
+2023-03-12 00:50:32,622 INFO    Thread-19 :774304 [upload_job.py:push():143] Uploaded file /home/admin1/git/SCA_CNN/wandb/run-20230312_005030-l6rx3pag/files/requirements.txt
+2023-03-12 00:50:32,653 INFO    Thread-18 :774304 [upload_job.py:push():143] Uploaded file /home/admin1/git/SCA_CNN/wandb/run-20230312_005030-l6rx3pag/files/config.yaml
+2023-03-12 00:50:33,028 DEBUG   HandlerThread:774304 [handler.py:handle_request():138] handle_request: poll_exit
+2023-03-12 00:50:33,029 DEBUG   SenderThread:774304 [sender.py:send_request():317] send_request: poll_exit
+2023-03-12 00:50:33,400 INFO    Thread-20 :774304 [upload_job.py:push():143] Uploaded file /home/admin1/git/SCA_CNN/wandb/run-20230312_005030-l6rx3pag/files/wandb-summary.json
+2023-03-12 00:50:33,600 INFO    Thread-12 (_thread_body):774304 [sender.py:transition_state():463] send defer: 9
+2023-03-12 00:50:33,600 DEBUG   HandlerThread:774304 [handler.py:handle_request():138] handle_request: defer
+2023-03-12 00:50:33,601 INFO    HandlerThread:774304 [handler.py:handle_request_defer():161] handle defer: 9
+2023-03-12 00:50:33,601 DEBUG   SenderThread:774304 [sender.py:send_request():317] send_request: defer
+2023-03-12 00:50:33,601 INFO    SenderThread:774304 [sender.py:send_request_defer():459] handle sender defer: 9
+2023-03-12 00:50:33,601 INFO    SenderThread:774304 [file_pusher.py:join():173] waiting for file pusher
+2023-03-12 00:50:33,601 INFO    SenderThread:774304 [sender.py:transition_state():463] send defer: 10
+2023-03-12 00:50:33,601 DEBUG   HandlerThread:774304 [handler.py:handle_request():138] handle_request: defer
+2023-03-12 00:50:33,601 INFO    HandlerThread:774304 [handler.py:handle_request_defer():161] handle defer: 10
+2023-03-12 00:50:33,601 DEBUG   SenderThread:774304 [sender.py:send_request():317] send_request: defer
+2023-03-12 00:50:33,601 INFO    SenderThread:774304 [sender.py:send_request_defer():459] handle sender defer: 10
+2023-03-12 00:50:34,029 DEBUG   HandlerThread:774304 [handler.py:handle_request():138] handle_request: poll_exit
+2023-03-12 00:50:34,192 INFO    SenderThread:774304 [sender.py:transition_state():463] send defer: 11
+2023-03-12 00:50:34,192 DEBUG   SenderThread:774304 [sender.py:send_request():317] send_request: poll_exit
+2023-03-12 00:50:34,193 DEBUG   HandlerThread:774304 [handler.py:handle_request():138] handle_request: defer
+2023-03-12 00:50:34,193 INFO    HandlerThread:774304 [handler.py:handle_request_defer():161] handle defer: 11
+2023-03-12 00:50:34,193 DEBUG   SenderThread:774304 [sender.py:send_request():317] send_request: defer
+2023-03-12 00:50:34,193 INFO    SenderThread:774304 [sender.py:send_request_defer():459] handle sender defer: 11
+2023-03-12 00:50:34,193 INFO    SenderThread:774304 [sender.py:transition_state():463] send defer: 12
+2023-03-12 00:50:34,194 DEBUG   SenderThread:774304 [sender.py:send():303] send: final
+2023-03-12 00:50:34,194 DEBUG   SenderThread:774304 [sender.py:send():303] send: footer
+2023-03-12 00:50:34,194 DEBUG   HandlerThread:774304 [handler.py:handle_request():138] handle_request: defer
+2023-03-12 00:50:34,194 INFO    HandlerThread:774304 [handler.py:handle_request_defer():161] handle defer: 12
+2023-03-12 00:50:34,194 DEBUG   SenderThread:774304 [sender.py:send_request():317] send_request: defer
+2023-03-12 00:50:34,194 INFO    SenderThread:774304 [sender.py:send_request_defer():459] handle sender defer: 12
+2023-03-12 00:50:34,197 DEBUG   HandlerThread:774304 [handler.py:handle_request():138] handle_request: poll_exit
+2023-03-12 00:50:34,197 DEBUG   SenderThread:774304 [sender.py:send_request():317] send_request: poll_exit
+2023-03-12 00:50:34,197 DEBUG   HandlerThread:774304 [handler.py:handle_request():138] handle_request: server_info
+2023-03-12 00:50:34,198 DEBUG   HandlerThread:774304 [handler.py:handle_request():138] handle_request: get_summary
+2023-03-12 00:50:34,198 DEBUG   SenderThread:774304 [sender.py:send_request():317] send_request: server_info
+2023-03-12 00:50:34,198 DEBUG   HandlerThread:774304 [handler.py:handle_request():138] handle_request: sampled_history
+2023-03-12 00:50:34,691 DEBUG   HandlerThread:774304 [handler.py:handle_request():138] handle_request: shutdown
+2023-03-12 00:50:34,691 INFO    HandlerThread:774304 [handler.py:finish():814] shutting down handler
+2023-03-12 00:50:35,194 INFO    WriterThread:774304 [datastore.py:close():279] close: /home/admin1/git/SCA_CNN/wandb/run-20230312_005030-l6rx3pag/run-l6rx3pag.wandb
+2023-03-12 00:50:35,690 INFO    SenderThread:774304 [sender.py:finish():1331] shutting down sender
+2023-03-12 00:50:35,690 INFO    SenderThread:774304 [file_pusher.py:finish():168] shutting down file pusher
+2023-03-12 00:50:35,690 INFO    SenderThread:774304 [file_pusher.py:join():173] waiting for file pusher
+2023-03-12 00:50:39,934 INFO    MainThread:774304 [internal.py:handle_exit():78] Internal process exited

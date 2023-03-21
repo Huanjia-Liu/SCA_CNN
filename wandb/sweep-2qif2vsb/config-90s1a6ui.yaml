@@ -1,0 +1,32 @@
+wandb_version: 1
+
+J:
+  value: 4
+Q:
+  value: 52
+channel_1:
+  value: 4
+channel_2:
+  value: 8
+channel_3:
+  value: 128
+dense:
+  value: 2
+epochs:
+  value: 200
+kernel_length:
+  value: 4
+kernel_width:
+  value: 3
+layer:
+  value: 4
+loss_function:
+  value: mine_cross
+lr:
+  value: 0.0006677656710976902
+optimizer:
+  value: rmsprop
+project_name:
+  value: scattering_2.5k_100
+wrong_key:
+  value: 0

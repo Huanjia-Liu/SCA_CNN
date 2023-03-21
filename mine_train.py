@@ -22,9 +22,10 @@ from sweep_para import sweep_para as sp
 
 import h5py
 import wandb
+import datetime
+from os import path, mkdir
 
 
-save_path = "/home/admin1/Documents/git/SCA_CNN_result/"
 
 #train part
 def train(model, device, train_loader, optimizer, epoch, data_temp, scheduler):
@@ -41,8 +42,10 @@ def train(model, device, train_loader, optimizer, epoch, data_temp, scheduler):
         #WST and DL are processed in GRAM in GRAM for efficiency
         if(pre_process == "scattering" and sweep_enable == True):        
             traces = sca_preprocessing.scattering(traces, J = wandb.config.J, M = traces.shape[1], Q = wandb.config.Q)
+            traces = sca_preprocessing.trcs_scaled_centrolize_agmt( traces, data_temp.mean.to(device), torch.sqrt(data_temp.var).to(device) )
+        else:
+            traces = sca_preprocessing.trcs_scaled_centrolize_agmt( traces, torch.from_numpy(data_temp.mean).to(device), torch.sqrt(torch.from_numpy(data_temp.var)).to(device) )
 
-        traces = sca_preprocessing.trcs_scaled_centrolize_agmt( traces, torch.from_numpy(data_temp.mean).to(device), torch.sqrt(torch.from_numpy(data_temp.var)).to(device) )
         traces = traces.unsqueeze(1)
         traces.requires_grad=True
         preds = model(traces)
@@ -63,6 +66,8 @@ def train(model, device, train_loader, optimizer, epoch, data_temp, scheduler):
             #if(layer == 7 or layer==8 or layer==9):
             #    preds = torch.sum(preds,dim=1)
             train_loss = loss_functions.corr_loss(preds, labels)
+        elif(loss_functions == 'MI'):
+            train_loss = loss_functions.MI(preds,labels)
 
 
 
@@ -77,7 +82,7 @@ def train(model, device, train_loader, optimizer, epoch, data_temp, scheduler):
             for g in optimizer.param_groups: g['lr'] = g['lr'] * 0.95
 
         train_total_loss += train_loss.item()
-        if(False):
+        if(hp.grad_output):
             temp_grad = traces.grad
             temp_grad = torch.abs(temp_grad)
             temp_grad_cpu = torch.sum(temp_grad,dim=(0,1)).cpu().detach().numpy()
@@ -173,15 +178,24 @@ def nn_train( plt, cpt, data, bit_poss, byte_pos, sample_num, sweep_mode, pre_pr
     elif(layer==10):
         network = cnn_co(traceLen=sample_num, num_classes=1)
 
+    #Multiple GPU processing
+    gpu_num = torch.cuda.device_count()
+    if(hp.GPU_num > gpu_num):
+        print(f'GPU_num exceeds the number of GPU in this Desktop, auto set GPU_num = {gpu_num} ')
+    else:
+        gpu_num = hp.GPU_num
+    if(gpu_num > 1):
+        network = torch.nn.DataParallel(network, device_ids = [i for i in range(gpu_num)])
 
+    
 
 
 
     #Calculate label using power model, the model is determined by CPA
     if(hp.power_model == 'hd'):
-        labels = get_HD_last(atk_round=10, byte_pos=byte_pos, plt=plt, cpt=cpt ).astype( 'uint8' )
+        labels = get_HD_last(atk_round=hp.atk_round, byte_pos=byte_pos, plt=plt, cpt=cpt ).astype( 'uint8' )
     elif(hp.power_model == 'hw'):
-        labels = get_HammingWeight( atk_round=1, byte_pos=byte_pos, plt=plt, cpt=cpt ).astype( 'uint8' )
+        labels = get_HammingWeight( atk_round=hp.atk_round, byte_pos=byte_pos, plt=plt, cpt=cpt ).astype( 'uint8' )
     elif(hp.power_model == 'lsb'):
         labels = get_LSB( atk_round=hp.atk_round, byte_pos=byte_pos, plt=plt, cpt=cpt ).astype( 'uint8' )
 
@@ -222,7 +236,7 @@ def nn_train( plt, cpt, data, bit_poss, byte_pos, sample_num, sweep_mode, pre_pr
             vali_loader = torch.utils.data.DataLoader(md_vali, batch_size=hp.vali_batch)
             print(Data1.vali_labels.max())
             vali_loader = DeviceDataLoader(vali_loader, DV.device)
-            print(f"finish---{torch.cuda.memory_reserved(0)/1024/1024/1024}")
+            print(f"G-RAM---{torch.cuda.memory_reserved(0)/1024/1024/1024}GB")
             network.train()
 
             # move network to deivce
@@ -273,16 +287,29 @@ def nn_train( plt, cpt, data, bit_poss, byte_pos, sample_num, sweep_mode, pre_pr
                 if(math.isnan(vali_loss.item())):
                     continue
                 train_total_loss,total_grad = train(network, DV.device, train_loader, optimizer,epoch, Data1, scheduler)
-
-                #total_grad_list.append(total_grad)
-                #total_grad_np = np.array(total_grad_list).astype(np.float32)
                 
-#            with h5py.File(f'{save_path}grad/{wandb.config.project_name}_{wandb.config.wrong_key}.h5', 'w') as f:
-#                  f.create_dataset('grad', data=total_grad_np)
+                #save grad parameter as h5
+                if(hp.grad_output):
+                    total_grad_list.append(total_grad)
+                    total_grad_np = np.array(total_grad_list).astype(np.float32)
+                    
+                    #check if folder exists
+                    if(not path.exists(f'{hp.model_save_path}grad/')):
+                        mkdir(f'{hp.model_save_path}grad/')                        
 
-            torch.save(network.state_dict(), f'{save_path}model.h5')
+                    with h5py.File(f'{hp.model_save_path}grad/{wandb.config.project_name}_{wandb.config.wrong_key}.h5', 'w') as f:
+                        f.create_dataset('grad', data=total_grad_np)
+
+
+            #Save model as h5 file, save function is depend on if multi GPUs were used
+            now = datetime.datetime.now()
+            if isinstance(network, nn.DataParallel):
+                torch.save(network.module.state_dict(), f'{hp.model_save_path}model_J={wandb.config.J}Q={wandb.config.Q}_{now.strftime("%Y-%m-%d %H:%M:%S")}.h5')
+            else:
+                torch.save(network.state_dict(), f'{hp.model_save_path}model_J={wandb.config.J}Q={wandb.config.Q}_{now.strftime("%Y-%m-%d %H:%M:%S")}.h5')
+            #Also the wandb model, but seem never work 
             if(sweep_mode == 'wandb'):
-                wandb.save(f'{save_path}wandb/model.h5')
+                wandb.save(f'{hp.model_save_path}wandb/model.h5')
     return total_vali_list
 
 

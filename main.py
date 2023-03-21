@@ -227,12 +227,12 @@ if "__main__" == __name__:
     global pre_process, sweep_mode, sweep_enable, network_type, file_type
     pre_process = 'scattering'          # scattering or stft
     sweep_mode = 'wandb'                # wandb or tensorboard 
-    network_type = 'mlp'                # mlp or cnn
-    file_type = 'ascad'                 # sx or ascad
+    #network_type = 'mlp'                # mlp or cnn
+    file_type = 'sx'                 # sx or ascad
 
-    sweep_enable = False
-    project_name = 'scattering_100_2.5k_time_real_new_0302'
-    sweep_num = 300
+    sweep_enable = True
+    project_name = 'scattering_5M_jc'
+    sweep_num = 3
     
 
     pid = os.getpid()                   # show memory usage 
@@ -257,8 +257,9 @@ if "__main__" == __name__:
                 J = wp.scattering_keyguess['parameters']['J']['values'][0]          #
                 Q = wp.scattering_keyguess['parameters']['Q']['values'][0] 
                 sweep_config = wp.scattering_keyguess
-            scattered_sample = scap.scattering(trcs[:], J, trcs[:].shape[1], Q)     #Process WST in GPU, need to pick out data from GRAM 
-            scattered_trcs = scattered_sample.numpy()
+            #scattered_sample = scap.scattering(trcs[:], J, trcs[:].shape[1], Q)     #Process WST in GPU, need to pick out data from GRAM 
+            scattered_trcs = scattering_batch(trcs[:], hp.sca_batch ,J, Q)
+            #scattered_trcs = scattered_sample.numpy()
         elif(pre_process == 'stft' ):
             if(sweep_mode == 'tensorboard'):
                 windows = sp.windows

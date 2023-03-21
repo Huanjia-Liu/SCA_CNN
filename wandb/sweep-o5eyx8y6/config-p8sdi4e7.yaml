@@ -1,0 +1,32 @@
+wandb_version: 1
+
+J:
+  value: 4
+Q:
+  value: 36
+channel_1:
+  value: 4
+channel_2:
+  value: 16
+channel_3:
+  value: 64
+dense:
+  value: 2
+epochs:
+  value: 200
+kernel_length:
+  value: 2
+kernel_width:
+  value: 2
+layer:
+  value: 4
+loss_function:
+  value: mine_cross
+lr:
+  value: 0.0004735895086584188
+optimizer:
+  value: nadam
+project_name:
+  value: scattering_2.5k_100
+wrong_key:
+  value: 0

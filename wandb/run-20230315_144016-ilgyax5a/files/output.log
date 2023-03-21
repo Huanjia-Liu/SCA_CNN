@@ -1,0 +1,8 @@
+pre_process is finished
+shape is (48, 150)
+get hamming weight done!
+train set shape: (160000, 600) (160000,) vali set shape: (40000, 600) (40000,) test set shape: (0, 600) (0,)
+tensor(8, dtype=torch.uint8)
+G-RAM---1.1328125GB
+key guess j: 102 epoch: 0 vali_loss: 0.9978323578834534 train_total_loss: 0
+g-ram ---9.72265625GB

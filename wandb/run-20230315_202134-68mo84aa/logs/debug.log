@@ -1,0 +1,34 @@
+2023-03-15 20:21:34,591 INFO    Thread-18 (_run_job):1820309 [wandb_setup.py:_flush():68] Configure stats pid to 1820309
+2023-03-15 20:21:34,591 INFO    Thread-18 (_run_job):1820309 [wandb_setup.py:_flush():68] Loading settings from /home/admin1/.config/wandb/settings
+2023-03-15 20:21:34,591 INFO    Thread-18 (_run_job):1820309 [wandb_setup.py:_flush():68] Loading settings from /home/admin1/git/SCA_CNN/wandb/settings
+2023-03-15 20:21:34,591 INFO    Thread-18 (_run_job):1820309 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True', 'project': 'for_batch_test_jc_123', 'entity': 'aceleo', 'root_dir': '/home/admin1/git/SCA_CNN', 'run_id': '68mo84aa', 'sweep_param_path': '/home/admin1/git/SCA_CNN/wandb/sweep-u1h9h1ra/config-68mo84aa.yaml', 'sweep_id': 'u1h9h1ra'}
+2023-03-15 20:21:34,591 INFO    Thread-18 (_run_job):1820309 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'main.py', 'program': '/home/admin1/git/SCA_CNN/main.py'}
+2023-03-15 20:21:34,591 INFO    Thread-18 (_run_job):1820309 [wandb_init.py:_log_setup():476] Logging user logs to /home/admin1/git/SCA_CNN/wandb/run-20230315_202134-68mo84aa/logs/debug.log
+2023-03-15 20:21:34,592 INFO    Thread-18 (_run_job):1820309 [wandb_init.py:_log_setup():477] Logging internal logs to /home/admin1/git/SCA_CNN/wandb/run-20230315_202134-68mo84aa/logs/debug-internal.log
+2023-03-15 20:21:34,592 INFO    Thread-18 (_run_job):1820309 [wandb_init.py:init():516] calling init triggers
+2023-03-15 20:21:34,592 INFO    Thread-18 (_run_job):1820309 [wandb_init.py:init():519] wandb.init called with sweep_config: {'J': 3, 'Q': 24, 'channel_1': 8, 'channel_2': 16, 'channel_3': 128, 'dense': 2, 'epochs': 200, 'kernel_length': 2, 'kernel_width': 3, 'layer': 3, 'loss_function': 'mine_cross', 'lr': 0.00025856746168175264, 'optimizer': 'rmsprop', 'project_name': 'scattering_2.5k_100', 'wrong_key': 0}
+config: {}
+2023-03-15 20:21:34,592 INFO    Thread-18 (_run_job):1820309 [wandb_init.py:init():569] starting backend
+2023-03-15 20:21:34,592 INFO    Thread-18 (_run_job):1820309 [wandb_init.py:init():573] setting up manager
+2023-03-15 20:21:34,596 INFO    Thread-18 (_run_job):1820309 [backend.py:_multiprocessing_setup():102] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2023-03-15 20:21:34,599 INFO    Thread-18 (_run_job):1820309 [wandb_init.py:init():580] backend started and connected
+2023-03-15 20:21:34,601 INFO    Thread-18 (_run_job):1820309 [wandb_run.py:_config_callback():1160] config_cb None None {'J': 3, 'Q': 24, 'channel_1': 8, 'channel_2': 16, 'channel_3': 128, 'dense': 2, 'epochs': 200, 'kernel_length': 2, 'kernel_width': 3, 'layer': 3, 'loss_function': 'mine_cross', 'lr': 0.00025856746168175264, 'optimizer': 'rmsprop', 'project_name': 'scattering_2.5k_100', 'wrong_key': 0}
+2023-03-15 20:21:34,602 INFO    Thread-18 (_run_job):1820309 [wandb_init.py:init():658] updated telemetry
+2023-03-15 20:21:34,604 INFO    Thread-18 (_run_job):1820309 [wandb_init.py:init():693] communicating run to backend with 60 second timeout
+2023-03-15 20:21:35,196 INFO    Thread-18 (_run_job):1820309 [wandb_run.py:_on_init():2000] communicating current version
+2023-03-15 20:21:35,224 INFO    Thread-18 (_run_job):1820309 [wandb_run.py:_on_init():2004] got version response upgrade_message: "wandb version 0.14.0 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2023-03-15 20:21:35,224 INFO    Thread-18 (_run_job):1820309 [wandb_init.py:init():728] starting run threads in backend
+2023-03-15 20:21:35,264 INFO    Thread-18 (_run_job):1820309 [wandb_run.py:_console_start():1980] atexit reg
+2023-03-15 20:21:35,264 INFO    Thread-18 (_run_job):1820309 [wandb_run.py:_redirect():1838] redirect: SettingsConsole.WRAP_RAW
+2023-03-15 20:21:35,264 INFO    Thread-18 (_run_job):1820309 [wandb_run.py:_redirect():1903] Wrapping output streams.
+2023-03-15 20:21:35,264 INFO    Thread-18 (_run_job):1820309 [wandb_run.py:_redirect():1925] Redirects installed.
+2023-03-15 20:21:35,264 INFO    Thread-18 (_run_job):1820309 [wandb_init.py:init():765] run started, returning control to user process
+2023-03-15 20:21:35,746 INFO    Thread-18 (_run_job):1820309 [wandb_watch.py:watch():51] Watching
+2023-03-15 20:38:10,493 INFO    Thread-18 (_run_job):1820309 [wandb_run.py:_finish():1746] finishing run aceleo/for_batch_test_jc_123/68mo84aa
+2023-03-15 20:38:10,494 INFO    Thread-18 (_run_job):1820309 [wandb_run.py:_atexit_cleanup():1949] got exitcode: 0
+2023-03-15 20:38:10,494 INFO    Thread-18 (_run_job):1820309 [wandb_run.py:_restore():1932] restore
+2023-03-15 20:38:10,494 INFO    Thread-18 (_run_job):1820309 [wandb_run.py:_restore():1938] restore done
+2023-03-15 20:38:20,951 INFO    Thread-18 (_run_job):1820309 [wandb_run.py:_footer_history_summary_info():3377] rendering history
+2023-03-15 20:38:20,953 INFO    Thread-18 (_run_job):1820309 [wandb_run.py:_footer_history_summary_info():3409] rendering summary
+2023-03-15 20:38:20,955 INFO    Thread-18 (_run_job):1820309 [wandb_run.py:_footer_sync_info():3333] logging synced files
