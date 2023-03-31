@@ -3,7 +3,7 @@ from lib.data_transforms import Data
 from lib.TO_device import TO_device, DeviceDataLoader
 from lib.nerual.nn_utils import *
 from lib.custom_dataset import mydataset
-from lib.nerual.nn_class_CNN import Network_l2, Network_l3, Network_l3_u, mlp, mlp_jc, Network_jc, mlp_3, assign_variable_nn, cnn_co
+from lib.nerual.nn_class_CNN import Network_l2, Network_l3, Network_l3_u, mlp, mlp_jc, Network_jc, mlp_3, assign_variable_nn, cnn_co, Network_l5_u
 from lib.hdf5_files_import import read_multi_plt, read_multi_h5, load_ascad_metadata, load_raw_ascad  
 from lib.function_initialization import read_plts
 from lib.SCA_preprocessing import sca_preprocessing
@@ -177,6 +177,8 @@ def nn_train( plt, cpt, data, bit_poss, byte_pos, sample_num, sweep_mode, pre_pr
         network = mlp_3(traceLen=sample_num, num_classes=1)
     elif(layer==10):
         network = cnn_co(traceLen=sample_num, num_classes=1)
+    elif(layer==5):
+        network = Network_l5_u(traceLen=sample_num, num_classes=1)
 
     #Multiple GPU processing
     gpu_num = torch.cuda.device_count()

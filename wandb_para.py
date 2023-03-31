@@ -43,14 +43,17 @@ class wandb_para():
             'optimizer' : {'values': ['sgd', 'rmsprop', 'adam', 'nadam']},                         #['sgd', 'rmsprop', 'adam', 'nadam']},
             'loss_function' : {'values': ['mine_cross']},
             'wrong_key': {'values':[0]},        #add number to increase wrong key number
-            'layer' : {'values': [2,3,4]},                  #[2,3,4]
+            'layer' : {'values': [5]},                  #[2,3,4]
             'kernel_length' : {'values': [2,3,4,5]},
             'kernel_width' : {'values':[2,3,4,5]},                       #[16,24,32,36]
             'dense' : {'values': [1,2]},
             'project_name': {'values': ['scattering_2.5k_100']},
             'channel_1' : {'values': [2,4,8]},
-            'channel_2' : {'values': [8,16,32]},
-            'channel_3' : {'values': [32,64,96,128]},
+            'channel_2' : {'values': [8,16,24]},
+            'channel_3' : {'values': [24,32,40]},
+            'channel_4' : {'values': [48,56,64]},
+            'channel_5' : {'values': [64,96,128]},
+
             }
         }
     

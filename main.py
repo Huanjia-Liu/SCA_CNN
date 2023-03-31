@@ -231,7 +231,7 @@ if "__main__" == __name__:
     file_type = 'sx'                 # sx or ascad
 
     sweep_enable = True
-    project_name = 'scattering_5M_jc'
+    project_name = 'scattering_socure_test'
     sweep_num = 3
     
 
