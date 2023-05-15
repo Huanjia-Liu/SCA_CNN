@@ -24,23 +24,25 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/github_username/repo_name">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/Huanjia-Liu/SCA_CNN">
+    <img src="test_folder/images.png" alt="Logo" width="323" height="116">
   </a>
 
-<h3 align="center">project_title</h3>
+<h3 align="center">Deep-Learning based Side-Channel-Attack Testing Tool</h3>
 
   <p align="center">
-    project_description
+   Enhancing Efficiency of Side-Channel Attack Testing Tools with Preprocessing and Deep Learning Algorithms, including Wavelet Scattering Transform
     <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
+    <a href="https:/github.com/Huanjia-Liu/SCA_CNN"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
+    <a href="https://github.com/Huanjia-Liu/SCA_CNN">View Demo</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
+    <a href="https://github.com/Huanjia-Liu/SCA_CNN/issues">Report Bug</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
+    <a href="https://github.com/Huanjia-Liu/SCA_CNN/issues">Request Feature</a>
+    .
+    <a href="https://github.com/Huanjia-Liu/SCA_CNN">View Report</a>
   </p>
 </div>
 
@@ -79,7 +81,7 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+The objective of this project is to enhance the efficiency of non-profile side-channel attack testing tools by integrating preprocessing techniques, specifically focusing on the wavelet scattering transform, with powerful deep learning algorithms. Side-channel attacks exploit unintended information leakage, such as power consumption or electromagnetic emissions, to infer sensitive data. By combining advanced preprocessing, including the wavelet scattering transform, with state-of-the-art deep learning algorithms, we aim to improve the effectiveness and accuracy of side-channel attack testing.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -87,14 +89,8 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 ### Built With
 
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+* Python3
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
