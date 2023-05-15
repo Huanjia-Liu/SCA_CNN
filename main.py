@@ -225,14 +225,14 @@ import os
 if "__main__" == __name__:
     #hyperparam
     global pre_process, sweep_mode, sweep_enable, network_type, file_type
-    pre_process = 'scattering'          # scattering or stft
+    pre_process = 'co'          # scattering or stft
     sweep_mode = 'wandb'                # wandb or tensorboard 
     #network_type = 'mlp'                # mlp or cnn
     file_type = 'sx'                 # sx or ascad
 
-    sweep_enable = True
-    project_name = 'scattering_socure_test'
-    sweep_num = 3
+    sweep_enable = False
+    project_name = 'juncheng_ascad_0'
+    sweep_num = 200
     
 
     pid = os.getpid()                   # show memory usage 

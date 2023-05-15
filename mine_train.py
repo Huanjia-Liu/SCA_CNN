@@ -3,7 +3,7 @@ from lib.data_transforms import Data
 from lib.TO_device import TO_device, DeviceDataLoader
 from lib.nerual.nn_utils import *
 from lib.custom_dataset import mydataset
-from lib.nerual.nn_class_CNN import Network_l2, Network_l3, Network_l3_u, mlp, mlp_jc, Network_jc, mlp_3, assign_variable_nn, cnn_co, Network_l5_u
+from lib.nerual.nn_class_CNN import Network_l2, Network_l3, Network_l3_u, mlp, mlp_jc, Network_jc, mlp_3, assign_variable_nn, cnn_co, Network_l5_u, mlp_test
 from lib.hdf5_files_import import read_multi_plt, read_multi_h5, load_ascad_metadata, load_raw_ascad  
 from lib.function_initialization import read_plts
 from lib.SCA_preprocessing import sca_preprocessing
@@ -14,7 +14,7 @@ import matplotlib.pyplot as mplt
 import torch.nn.functional as F
 import torch.optim as optim
 from itertools import product
-from lib.nerual.nn_loss_functions import loss_functions
+from lib.nerual.nn_loss_functions import MI_output, MSE, KNLL, corr_loss
 import math
 
 from hyperparam import hyperparam as hp
@@ -65,9 +65,9 @@ def train(model, device, train_loader, optimizer, epoch, data_temp, scheduler):
         elif(loss_function == 'mine_cross'):
             #if(layer == 7 or layer==8 or layer==9):
             #    preds = torch.sum(preds,dim=1)
-            train_loss = loss_functions.corr_loss(preds, labels)
-        elif(loss_functions == 'MI'):
-            train_loss = loss_functions.MI(preds,labels)
+            train_loss = corr_loss(preds, labels)
+        elif(loss_function == 'MI'):
+            train_loss = MI_output(preds,labels,0.2)
 
 
 
@@ -118,7 +118,9 @@ def test(models, device, test_loader, data_temp):
         elif(loss_function == 'mine_cross'):
             #if(layer ==7 or layer==8 or layer==9):
             #    all_vali_preds = torch.sum(all_vali_preds,dim=1)
-            vali_loss = loss_functions.corr_loss(all_vali_preds, all_vali_labels)    #shape (n,1) (n)
+            vali_loss = corr_loss(all_vali_preds, all_vali_labels)    #shape (n,1) (n)
+        elif(loss_function == 'MI'):
+            vali_loss = MI_output(all_vali_preds, all_vali_labels,0.2)
 
     return vali_loss
 
@@ -179,6 +181,8 @@ def nn_train( plt, cpt, data, bit_poss, byte_pos, sample_num, sweep_mode, pre_pr
         network = cnn_co(traceLen=sample_num, num_classes=1)
     elif(layer==5):
         network = Network_l5_u(traceLen=sample_num, num_classes=1)
+    elif(layer==11):
+        network = mlp_test(traceLen=sample_num, num_classes=1)       
 
     #Multiple GPU processing
     gpu_num = torch.cuda.device_count()
@@ -305,10 +309,10 @@ def nn_train( plt, cpt, data, bit_poss, byte_pos, sample_num, sweep_mode, pre_pr
 
             #Save model as h5 file, save function is depend on if multi GPUs were used
             now = datetime.datetime.now()
-            if isinstance(network, nn.DataParallel):
-                torch.save(network.module.state_dict(), f'{hp.model_save_path}model_J={wandb.config.J}Q={wandb.config.Q}_{now.strftime("%Y-%m-%d %H:%M:%S")}.h5')
-            else:
-                torch.save(network.state_dict(), f'{hp.model_save_path}model_J={wandb.config.J}Q={wandb.config.Q}_{now.strftime("%Y-%m-%d %H:%M:%S")}.h5')
+            #if isinstance(network, nn.DataParallel):
+            #    torch.save(network.module.state_dict(), f'{hp.model_save_path}model_J={wandb.config.J}Q={wandb.config.Q}_{now.strftime("%Y-%m-%d %H:%M:%S")}.h5')
+            #else:
+            #    torch.save(network.state_dict(), f'{hp.model_save_path}model_J={wandb.config.J}Q={wandb.config.Q}_{now.strftime("%Y-%m-%d %H:%M:%S")}.h5')
             #Also the wandb model, but seem never work 
             if(sweep_mode == 'wandb'):
                 wandb.save(f'{hp.model_save_path}wandb/model.h5')

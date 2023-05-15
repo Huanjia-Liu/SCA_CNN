@@ -641,11 +641,11 @@ class cnn_co(nn.Module):
 
 
 
-        self.cov2fc_H = int( (traceLen-kernel_length+1)/2 )
+        self.cov2fc_H = int( (traceLen-32+1)/2 )
         #self.cov2fc_h = int( (self.cov2fc_h-3+1)/2 )
         # self.cov2fc = int( (self.cov2fc-16+1) )
-        self.cov2fc_H = int( (self.cov2fc_H-kernel_length+1)/2 )
-        self.cov2fc_H = int( (self.cov2fc_H-kernel_length+1)/2 )
+        self.cov2fc_H = int( (self.cov2fc_H-32+1)/2 )
+        self.cov2fc_H = int( (self.cov2fc_H-16+1)/2 )
 
 
 
@@ -655,13 +655,13 @@ class cnn_co(nn.Module):
 
 
         # UL paper non_profiing network
-        self.conv1 = nn.Conv1d(self.conv1_inchannel, self.conv1_outchannel, kernel_size=kernel_length, stride=1, padding=0)
+        self.conv1 = nn.Conv1d(self.conv1_inchannel, self.conv1_outchannel, kernel_size=32, stride=1, padding=0)
         self.bn1 = nn.BatchNorm1d(num_features=self.conv1_outchannel)
         # self.bn1 = BatchInstanceNorm1d(num_features=self.conv1_outchannel)
-        self.conv2 = nn.Conv1d(self.conv2_inchannel, self.conv2_outchannel, kernel_size= kernel_length, stride=1, padding=0)
+        self.conv2 = nn.Conv1d(self.conv2_inchannel, self.conv2_outchannel, kernel_size= 32, stride=1, padding=0)
         self.bn2 = nn.BatchNorm1d(num_features=self.conv2_outchannel)
         # self.bn2 = BatchInstanceNorm1d(num_features=self.conv2_outchannel)
-        self.conv3 = nn.Conv1d(self.conv3_inchannel, self.conv3_outchannel, kernel_size=kernel_length, stride=1, padding=0)
+        self.conv3 = nn.Conv1d(self.conv3_inchannel, self.conv3_outchannel, kernel_size=16, stride=1, padding=0)
         self.bn3 = nn.BatchNorm1d(num_features=self.conv3_outchannel)
 
 
@@ -846,6 +846,53 @@ class Network_l5_u(nn.Module):
         else:
             out1 = self.fc1(out1)
 
+        '''branch 2: bits compressing'''
+        # out2 = F.selu(self.rfc1(x2))
+
+
+        return out1
+
+class mlp_test(nn.Module):
+
+    def __init__(self, traceLen, num_classes):
+        """ Constructor
+        Args:
+            num_classes: number of classes
+        """
+        super(mlp_test, self).__init__()
+        '''branch 1: traces compressing'''
+        # traceLen, bitLen = input_size
+        global channel_1, channel_2, channel_3, kernel_width, kernel_length, dense
+        self.num_classes = num_classes
+
+       
+        self.dt0 = nn.Dropout(0.25)
+        self.fc1 = nn.Linear(traceLen, 20)
+        self.dt1 = nn.Dropout(0.25)
+        self.fc2 = nn.Linear(20, 10)
+        self.fc3 = nn.Linear(10, 1)
+        
+        # self.fc3 = nn.Linear(32, num_classes)
+        
+        '''branch 2: bits compressing'''
+        # self.bitLen = bitLen
+        # self.rfc1 = nn.Linear(self.bitLen, num_classes)
+
+
+    def forward(self, x):
+        # x1, x2 = x
+
+
+
+ 
+        out1 = x.view(x.size(0), -1)
+        out1 = F.relu(self.fc1(out1))
+        out1 = F.relu(self.fc2(out1))
+
+        out1 = self.fc3(out1)
+        #out1 = F.selu(self.fc3(out1))
+        # # out = out.mean(2)
+        # out = self.fc3(out)
         '''branch 2: bits compressing'''
         # out2 = F.selu(self.rfc1(x2))
 

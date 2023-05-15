@@ -41,18 +41,18 @@ class wandb_para():
             #'windows' : {'values': [84]},
     
             'optimizer' : {'values': ['sgd', 'rmsprop', 'adam', 'nadam']},                         #['sgd', 'rmsprop', 'adam', 'nadam']},
-            'loss_function' : {'values': ['mine_cross']},
+            'loss_function' : {'values': ['MI']},
             'wrong_key': {'values':[0]},        #add number to increase wrong key number
-            'layer' : {'values': [5]},                  #[2,3,4]
-            'kernel_length' : {'values': [2,3,4,5]},
-            'kernel_width' : {'values':[2,3,4,5]},                       #[16,24,32,36]
+            'layer' : {'values': [7,8,9]},                  #[2,3,4]
+            'kernel_length' : {'values': [5]},
+            'kernel_width' : {'values':[5]},                       #[16,24,32,36]
             'dense' : {'values': [1,2]},
             'project_name': {'values': ['scattering_2.5k_100']},
-            'channel_1' : {'values': [2,4,8]},
-            'channel_2' : {'values': [8,16,24]},
-            'channel_3' : {'values': [24,32,40]},
-            'channel_4' : {'values': [48,56,64]},
-            'channel_5' : {'values': [64,96,128]},
+            'channel_1' : {'values': [2]},
+            'channel_2' : {'values': [10,16,24,32,48,56,64,84,96,128,192,256]},
+            'channel_3' : {'values': [10,16,24,32,48,56,64,84,96,128,192,256]},
+            'channel_4' : {'values': [2]},
+            'channel_5' : {'values': [2]},
 
             }
         }
@@ -152,7 +152,7 @@ class wandb_para():
         {
             'epochs': {'values': [200]},
             
-            'lr': {'values':[0.0003369]},             #{'max':0.001, 'min':0.0001 },
+            'lr': {'values':[0.0001]},             #{'max':0.001, 'min':0.0001 },
             'Q' : {'values' : [1]},                            #[8,12,16,20,24,36,48,52,64]
             'J' : {'values' : [1]},
             #'windows' : {'values': [84]},
@@ -160,7 +160,7 @@ class wandb_para():
             'optimizer' : {'values': ['adam']},                         #['sgd', 'rmsprop', 'adam', 'nadam']},
             'loss_function' : {'values': ['mine_cross']},
             'wrong_key': {'values':[x for x in range(256)]},        #add number to increase wrong key number
-            'layer' : {'values': [10]},                  #[2,3,4]
+            'layer' : {'values': [11]},                  #[2,3,4]
             'kernel_length' : {'values': [16]},
             'kernel_width' : {'values':[2]},                       #[16,24,32,36]
             'dense' : {'values': [2]},
@@ -168,6 +168,8 @@ class wandb_para():
             'channel_1' : {'values': [2]},
             'channel_2' : {'values': [16]},
             'channel_3' : {'values': [64]},
+            'channel_4' : {'values': [2]},
+            'channel_5' : {'values': [2]},
             }
         }
                
