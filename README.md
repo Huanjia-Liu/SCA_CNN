@@ -104,26 +104,27 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
+This is an example of how to list things you need to use the software and how to install them. The command is based on Ubuntu or Debain, the other OS should google it by yourself.
+* pip3
   ```sh
-  npm install npm@latest -g
+  sudo apt install python3-pip
   ```
+
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   git clone --single-branch --branch merge_master git@github.com:Huanjia-Liu/SCA_CNN.git
    ```
-3. Install NPM packages
+2. Install Python packages
    ```sh
-   npm install
+   pip3 install -r requirements.txt
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+3. Enter your API in Python Package `Wandb` by running the script below
+   ```python
+   import wandb
+   wandb.login()
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
