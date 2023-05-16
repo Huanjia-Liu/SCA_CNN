@@ -134,9 +134,21 @@ This is an example of how to list things you need to use the software and how to
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+### Parameter setting
+We split the parameter setting to three places. `main.py`, `hyperparam.py`, and `sweep_para.py`
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+#### main.py
+Some basic parameters can be set here including
+ ```python
+ pre_process = 
+ sweep_mode = 'wandb'                   # using 'wandb' sweeping online or using 'tensorborad' sweeping local | Str ('wandb' or tensorboard')
+ file_type = 'sx'                       # dataset format of input file | Str ('sx' or 'ascad')
+ sweep_enable = True                    # sweeping parameters or using specifc parameter to verify key guess | Boolean
+ sweep_num = 200                        # number of sweeping times| Int
+ project_name = 'your project name'     # project name | Str
+ ```
+
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
