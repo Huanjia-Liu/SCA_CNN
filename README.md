@@ -148,6 +148,35 @@ Some basic parameters can be set here including
  project_name = 'your project name'     # project name | Str
  ```
 
+#### hpyerparam.py
+Hyperparameters setting, inlucinng
+ ```python
+path = ""                               # the path of trace file | Str
+trace_start = 0                         # trace start | Int
+trace_end = 100                         # trace end | Int
+signal_start = 0                        # signal start | Int 
+signal_end = 700                        # signal end | Int
+sca_batch = 1000                        # the batch size when processing scattering | Int
+train_batch = 1000                      # deep learning train batch | Int
+vali_batch = 1000                       # deep learning validation batch | Int
+
+atk_round = 1                           # attack round | Int (1 or 10)
+byte = 2                                # attack byte | Int ([0,15])
+power_model = "hw"                      # type of power model | Str ('hw', 'lsb', 'hd')
+
+model_save_path = ""                    # save path of trained model | Str
+grad_output =False                      # wether save grad | Boolean
+GPU_num = 1                             # num of GPU | Int
+
+key = []                                # the key of input trace | List
+```
+
+#### wandb_para.py
+The are two categories of class in this script. The first category is the ``xxx_sweep`` class, which initiates the parameter sweeping process to explore different values. The second category is the ``xxx_keyguess`` class, which verifies the effect of specific parameters for Side-Channel-Attack through key guessing.
+
+
+### Running
+If the number of input traces is less than 10k, you can simply run the command ``python3 main.py``. However, if the number of input traces exceeds 10k, there is a possibility that the VRAM may crash, causing the sweeping process to stop. In such cases, it is recommended to stop the Python process and reset the VRAM. To do this, you can use the shell script by running the command ``sh main.sh``. Please ensure that you modify the loop number and sweep number accordingly before executing the command.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -157,10 +186,10 @@ Some basic parameters can be set here including
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
+- [ ] Online Sweeping
+- [ ] Wavelet Scattering Transform
+- [ ] Short-time Fourier Transform
+
 
 See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
 
@@ -186,21 +215,13 @@ Don't forget to give the project a star! Thanks again!
 
 
 
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Huanjia - hliu026@e.ntu.edu.sg
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Project Link: [https://github.com/Huanjia-Liu/SCA_CNN](https://github.com/Huanjia-Liu/SCA_CNN)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -210,8 +231,7 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 ## Acknowledgments
 
 * []()
-* []()
-* []()
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
